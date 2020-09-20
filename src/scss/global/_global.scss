@@ -1,0 +1,145 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-body;
+  overflow-x: hidden;
+  background-color: $color-background;
+  color: $color-text;
+}
+
+
+%flex-row-center {
+  display: flex;
+  justify-content: center;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+a {
+  transition: .15s;
+}
+
+
+.btn {
+  cursor: pointer;
+  box-shadow: $button-shadow;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 12px 21px;
+  border: 0;
+  font-weight: bold;
+
+  &-purple{
+    color: #FFF;
+    background-color: $color-purple;
+    &:hover{
+      background-color: darken($color-purple,7%);
+      color: #FFF;
+    }
+  }
+  &-green{
+    color: #FFF;
+    background-color: $color-green;
+    &:hover{
+      background-color: darken($color-green,7%);
+      color: #FFF;
+    }
+  }
+  &-red{
+    color: #FFF;
+    background-color: $color-red;
+    &:hover{
+      background-color: darken($color-red,7%);
+      color: #FFF;
+    }
+  }
+}
+
+.subpage {
+  padding: 30px 138px;
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &-slash {
+      margin-right: 10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &-title {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 86px;
+      font-family: Futura, serif;
+      letter-spacing: 5.4px;
+      color: #17262F;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: unset;
+}
+
+.button {
+  height: 68px;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 0.45px;
+  line-height: 34px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  margin: 20px 0;
+  color: #FFF;
+  transition: .15s;
+
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  &-red {
+    color: #FFF;
+    background-color: $color-red;
+
+    &:hover {
+      background-color: darken($color-red, 10%);
+    }
+  }
+
+  &-right_arrow {
+    &:hover::after {
+      transform: translateX(5px);
+    }
+
+    &::after {
+      transition: .15s;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27.44 17.896'%3E%3Cpath fill='%23fff' d='M18.373,0,17.18,1.316S22.191,6.053,24.338,7.9C16.8,7.822,0,7.9,0,7.9V9.474s16.809-.057,24.338,0c-2.147,2.105-7.158,6.842-7.158,6.842L18.373,17.9,27.44,8.685Z'%3E%3C/path%3E%3C/svg%3E");
+      display: block;
+      height: 27px;
+      width: 27px;
+    }
+  }
+}
+
+

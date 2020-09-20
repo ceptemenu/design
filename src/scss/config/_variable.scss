@@ -1,0 +1,27 @@
+/* Colors */
+$color-background: #fff;
+$color-text: #32325D;
+$color-text-dark: #525F7F;
+$color-light: #8898AA;
+$color-extra-light: #ADB5BD;
+$color-link: #4A90E2;
+
+$color-green-text: #00CDAC;
+$color-green: #2DCE89;
+$color-red: #FB6340;
+$color-purple: #5E72E4;
+$color-blue: #11CDEF;
+
+
+$color-first: $color-red;
+$color-title: #17262F;
+$color-form-bg: #F7F6F4;
+/* Font Sizes */
+$font-size-body: 14px;
+
+/* Font Families*/
+$font-family-base: 'Open Sans', sans-serif;
+
+/* Box Shadows */
+$button-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(50, 50, 93, 0.11);
+$button-shadow--hover: 0px 7px 14px rgba(50, 50, 93, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.08);

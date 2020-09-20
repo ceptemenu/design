@@ -1,0 +1,83 @@
+doctype html
+html(lang="tr")
+    head
+        block head
+            meta(charset='UTF-8')
+            meta(http-equiv='X-UA-Compatible', content='IE=edge')
+            meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+            //Ortak değiller meta(name='description', content='lorem lorem')
+            //Ortak değiller meta(name='keywords', content='lorem, ipsum, sit, dolor, amet')
+            //meta(name='author', content='Muhammet Celepci')
+            //meta(name='robots', content='follow,index')
+            //meta(property='og:type', content='website')
+            //meta(property='og:site_name', content='')
+            //meta(property='og:title', content=' ')
+            //meta(property='og:description', content='')
+            //meta(property='og:url', content='https://www.siteadi.com/')
+            meta(property='og:locale', content='tr_TR')
+            //meta(property='og:image', content='https://www.siteadi.com/public/img/static/index_image.jpg')
+            //meta(name='twitter:card', content='summary')
+            //meta(name='twitter:site', content='@')
+            //meta(name='twitter:title', content='')
+            //meta(name='twitter:url', content='https://www.siteadi.com/')
+            //meta(name='twitter:description', content='')
+            //meta(name='twitter:image', content='')
+
+        block styles
+            link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
+            link(href="/css/style.css",rel='stylesheet')
+            link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap&subset=latin-ext', rel='stylesheet')
+    body
+        block vars
+
+        block svg
+            include ../svg/shared
+
+        block header
+            header.header
+                .container
+                    .header-content
+                        .header-content-logo
+                            a(href="#")
+                                img(src="/img/logo.svg")
+                            span Posts
+                        .header-content-nav
+                            .btn.btn-light.header-content-nav-login Login
+        // İçerik Başlangıç
+        block content
+
+        // İçerik Bitiş
+        block footer
+            // Footer Başlangıç
+            .container
+                footer.footer
+                    .footer-content
+                        .footer-content-top
+                            .row.align-items-center
+                                .col-xl-8
+                                    .footer-content-top-slogan Thank you for supporting us!
+                                    .footer-content-top-text Let's get in touch on any of these platforms.
+                                .col-xl-4
+                                    .footer-content-top-social
+                                        a(href="#").footer-content-top-social-item.twitter
+                                            i.fab.fa-twitter
+                                        a(href="#").footer-content-top-social-item.facebook
+                                            i.fab.fa-facebook-square
+                                        a(href="#").footer-content-top-social-item.dribbble
+                                            i.fab.fa-dribbble
+                                        a(href="#").footer-content-top-social-item.github
+                                            i.fab.fa-github
+                        .footer-content-bottom
+                            .footer-content-bottom-copyright
+                                | © 2018
+                                a(href="#") Şikayetvar
+                            .footer-content-bottom-platform Posts
+
+
+        block scripts
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+            script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+            script(src="/js/all.js")
+
+

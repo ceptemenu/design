@@ -1,0 +1,24 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+    include svg/index
+
+block content
+    .container
+        section.main
+            .main-content
+                .cards
+                    include blocks/cards-item
+                    include blocks/cards-item
+                    include blocks/cards-item
+                    include blocks/cards-item
+                    include blocks/cards-item
+                    include blocks/cards-item
+
+
+
+

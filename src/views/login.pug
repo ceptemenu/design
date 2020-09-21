@@ -1,0 +1,39 @@
+extends blocks/layout
+block vars
+
+block append head
+    title Giriş Yap
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .loginarea-image
+                    .loginarea-image-title GİRİŞ YAP
+                .loginarea-form
+                    .input-wrapper
+                        i.icon-avatar.input-icon
+                        input.input(type="text",placeholder="E-mail")
+                    .input-wrapper.password
+                        i.icon-lock.input-icon
+                        input.input(type="password",placeholder="Şifre")
+                        .password-see(onclick="togglePassSee()")
+                            i.icon-eye-close
+                            i.icon-eye
+                    .button.button-red.mt-3 Giriş Yap
+                    .loginarea-form-forgetpass Şifreni mi unuttun?
+                    .button.button-light.button-icon-left
+                        img(src="img/facebook.svg")
+                        span Facebook ile Bağlan
+                    .button.button-light.button-icon-left
+                        img(src="img/google.svg")
+                        span Google ile Bağlan
+                    .loginarea-text.mt-3
+                        span Üyeliğin Yok mu?
+                        a Hemen Kayıt Ol
+
+
+
+
+

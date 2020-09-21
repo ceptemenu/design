@@ -1,69 +1,74 @@
-$input-br: 6px;
-$input-padding: 10px;
-form {
-  label {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 34px;
-    letter-spacing: 0.4px;
+.input-wrapper {
+  position: relative;
+  width: 100%;
 
-    &.required {
-      &:after {
-        content: '(*)';
-        margin-left: 5px;
-        color: $color-red;
+  & + & {
+    margin-top: 20px;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  &.password {
+    .input {
+      padding-right: 40px;
+    }
+
+    .password-see {
+      position: absolute;
+      height: 43px;
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      top: 0;
+      i:last-child{
+        display: none;
+      }
+      &.active{
+        i{
+          display: none;
+        }
+        i:last-child{
+          display: block;
+        }
       }
     }
   }
-}
-
-.form {
-  &-control {
-    border: 0;
-    background-color: $color-form-bg;
-    font-size: 18px;
-    letter-spacing: 0.45px;
-    height: 60px;
-    border-radius: 0;
-    transition: .15s;
-    padding: 10px 25px;
-    color: $color-text;
-
-    &::placeholder {
-      color: rgba($color-text, .5);
-    }
-
-    &:focus {
-      outline: 0;
-      border: 0;
-      background-color: $color-form-bg;
-      box-shadow: none;
-    }
-  }
-}
-
-textarea.form-control {
-  padding: 25px;
 }
 
 .input {
-  &-group {
-    &-divider {
-      background-color: $color-form-bg;
-      width: 10px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  border: 1px solid transparent;
+  color: $color-border;
+  border-radius: $border-radius;
+  padding: $input-padding;
+  width: 100%;
+  background: transparent;
+  padding-left: 35px;
+  box-shadow: 0 4px 24px -5px $color-shadow;
 
-      &::before {
-        content: '';
-        display: block;
-        height: 30px;
-        width: 3px;
-        border-left: 1px solid #707070;
-        opacity: .3;
-      }
+  &:focus {
+    border-color: $color-border;
+    outline: 0;
+
+    .input-icon {
+      color: $color-border--focus;
     }
   }
+
+  &::placeholder {
+    color: $color-light;
+    font-weight: 300;
+  }
+}
+
+.input-icon {
+  color: $color-border;
+  font-size: 18px;
+  user-select: none;
 }

@@ -1,0 +1,48 @@
+extends blocks/layout
+block vars
+
+block append head
+    title Kayıt Ol
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .loginarea-image
+                    .loginarea-image-title KAYIT OL
+                .loginarea-form
+                    .input-wrapper
+                        i.icon-avatar.input-icon
+                        input.input(type="text",placeholder="İsim")
+                    .input-wrapper
+                        i.icon-avatar.input-icon
+                        input.input(type="text",placeholder="Soyisim")
+                    .input-wrapper
+                        i.icon-envelope.input-icon
+                        input.input(type="text",placeholder="E-mail")
+                    .input-wrapper.password
+                        i.icon-lock.input-icon
+                        input.input(type="password",placeholder="Şifre")
+                        .password-see(onclick="togglePassSee()")
+                            i.icon-eye-close
+                            i.icon-eye
+                    .button.button-red.mt-3 Kayıt Ol
+                    small.mb-2.mt-1.d-block
+                        | Kayıt olduğunuz takdirde
+                        a(href="#") gizlilik sözleşmesini
+                        | okuyup kabul etmiş varsayılırsınız.
+                    .button.button-light.button-icon-left
+                        img(src="img/facebook.svg")
+                        span Facebook ile Bağlan
+                    .button.button-light.button-icon-left
+                        img(src="img/google.svg")
+                        span Google ile Bağlan
+                    .loginarea-text.mt-3
+                        span Üyeliğin Var mı?
+                        a Hemen Giriş Yap
+
+
+
+
+

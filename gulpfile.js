@@ -77,6 +77,7 @@ gulp.task('watch', function () {
         files: ["dist/css/style.css", "dist/js/*.js", "dist/*.html"],
         browser: "chrome",
         online: true,
+        tunnel: true,
     })
     // gulp.watch('./*.html', ['html']);
     gulp.watch('./src/views/**/*.pug', {usePolling:true},gulp.series('pug'));

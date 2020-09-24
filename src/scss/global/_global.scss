@@ -8,6 +8,8 @@ body {
 }
 
 .maincontainer {
+  display: flex;
+  justify-content: center;
   .device-container {
     background-image: url("../img/device1.png");
     width: 425px;
@@ -85,5 +87,13 @@ body {
       right: 10px;
 
     }
+  }
+}
+
+a{
+  color: $color-text;
+  &:hover{
+    text-decoration: none;
+    color: $color-text-dark;
   }
 }

@@ -10,7 +10,123 @@ block content
     .maincontainer
         .device-container
             .safearea
-                include blocks/tabbar
+                .main
+                    .main-content
+                        .main-content-header
+                            .logo-wrapper
+                                img(src="img/logo.svg")
+                            .scan_code
+                                i.icon-placeholder
+
+                        .welcome_area
+                            .welcome_area-title Hoşgeldin
+                                span Mehmet
+                            .welcome_area-subtitle Hemen yemeklerine bayılacağın restoranı keşfet
+                        .search_area
+                            small.location
+                                .location-icon
+                                    i.icon-placeholder
+                                .location-text
+                                    | Kdz. Ereğli / Zonguldak
+                            .input-wrapper.search
+                                i.icon-search.input-icon
+                                input.input(type="text",placeholder="Şimdi Keşfet...")
+                                .filter
+                                    i.icon-filter.input-icon
+                        .food_category
+                            .see_all-wrapper
+                                .see_all-title Kategoriler
+                                .see_all-button Hepsini Gör
+                                    i.icon-arrow-right
+                            .food_category-slider
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/burger.png")
+                                    .food_category-item-title Burger
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/makarna.png")
+                                    .food_category-item-title Makarna
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/kahve.png")
+                                    .food_category-item-title Kahve
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/kebap.png")
+                                    .food_category-item-title Kebap
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/steak.png")
+                                    .food_category-item-title Steak
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/burger.png")
+                                    .food_category-item-title Kahve
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/burger.png")
+                                    .food_category-item-title Burger
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/makarna.png")
+                                    .food_category-item-title Makarna
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/kahve.png")
+                                    .food_category-item-title Kahve
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/kebap.png")
+                                    .food_category-item-title Kebap
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/steak.png")
+                                    .food_category-item-title Steak
+                                .food_category-item
+                                    .food_category-item-image
+                                        img(src="img/categories/burger.png")
+                                    .food_category-item-title Kahve
+                        .restaruants
+                            .see_all-wrapper
+                                .see_all-title Yakınındaki Restoranlar
+                                .see_all-button Hepsini Gör
+                                    i.icon-arrow-right
+                            .restaruants-slider
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/gunaydin.jpg")
+                                    .restaruant-item-content
+                                        .title Günaydın Steak House
+                                        .category Türk Mutfağı - Izgara
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span < 0.5 Km
+                                            .pins
+                                                i.icon.icon-guitar
+                                                i.icon.icon-yes-smoking
+                                                i.icon.icon-no-smoking
+
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+
+
+                    include blocks/tabbar
 
 
 

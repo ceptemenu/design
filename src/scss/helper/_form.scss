@@ -40,6 +40,24 @@
       }
     }
   }
+  &.search{
+    .filter{
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 5px;
+      top: 7px;
+      border-radius: 10px;
+      background: $color-red;
+      i{
+        color: #FFF;
+        left: unset;
+      }
+    }
+  }
 }
 
 .input {
@@ -62,13 +80,13 @@
   }
 
   &::placeholder {
-    color: $color-light;
+    color: rgba($color-light,.5);
     font-weight: 300;
   }
 }
 
 .input-icon {
-  color: $color-border;
+  color: rgba($color-light,.5);
   font-size: 18px;
   user-select: none;
 }

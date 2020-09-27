@@ -14,7 +14,7 @@
     margin-top: 10px;
   }
 
-  &-red {
+  &--red {
     background-color: $color-red;
     color: #FFF;
 
@@ -23,7 +23,7 @@
     }
   }
 
-  &-light {
+  &--light {
     background-color: $color-button-light;
 
     &:active, &:focus {
@@ -31,8 +31,8 @@
     }
   }
 
-  &-icon {
-    &-left {
+  &--icon {
+    &--left {
       img, i, svg {
         width: 1em;
         height: 1em;
@@ -43,5 +43,10 @@
         transform: translateY(-50%);
       }
     }
+  }
+
+  &--xs {
+    display: inline-flex;
+    font-size: 14px;
   }
 }

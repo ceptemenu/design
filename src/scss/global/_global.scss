@@ -6,7 +6,9 @@ body {
   color: $color-text;
 
 }
-
+.text--light{
+  color: $color-text-light;
+}
 .maincontainer {
   display: flex;
   justify-content: center;
@@ -361,6 +363,20 @@ a {
 
     &-title {
       font-size: 10px;
+    }
+  }
+}
+.back{
+  flex: 1;
+  padding: 0 10px;
+  box-shadow: 0 4px 24px -8px $color-shadow;
+  &-item{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    i{
+      margin-right: 5px;
+      font-size: 20px;
     }
   }
 }

@@ -1,0 +1,38 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-item
+                        i.icon-back
+                        span Geri Dön
+                .scan_code
+                    .scan_code-icon
+                        i.icon-qr-code
+                    .scan_code-text
+                        | Masanızdaki QR kodunu taratın. Telefonunuzdan sipariş verme rahatlığını doyasıya yaşayın.
+                    .button.button--red.button--icon--left.scan_code-button
+                        i.icon-qr-code
+                        span Qr Kodu Tara
+
+                    .scan_code-divider
+                        span ya da
+                    .button.button--light.button--icon--left
+                            i.icon-keyboard
+                            span Kodu el ile gir
+                    small.mt-1.text--light Kamera problemi yaşıyorsanız kodu el ile girebilirsiniz.
+
+
+
+
+
+
+

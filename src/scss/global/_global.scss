@@ -397,6 +397,14 @@ a {
 #linkler {
   display: none;
 }
+// Back header'ı bulunan sayfalarda header harici alanı belirtir
+.within_back_area{
+  flex: 1;
+  min-height: calc(100% - 30px);
+  padding: $padding-normal;
+
+
+}
 
 @media (max-width: 992px) {
   .mobil_menu_linkler {

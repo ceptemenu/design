@@ -5,6 +5,9 @@
   & + & {
     margin-top: 10px;
   }
+  &.input-number{
+
+  }
 
   .input-icon {
     position: absolute;
@@ -27,21 +30,25 @@
       align-items: center;
       right: 0;
       top: 0;
-      i:last-child{
+
+      i:last-child {
         display: none;
       }
-      &.active{
-        i{
+
+      &.active {
+        i {
           display: none;
         }
-        i:last-child{
+
+        i:last-child {
           display: block;
         }
       }
     }
   }
-  &.search{
-    .filter{
+
+  &.search {
+    .filter {
       position: absolute;
       height: 30px;
       width: 30px;
@@ -52,7 +59,8 @@
       top: 7px;
       border-radius: 10px;
       background: $color-red;
-      i{
+
+      i {
         color: #FFF;
         left: unset;
       }
@@ -79,14 +87,19 @@
     }
   }
 
+  &.no-icon {
+    padding: $input-padding;
+  }
+
+
   &::placeholder {
-    color: rgba($color-light,.5);
+    color: rgba($color-light, .5);
     font-weight: 300;
   }
 }
 
 .input-icon {
-  color: rgba($color-light,.5);
+  color: rgba($color-light, .5);
   font-size: 18px;
   user-select: none;
 }

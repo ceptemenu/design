@@ -1,0 +1,47 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-item
+                        i.icon-back
+                        span Geri Dön
+                .within_back_area.enter_code
+
+                    .enter_code-icon
+                        i.icon-keyboard
+                    .enter_code-text.mb-20.text-center
+                        | Hemen restoran/cafe'den bir kod talep edin. Telefonunuzdan sipariş verme rahatlığını doyasıya yaşayın.
+                    .enter_code-form.w-100
+                        .input-wrapper.input-number
+                            i.icon-keyboard.input-icon
+                            input.input(type="number",placeholder="Kodu Girin")
+                    .button.button--red.enter_code-button.mt-20
+                        span Onayla
+
+                    .scan_code-divider
+                        span ya da
+                    .button.button--light.button--icon--left
+                        i.icon-qr-code
+                        span QR Kodu Taratın
+                    small.mt-1.text--light Kameranızı kullanarak masadaki QR kodu okutabilirsiniz.
+
+
+
+
+
+
+
+
+
+
+
+

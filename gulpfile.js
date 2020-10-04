@@ -13,6 +13,9 @@ const autoprefix = require('gulp-autoprefixer');
 
 const browser_sync = require('browser-sync').create();
 
+const images_path = './src/assets/img/**/*.{gif,svg,jpg,jpeg,png,webp}';
+const fonts_path = './src/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}';
+
 
 
 // Sass dosyalarını işler, browser uyumluluğu sağlar,
@@ -71,6 +74,14 @@ gulp.task('pug', function () {
 });
 // İzlemeye alınan işlemler
 
+gulp.task('move_images', function() {
+	return gulp.src(images_path).pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('move_fonts', function() {
+	return gulp.src(fonts_path).pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('watch', function () {
     browser_sync.init({
         server: 'dist',
@@ -83,8 +94,10 @@ gulp.task('watch', function () {
     gulp.watch('./src/views/**/*.pug', {usePolling:true},gulp.series('pug'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'));
     gulp.watch('./src/js/**/*.js', gulp.series('js'));
+	gulp.watch(fonts_path, gulp.series('move_fonts'));
+	gulp.watch(images_path, gulp.series('move_images'));
     //gulp.watch('./src/images/**/*.{png,jpg,jpeg}', ['img']);
 });
 
 // Gulp çalıştığı anda yapılan işlemler
-gulp.task('default', gulp.series('css', 'js', 'pug', 'watch', function(){}));
+gulp.task('default', gulp.series('css', 'js', 'pug', 'move_fonts', 'move_images', 'watch', function(){}));

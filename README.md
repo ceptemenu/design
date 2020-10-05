@@ -1,4 +1,4 @@
-# SikayetVarStudyCase
+# Cepte Menü
 
 ### Kurulum
 * Projeyi klonlayın.

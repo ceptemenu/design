@@ -1,0 +1,176 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.d-flex.justify-content-between.align-items-center
+                    .back-item
+                        i.icon-back
+                        span Geri Dön
+                    .back-right
+                        .save-restaruant.active(onclick="$(this).toggleClass('active')")
+                            i.icon-bookmark-empty
+                            i.icon-bookmark
+                .restaruant-mainpage.within_back_area.p-0
+                    #genel.tabcontent.active
+                        .restaruant-mainpage-slider
+                            img(src="img/restaruant/gunaydin2.jpg")
+                            .restaruant-mainpage-slider__count 1/4
+                        .p-20
+                            .restaruant-mainpage-name
+                                | Günaydın Steakhouse
+                            .restaruant-mainpage-sub_info
+                                .rating.tab-item(data-href="yorum")
+                                    i.icon.icon-star
+                                    span 4.2
+                                    small.ml-1 (33 Yorum)
+                                .divider-circle
+                                .distance
+                                    i.icon.icon-placeholder
+                                    span < 1 Km
+
+                        .p-20.restaruant-mainpage-sub_info.d-block
+                            .d-flex.align-items-center
+                                .status.status--success
+                                    .status__circle
+                                    .status__text Açık
+                                // Tıklandığında popup şeklinde tüm detay görülebilir
+                                .divider-circle
+                                .work-hours 10:00 - 02:00
+                                //.status.status--danger
+                                //    .status__circle
+                                //    .status__text Açık
+                            .address
+                                i.icon.icon-placeholder
+                                | Serinsu, Üsküdar, İstanbul
+                        .divider
+                        .restaruant-mainpage-buttons
+                            .restaruant-mainpage-buttons__item
+                                .restaruant-mainpage-buttons__icon
+                                    i.icon.icon-phone-call
+                                .restaruant-mainpage-buttons__title Ara
+                            .divider-circle
+                            .restaruant-mainpage-buttons__item
+                                .restaruant-mainpage-buttons__icon
+                                    i.icon.icon-map
+                                .restaruant-mainpage-buttons__title Beni Götür
+                            .divider-circle
+                            .restaruant-mainpage-buttons__item
+                                .restaruant-mainpage-buttons__icon
+                                    i.icon.icon-phone-call
+                                .restaruant-mainpage-buttons__title Hata Bildir
+                        .divider
+                        .food.p-20.mb-0
+                            .see_all-wrapper.mt-0
+                                .see_all-title En Çok Tercih Edilenler
+                                .see_all-button.tab-item(data-href="menu") Hepsini Gör
+                                    i.icon-arrow-right
+                            .food-slider
+                                .food-item
+                                    .food-item-image
+                                        img(src="img/food/hamburger.jpg")
+                                    .food-item-title Şefin Özel Burgeri
+                                .food-item
+                                    .food-item-image
+                                        img(src="img/food/hamburger.jpg")
+                                    .food-item-title Şefin Özel Burgeri
+                                .food-item
+                                    .food-item-image
+                                        img(src="img/food/hamburger.jpg")
+                                    .food-item-title Şefin Özel Burgeri
+                        .divider
+
+                        .p-20.restaruant-mainpage-info
+                            .title Daha Fazla Bilgi
+                            .pins
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-guitar
+                                    .pins-item-title Canlı Müzik
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-no-smoking
+                                    .pins-item-title Sigarasız Alan
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-yes-smoking
+                                    .pins-item-title Sigara İçilebilir Alan
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-signal
+                                    .pins-item-title Wifi
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-check
+                                    .pins-item-title İç Mekan
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-check
+                                    .pins-item-title Dış Mekan
+                                .pins-item
+                                    .pins-item-icon
+                                        i.icon.icon-alcohol
+                                    .pins-item-title Alkol İçilebilir
+                        .divider
+                        .restaruants.p-20
+                            .see_all-wrapper.mt-0
+                                .see_all-title Benzer Restoranlar
+                            .restaruants-slider
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/gunaydin.jpg")
+                                    .restaruant-item-content
+                                        .title Günaydın Steak House
+                                        .category Türk Mutfağı - Izgara
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span < 0.5 Km
+                                            .pins
+                                                i.icon.icon-guitar
+                                                i.icon.icon-yes-smoking
+                                                i.icon.icon-no-smoking
+
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+
+
+
+
+
+                    #menu.tabcontent
+                        .restaruant-mainpage.within_back_area.p-0
+                            | Menü
+                    #yorum.tabcontent
+                        .restaruant-mainpage.within_back_area.p-0
+                            | Yorumlar
+                .restaruant-tabs
+                    .restaruant-tabs-item.tab-item.active(data-href="genel") Genel
+                    .restaruant-tabs-item.tab-item(data-href="menu") Menü
+                    .restaruant-tabs-item.tab-item(data-href="yorum") Yorumlar
+
+
+
+
+

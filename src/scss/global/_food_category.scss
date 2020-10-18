@@ -41,6 +41,11 @@
 
     &-title {
       font-size: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width:100%;
+      text-align: center;
     }
   }
 }

@@ -3,6 +3,53 @@
   min-height: calc(100% - 30px - 60px);
   overflow: auto;
 
+  &-summary {
+    padding: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, $color-red, #000);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .8;
+      filter: blur(0px);
+    }
+
+    &-image {
+      height: 100px;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: inherit;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      top: 50%;
+      height: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 40px);
+      z-index: 2;
+
+      .restaruant-mainpage {
+        &-name, &-sub_info {
+          color: #FFF;
+          text-align: center;
+          justify-content: center;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   &-slider {
     height: 180px;
     width: 100%;
@@ -25,7 +72,8 @@
       object-fit: cover;
       object-position: top;
     }
-    &__count{
+
+    &__count {
       position: absolute;
       bottom: 5px;
       right: 10px;
@@ -54,6 +102,10 @@
 
     .address {
       font-weight: 300;
+
+      i {
+        margin-right: 10px;
+      }
     }
 
 
@@ -70,10 +122,12 @@
       align-items: center;
       justify-content: center;
     }
-    &__icon{
+
+    &__icon {
       font-size: 20px;
     }
-    &__title{
+
+    &__title {
       font-size: 13px;
     }
   }
@@ -234,6 +288,22 @@
           }
         }
       }
+    }
+  }
+}
+
+
+// Restoran Menü
+
+.foods-menu {
+  margin-bottom: 15px;
+  &__title {
+    font-size: 16px;
+  }
+
+  &-items {
+    .food-item {
+      margin-top: 10px;
     }
   }
 }

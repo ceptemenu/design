@@ -12,14 +12,14 @@ block content
             .safearea
                 .back.d-flex.justify-content-between.align-items-center
                     .back-item
-                        i.icon-back
+                        i.icon-arrow-left
                         span Geri Dön
                     .back-right
-                        .save-restaruant.active(onclick="$(this).toggleClass('active')")
-                            i.icon-bookmark-empty
+                        .save-restaruant(onclick="$(this).toggleClass('active')")
                             i.icon-bookmark
+                            i.icon-bookmark-fill
                 .restaruant-mainpage.within_back_area.p-0
-                    #genel.tabcontent.active
+                    #genel.tabcontent
                         .restaruant-mainpage-slider
                             img(src="img/restaruant/gunaydin2.jpg")
                             .restaruant-mainpage-slider__count 1/4
@@ -33,7 +33,7 @@ block content
                                     small.ml-1 (33 Yorum)
                                 .divider-circle
                                 .distance
-                                    i.icon.icon-placeholder
+                                    i.icon.icon-map-pin
                                     span < 1 Km
 
                         .p-20.restaruant-mainpage-sub_info.d-block
@@ -45,11 +45,14 @@ block content
                                 .divider-circle
                                 .work-hours 10:00 - 02:00
                                 //.status.status--danger
-                                //    .status__circle
-                                //    .status__text Açık
+                                    .status__circle
+                                    .status__text Kapalı
                             .address
-                                i.icon.icon-placeholder
+                                i.icon.icon-map-direction
                                 | Serinsu, Üsküdar, İstanbul
+                            .paytype.address
+                                i.icon.icon-qr-code-scan
+                                | Ödeme Seçenekleri
                         .divider
                         .restaruant-mainpage-buttons
                             .restaruant-mainpage-buttons__item
@@ -59,12 +62,12 @@ block content
                             .divider-circle
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
-                                    i.icon.icon-map
+                                    i.icon.icon-navigation
                                 .restaruant-mainpage-buttons__title Beni Götür
                             .divider-circle
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
-                                    i.icon.icon-phone-call
+                                    i.icon.icon-flag
                                 .restaruant-mainpage-buttons__title Hata Bildir
                         .divider
                         .food.p-20.mb-0
@@ -86,7 +89,6 @@ block content
                                         img(src="img/food/hamburger.jpg")
                                     .food-item-title Şefin Özel Burgeri
                         .divider
-
                         .p-20.restaruant-mainpage-info
                             .title Daha Fazla Bilgi
                             .pins
@@ -100,11 +102,11 @@ block content
                                     .pins-item-title Sigarasız Alan
                                 .pins-item
                                     .pins-item-icon
-                                        i.icon.icon-yes-smoking
+                                        i.icon.icon-cigarette
                                     .pins-item-title Sigara İçilebilir Alan
                                 .pins-item
                                     .pins-item-icon
-                                        i.icon.icon-signal
+                                        i.icon.icon-wifi
                                     .pins-item-title Wifi
                                 .pins-item
                                     .pins-item-icon
@@ -112,7 +114,7 @@ block content
                                     .pins-item-title İç Mekan
                                 .pins-item
                                     .pins-item-icon
-                                        i.icon.icon-check
+                                        i.icon.icon-fence
                                     .pins-item-title Dış Mekan
                                 .pins-item
                                     .pins-item-icon
@@ -159,15 +161,108 @@ block content
 
 
 
-                    #menu.tabcontent
+                    #menu.tabcontent.active
                         .restaruant-mainpage.within_back_area.p-0
-                            | Menü
+                            .p-20.mb-10.restaruant-mainpage-summary
+                                .restaruant-mainpage-summary-image
+                                    img(src="img/restaruant/gunaydin2.jpg")
+                                .restaruant-mainpage-summary-info
+                                    .restaruant-mainpage-name
+                                        | Günaydın Steakhouse
+                                    .restaruant-mainpage-sub_info
+                                        .rating.tab-item(data-href="yorum")
+                                            i.icon.icon-star
+                                            span 4.2
+                                            small.ml-1 (33 Yorum)
+                                        .divider-circle
+                                        .distance
+                                            i.icon.icon-map-pin
+                                            span < 1 Km
+
+                            .p-20
+                                .input-wrapper.search
+                                    i.icon-search.input-icon
+                                    input.input(type="text",placeholder="Ne yemek istersin")
+                                    .filter
+                                        i.icon-search.input-icon
+                            .p-20
+                                .food_category
+                                    .see_all-wrapper
+                                        .see_all-title Kategoriler
+                                        .see_all-button Hepsini Gör
+                                            i.icon-arrow-right
+                                    .food_category-slider
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/burger.png")
+                                            .food_category-item-title Burgerler
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/makarna.png")
+                                            .food_category-item-title Makarnalar
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/kahve.png")
+                                            .food_category-item-title Sıcak İçecekler
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/kebap.png")
+                                            .food_category-item-title Kebap
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/steak.png")
+                                            .food_category-item-title Steak
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/burger.png")
+                                            .food_category-item-title Kahve
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/burger.png")
+                                            .food_category-item-title Burger
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/makarna.png")
+                                            .food_category-item-title Makarna
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/kahve.png")
+                                            .food_category-item-title Kahve
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/kebap.png")
+                                            .food_category-item-title Kebap
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/steak.png")
+                                            .food_category-item-title Steak
+                                        .food_category-item
+                                            .food_category-item-image
+                                                img(src="img/categories/burger.png")
+                                            .food_category-item-title Kahve
+                            .p-20
+                                .foods-menu
+                                    .foods-menu__title En Çok Tercih Edilenler
+                                    .foods-menu-items
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
+
+
+                                .foods-menu
+                                    .foods-menu__title Burgerler
+                                    .foods-menu-items
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
+                                        include blocks/food-item--extended
                     #yorum.tabcontent
                         .restaruant-mainpage.within_back_area.p-0
                             | Yorumlar
                 .restaruant-tabs
-                    .restaruant-tabs-item.tab-item.active(data-href="genel") Genel
-                    .restaruant-tabs-item.tab-item(data-href="menu") Menü
+                    .restaruant-tabs-item.tab-item(data-href="genel") Genel
+                    .restaruant-tabs-item.tab-item.active(data-href="menu") Menü
                     .restaruant-tabs-item.tab-item(data-href="yorum") Yorumlar
 
 

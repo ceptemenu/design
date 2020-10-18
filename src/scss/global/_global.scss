@@ -226,22 +226,22 @@ a {
     font-size: 17px;
     transition: $transition-fast;
 
-    .icon-bookmark {
+    .icon-bookmark-fill {
       display: none;
     }
 
-    .icon-bookmark-empty {
+    .icon-bookmark {
       display: block;
     }
 
     &.active {
       color: $color-red;
 
-      .icon-bookmark {
+      .icon-bookmark-fill {
         display: block;
       }
 
-      .icon-bookmark-empty {
+      .icon-bookmark {
         display: none;
       }
 
@@ -340,4 +340,30 @@ a {
   border-radius: 50%;
   background-color: $color-divider;
   margin: 0 10px;
+}
+
+.input-button-group {
+  display: flex;
+  height: 20px;
+
+  .button {
+    height: 100%;
+    width: 20px;
+    border: 1px solid #eee;
+    border-radius: .25rem 0 0 .25rem;
+  }
+
+  .input {
+    height: 100%;
+    width: 20px;
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background: #FFF;
+    font-size: 10px;
+    text-align: center;
+    & + .button{
+      border-radius: 0 .25rem .25rem 0;
+    }
+  }
 }

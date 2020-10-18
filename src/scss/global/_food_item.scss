@@ -16,7 +16,25 @@
     align-items: center;
     flex-shrink: 0;
     margin-right: 10px;
-    &-image {
+
+    &--extended {
+      width: 100%;
+      height: 80px;
+
+      .food {
+        &-item {
+          &__image {
+            width: 70px;
+          }
+
+          &__title {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &__image {
       height: inherit;
       width: 50px;
       flex-shrink: 0;
@@ -28,10 +46,45 @@
       }
     }
 
-    &-title {
+    &__title {
       font-size: 13px;
       margin-left: 10px;
       line-height: 14px;
+    }
+
+    &-content {
+      padding:5px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+
+      &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__add-cart {
+
+    }
+
+    &__ingredients {
+      font-size: 10px;
+      color: $color-text-light;
+      font-weight: 300;
+      max-height: 25px;
+      overflow: hidden;
+      padding-right: 30px;
+      line-height: 13px;
     }
   }
 }

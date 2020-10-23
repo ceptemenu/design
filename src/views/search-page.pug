@@ -1,0 +1,125 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    // Bu sayfa index sayfasının arama focus state'i olarak dizayn edilmiştir.
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-item
+                        i.icon-chevron-left
+                        span Geri Dön
+                .within_back_area
+                    .search_area
+                        small.location
+                            .location-icon
+                                i.icon-map-pin
+                            .location-text
+                                | Kdz. Ereğli / Zonguldak
+                        .input-wrapper.search
+                            i.icon-search.input-icon
+                            input.input(type="text",placeholder="Şimdi Keşfet...")
+                            .filter.js-open-search-filter-modal
+                                i.icon-filter.input-icon
+                    .title.mt-10 Arama Sonuçları
+                    .search-result-wrapper
+                        .search-result-item.mt-10
+                            .restaruant-item
+                                .restaruant-item-image
+                                    img(src="img/restaruant/starbucks.jpg")
+                                .restaruant-item-content
+                                    .title Starbucks Coffee
+                                    .category Cafe - Pastane
+                                    .restaruant-item-content-footer
+                                        .rating
+                                            i.icon.icon-star
+                                            span 4.2
+                                        .distance
+                                            i.icon.icon-placeholder
+                                            span 2.5 Km
+                                    .restaruant-item-save
+                                        i.icon-bookmark
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                    .food-item-content-bottom
+                                        .food-item__price 19.90 TL
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                    .food-item-content-bottom
+                                        .food-item__price 17.00 TL
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi
+                                    .food-item-content-bottom
+                                        .food-item__price 122.00 TL
+                        .search-result-item.mt-10
+                            .restaruant-item
+                                .restaruant-item-image
+                                    img(src="img/restaruant/starbucks.jpg")
+                                .restaruant-item-content
+                                    .title Starbucks Coffee
+                                    .category Cafe - Pastane
+                                    .restaruant-item-content-footer
+                                        .rating
+                                            i.icon.icon-star
+                                            span 4.2
+                                        .distance
+                                            i.icon.icon-placeholder
+                                            span 2.5 Km
+                                    .restaruant-item-save
+                                        i.icon-bookmark
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                    .food-item-content-bottom
+                                        .food-item__price 19.90 TL
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                    .food-item-content-bottom
+                                        .food-item__price 17.00 TL
+                            .food-item.food-item--extended
+                                .food-item-content
+                                    .food-item-content-top
+                                        .food-item__title Şefin Özel Burgeri
+                                    .food-item-content-middle
+                                        .food-item__ingredients
+                                            | 200gr Özel Hamburger Köftesi
+                                    .food-item-content-bottom
+                                        .food-item__price 122.00 TL
+
+
+
+
+
+
+
+

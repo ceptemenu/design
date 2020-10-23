@@ -9,22 +9,6 @@
     height: 100%;
     padding: $padding-normal;
 
-    .location{
-      display: flex;
-      flex: 1;
-      align-items: center;
-      margin-bottom: 2px;
-      color: $color-text-light;
-
-      &-icon{
-        margin-right: 4px;
-        font-size: 11px;
-      }
-      &-text{
-        font-size: 10px;
-        font-weight: 300;
-      }
-    }
     &-header{
       display: flex;
       align-items: center;
@@ -72,5 +56,22 @@
 
       }
     }
+  }
+}
+
+.location{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-bottom: 2px;
+  color: $color-text-light;
+
+  &-icon{
+    margin-right: 4px;
+    font-size: 11px;
+  }
+  &-text{
+    font-size: 10px;
+    font-weight: 300;
   }
 }

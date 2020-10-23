@@ -32,15 +32,24 @@
   }
 
   &--icon {
+    img, i, svg {
+      width: 1em;
+      height: 1em;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     &--left {
       img, i, svg {
-        width: 1em;
-        height: 1em;
-        font-size: 20px;
-        position: absolute;
         left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+      }
+    }
+
+    &--right {
+      img, i, svg {
+        right: 10px;
       }
     }
   }

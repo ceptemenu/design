@@ -15,3 +15,6 @@ $('.tab-item').on('click', function () {
     $('.restaruant-tabs-item[data-href="'+target+'"]').addClass('active');
     $('#'+target).addClass('active');
 });
+$('.js-open-search-filter-modal').on('click', function () {
+    $('#search_filter_modal').addClass('active');
+});

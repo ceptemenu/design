@@ -31,7 +31,7 @@ block content
                             .input-wrapper.search
                                 i.icon-search.input-icon
                                 input.input(type="text",placeholder="Şimdi Keşfet...")
-                                .filter
+                                .filter.js-open-search-filter-modal
                                     i.icon-filter.input-icon
                         .food_category
                             .see_all-wrapper
@@ -125,8 +125,121 @@ block content
                                                 i.icon.icon-map-pin
                                                 span 2.5 Km
 
-
                     include blocks/tabbar
+                    #search_filter_modal.bottom-modal
+                        .bottom-modal__divider(onclick='$("#search_filter_modal").removeClass("active")')
+                            span
+                        .bottom-modal-content
+                            .search-filter
+                                .search-filter__clear
+                                    i.icon.icon-trash-2.mr-2
+                                    span Filtreleri Temizle
+                                .search-filter-section
+                                    .search-filter-section__title Konum
+                                        span Konum Değiştir
+                                    .location.d-flex
+                                        .location-icon.mr-1
+                                            i.icon-map-pin
+                                        .location-text
+                                            | Kdz. Ereğli / Zonguldak
+                                .divider
+                                .search-filter-section
+                                    .search-filter-section__title Mesafe
+                                        span 1 Km İçinde
+                                    .line-filter
+                                        .line-filter__text 1Km
+                                        .line-filter__bar
+                                            span.line-filter__circle
+                                        .line-filter__text 10 Km
+
+                                .divider
+                                .search-filter-section
+                                    .search-filter-section__title Restoran İçi Özellikler
+                                    label.switch(for='switch1').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Wifi
+                                            .search-filter-item__subtitle Restoran içi ücretsiz wifi
+                                        .search-filter-item-right
+                                            input#switch1.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch2').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Canlı Müzik
+                                            .search-filter-item__subtitle Canlı Müzik Keyfi
+                                        .search-filter-item-right
+                                            input#switch2.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch3').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Sigara İçilebilir Alan
+                                        .search-filter-item-right
+                                            input#switch3.switch__input(type='checkbox')
+                                            span.switch__toggle
+                                    label.switch(for='switch4').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Sigara İçilmeyen Alan
+                                            .search-filter-item__subtitle Bu alanda dumansız keyif sürebilirsiniz
+                                        .search-filter-item-right
+                                            input#switch4.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                .divider
+                                .search-filter-section
+                                    .search-filter-section__title Ödeme Seçenekleri
+                                    label.switch(for='switch11').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Hepsi
+                                            .search-filter-item__subtitle Tüm ödeme seçeneklerini dahil eder
+                                        .search-filter-item-right
+                                            input#switch11.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch22').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Sodexo
+                                        .search-filter-item-right
+                                            input#switch22.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch3').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Ticket
+                                        .search-filter-item-right
+                                            input#switch33.switch__input(type='checkbox')
+                                            span.switch__toggle
+                                    label.switch(for='switch44').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Online Ödeme
+                                        .search-filter-item-right
+                                            input#switch44.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                .search-filter-section
+                                    .search-filter-section__title Ödeme Seçenekleri
+                                    label.switch(for='switch11').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Hepsi
+                                            .search-filter-item__subtitle Tüm ödeme seçeneklerini dahil eder
+                                        .search-filter-item-right
+                                            input#switch11.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch22').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Sodexo
+                                        .search-filter-item-right
+                                            input#switch22.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                    label.switch(for='switch3').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Ticket
+                                        .search-filter-item-right
+                                            input#switch33.switch__input(type='checkbox')
+                                            span.switch__toggle
+                                    label.switch(for='switch44').search-filter-item
+                                        .search-filter-item-left
+                                            .search-filter-item__title Online Ödeme
+                                        .search-filter-item-right
+                                            input#switch44.switch__input(type='checkbox' checked='')
+                                            span.switch__toggle
+                                .search-filter__apply-button.button.button--red.button--icon.button--icon--right
+                                    span Filtreleri Uygula
+                                    i.icon.icon-arrow-right
 
 
 

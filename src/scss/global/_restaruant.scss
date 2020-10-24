@@ -297,6 +297,7 @@
 
 .foods-menu {
   margin-bottom: 15px;
+
   &__title {
     font-size: 16px;
   }
@@ -304,6 +305,141 @@
   &-items {
     .food-item {
       margin-top: 10px;
+    }
+  }
+}
+
+
+.comments {
+  &-add {
+    text-align: right;
+    margin-bottom: 5px;
+    color: $color-red;
+  }
+
+  &-filter {
+    &-wrapper {
+      max-width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    &-item {
+      flex-shrink: 0;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border: 1px solid rgba($color-text-light, .2);
+      border-radius: 4px;
+      color: $color-text-light;
+      font-weight: 300;
+      font-size: 13px;
+      background: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+
+      &.active {
+        border-color: $color-red;
+        background-color: $color-red;
+        color: #FFF;
+        font-weight: 500;
+      }
+
+      i {
+        color: $color-yellow;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-item {
+    background: #FFF;
+    padding-bottom: 10px;
+
+    &-head {
+    }
+
+    &-profile {
+      display: flex;
+
+      &__image {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+
+
+      &__star {
+        i {
+          color: $color-yellow;
+
+        }
+
+        i + i {
+          margin-left: 3px;
+        }
+      }
+    }
+
+    &-info {
+      margin-left: 10px;
+      padding-right: 15px;
+    }
+
+    &__date {
+      color: $color-text-light;
+      font-weight: 300;
+      font-size: 12px;
+      margin-left: auto;
+    }
+
+    &-content {
+      margin-top: 5px;
+      padding-top: 5px;
+      border-top: 1px dashed $color-divider;
+
+      &__text {
+        color: $color-text-light;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.4em;
+      }
+
+      &-images {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed $color-divider;
+        overflow-x: scroll;
+        &__item {
+          width: 60px;
+          height: 60px;
+          overflow: hidden;
+          border-radius: 7px;
+          margin-right: 10px;
+          flex-shrink: 0;
+
+          img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            object-position: top center;
+          }
+        }
+      }
     }
   }
 }

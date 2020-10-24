@@ -25,7 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-fence:before {
   content: "\e90c";
 }
@@ -46,6 +45,9 @@
 }
 .icon-chevron-right:before {
   content: "\e918";
+}
+.icon-edit:before {
+  content: "\e929";
 }
 .icon-filter:before {
   content: "\e919";
@@ -92,9 +94,6 @@
 .icon-shopping-cart:before {
   content: "\e925";
 }
-.icon-star:before {
-  content: "\e91f";
-}
 .icon-trash-2:before {
   content: "\e928";
 }
@@ -106,6 +105,12 @@
 }
 .icon-wifi-off:before {
   content: "\e922";
+}
+.icon-star:before {
+  content: "\e92a";
+}
+.icon-star-fill:before {
+  content: "\e92b";
 }
 .icon-bookmark:before {
   content: "\e916";

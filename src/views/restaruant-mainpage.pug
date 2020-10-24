@@ -161,7 +161,7 @@ block content
 
 
 
-                    #menu.tabcontent.active
+                    #menu.tabcontent
                         .restaruant-mainpage.within_back_area.p-0
                             .p-20.mb-10.restaruant-mainpage-summary
                                 .restaruant-mainpage-summary-image
@@ -257,9 +257,89 @@ block content
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
-                    #yorum.tabcontent
+                    #yorum.tabcontent.active
                         .restaruant-mainpage.within_back_area.p-0
-                            | Yorumlar
+                            .comments-head.p-20.mt-10
+                                .comments-add
+                                    i.icon-edit.mr-2
+                                    span Yorum Yaz
+                                .input-wrapper.search
+                                    i.icon-search.input-icon
+                                    input.input(type="text",placeholder="Yorumlarda Ara")
+                                .comments-filter-wrapper
+                                    .comments-filter-item.active Yorumlarım
+                                    .comments-filter-item En Güncel
+                                    .comments-filter-item Fotoğraflı
+                                    .comments-filter-item
+                                        i.icon-star-fill
+                                        span 5 Yıldız
+                                    .comments-filter-item
+                                        i.icon-star-fill
+                                        span 4 Yıldız
+                                    .comments-filter-item
+                                        i.icon-star-fill
+                                        span 3 Yıldız
+                                    .comments-filter-item
+                                        i.icon-star-fill
+                                        span 2 Yıldız
+                                    .comments-filter-item
+                                        i.icon-star
+                                        span 1 Yıldız
+
+                            .divider
+                            .comments
+                                .comments-item.p-20
+                                    .comments-item-head
+                                        .comments-item-profile
+                                            .comments-item-profile__image
+                                                img(src="img/mehmet.jpg")
+                                            .comments-item-info
+                                                .comments-item-profile__name
+                                                    | Mehmet Baz
+                                                .comments-item-profile__star
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star
+                                            .comments-item__date 13.10.2020
+                                    .comments-item-content
+                                        .comments-item-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore, laboriosam libero mollitia qui rerum similique suscipit voluptate voluptate.
+                                        .comments-item-content-images
+                                            .comments-item-content-images__item
+                                                img(src="img/bg1.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg2.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg3.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg1.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg2.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg3.jpg")
+
+
+
+                                .divider
+                                .comments-item.p-20
+                                    .comments-item-head
+                                        .comments-item-profile
+                                            .comments-item-profile__image
+                                                img(src="img/mehmet.jpg")
+                                            .comments-item-info
+                                                .comments-item-profile__name
+                                                    | Mehmet Baz
+                                                .comments-item-profile__star
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star
+                                                    i.icon-star
+                                                    i.icon-star
+                                            .comments-item__date 17.10.2020
+                                    .comments-item-content
+                                        .comments-item-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore, laboriosam libero mollitia qui rerum similique suscipit voluptate voluptate.
+
                 .restaruant-tabs
                     .restaruant-tabs-item.tab-item(data-href="genel") Genel
                     .restaruant-tabs-item.tab-item.active(data-href="menu") Menü

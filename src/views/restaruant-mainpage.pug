@@ -258,7 +258,7 @@ block content
                     #yorum.tabcontent.active
                         .restaruant-mainpage.within_back_area.p-0
                             .comments-head.p-20.mt-10
-                                .comments-add
+                                .comments-add(onclick='$("#selectOrderToWriteComment").addClass("active"); ')
                                     i.icon-edit.mr-2
                                     span Yorum Yaz
                                 .input-wrapper.search
@@ -388,7 +388,7 @@ block content
                                         .order-item-content__amount
                                             div Toplam Tutar
                                             span 123.53 TL
-                            .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                            .apply-button.button.button--red.button--icon.button--icon--right.mt-20(onclick='$("#selectOrderToWriteComment").removeClass("active");$("#writeComment").addClass("active"); ')
                                 span Devam Et
                                 i.icon.icon-arrow-right
                 #writeComment.bottom-modal

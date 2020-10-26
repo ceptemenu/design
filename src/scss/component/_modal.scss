@@ -10,9 +10,29 @@
   overflow-y: auto;
   transform: translateY(100%);
   transition: .7s;
-  &.active{
-   transform: translateY(0);
+
+  &.active {
+    transform: translateY(0);
   }
+
+  &-content {
+    text-align: center;
+
+    &__title {
+      color: $color-title;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      color: $color-text-light;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1em;
+    }
+  }
+
   &__divider {
     width: 100%;
     position: sticky;
@@ -22,6 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     span {
       width: 40px;
       margin: 10px auto;

@@ -25,6 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-fence:before {
   content: "\e90c";
 }
@@ -36,6 +37,9 @@
 }
 .icon-arrow-right:before {
   content: "\e902";
+}
+.icon-camera:before {
+  content: "\e91f";
 }
 .icon-check:before {
   content: "\e903";
@@ -57,6 +61,9 @@
 }
 .icon-home:before {
   content: "\e924";
+}
+.icon-image:before {
+  content: "\e92c";
 }
 .icon-lock:before {
   content: "\e90e";

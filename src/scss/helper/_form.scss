@@ -272,3 +272,15 @@
     border: 2px solid #f2f2f2;
   }
 }
+
+textarea{
+  border: 1px solid #eee;
+  color: $color-text;
+  border-radius: $border-radius;
+  padding: $input-padding;
+  width: 100%;
+  background: #FFF;
+  &::placeholder{
+    color: rgba($color-text-light,.4);
+  }
+}

@@ -248,8 +248,6 @@ block content
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
-
-
                                 .foods-menu
                                     .foods-menu__title Burgerler
                                     .foods-menu-items
@@ -344,6 +342,116 @@ block content
                     .restaruant-tabs-item.tab-item(data-href="genel") Genel
                     .restaruant-tabs-item.tab-item.active(data-href="menu") Menü
                     .restaruant-tabs-item.tab-item(data-href="yorum") Yorumlar
+                #selectOrderToWriteComment.bottom-modal.active
+                    .bottom-modal__divider(onclick='$("#selectOrderToWriteComment").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Sipariş Seç
+                        p.bottom-modal-content__text Yorum yazmak istediğiniz siparişi aşağıdan seçerek devam ediniz.
+                        .divider
+                        .comment-write-select-order
+                            .order-item-input_wrapper
+                                input#siparis1(type="radio",name="siparis").order-item-input
+                                label(for="siparis1").order-item
+                                    .order-item-image
+                                        img(src="img/restaruant/gunaydin.jpg")
+                                        .select_area
+                                            i.icon.icon-check
+                                    .order-item-content
+                                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                                        .order-item-content__text
+                                            span 3x Çay
+                                            span 1x Magnolia
+                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                                            span 1x Su
+                                        .order-item-content__amount
+                                            div Toplam Tutar
+                                            span 123.53 TL
+                            .order-item-input_wrapper
+                                input#siparis2(type="radio",name="siparis").order-item-input
+                                label(for="siparis2").order-item
+                                    .order-item-image
+                                        img(src="img/restaruant/gunaydin.jpg")
+                                        .select_area
+                                            i.icon.icon-check
+                                    .order-item-content
+                                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                                        .order-item-content__text
+                                            span 3x Çay
+                                            span 1x Magnolia
+                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                                            span 3x Çay
+                                            span 1x Magnolia
+                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                                            span 1x Su
+                                            span 1x Su
+                                        .order-item-content__amount
+                                            div Toplam Tutar
+                                            span 123.53 TL
+                            .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                                span Devam Et
+                                i.icon.icon-arrow-right
+                #writeComment.bottom-modal
+                    .bottom-modal__divider(onclick='$("#writeComment").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Yorum Yap
+                        p.bottom-modal-content__text Seçtiğiniz sipariş için yorum yapabilirsiniz.
+                        .divider
+                        .comment-write
+                            .order-item
+                                .order-item-image
+                                    img(src="img/restaruant/gunaydin.jpg")
+
+                                .order-item-content
+                                    .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                                    .order-item-content__text
+                                        span 3x Çay
+                                        span 1x Magnolia
+                                        span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                                        span 1x Su
+                                    .order-item-content__amount
+                                        div Toplam Tutar
+                                        span 123.53 TL
+                            .comment-write__title Değerlendir
+                            .comment-write-star-content
+                                i.star.icon-star-fill
+                                i.star.icon-star-fill
+                                i.star.icon-star-fill
+                                i.star.icon-star
+                                i.star.icon-star
+                            .comment-write__title Fotoğraf Yükle
+                            .comment-write-upload
+                                .comment-write-upload__image.upload-image
+                                    i.icon.icon-image
+                                .comment-write-upload__image
+                                    img(src="img/restaruant/gunaydin.jpg")
+                                    span.comment-write-upload__close
+                                        i.icon.icon-close
+                                .comment-write-upload__image
+                                    img(src="img/restaruant/gunaydin.jpg")
+                                    span.comment-write-upload__close
+                                        i.icon.icon-close
+                                .comment-write-upload__image
+                                    img(src="img/restaruant/gunaydin.jpg")
+                                    span.comment-write-upload__close
+                                        i.icon.icon-close
+                                .comment-write-upload__image
+                                    img(src="img/restaruant/gunaydin.jpg")
+                                    span.comment-write-upload__close
+                                        i.icon.icon-close
+                            .comment-write__title Yorum Yaz
+                            textarea.comment-write-text(placeholder="Siparişinizle ilgili görüşlerinizi yazın.")
+
+
+                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                            span Gönder Gitsin
+                            i.icon.icon-arrow-right
+
+
+
+
+
 
 
 

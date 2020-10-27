@@ -648,3 +648,169 @@
     }
   }
 }
+
+.customize-food {
+  &__title {
+    font-size: 14px;
+    color: $color-text-light;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  &-item {
+    width: 100%;
+
+    &__image {
+      height: 130px;
+      width: 100%;
+      background: #fafafa;
+
+      img {
+        object-fit: contain;
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+      margin-top: 10px;
+
+      &__title {
+        font-size: 16px;
+        line-height: 1.4em;
+        margin-bottom: 5px;
+      }
+
+      &__ingredients {
+        font-size: 10px;
+        color: $color-text-light;
+        font-weight: 300;
+        overflow: hidden;
+        line-height: 13px;
+      }
+
+      /*    &__amount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 1px dashed $color-divider;
+            padding-top: 3px;
+            margin-top: 5px;
+
+            span {
+              color: $color-red;
+            }
+          }*/
+      &-selects {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .select-item {
+          display: inline-flex;
+          margin-right: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+#customizeFood {
+  .bottom-modal-content {
+    padding-bottom: 60px;
+  }
+}
+
+.add-cart-buttons {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF;
+
+  .select-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+    &-button {
+      width: 27px;
+      border-radius: 0 $border-radius $border-radius 0;
+      height: 40px;
+      color: $color-title;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #eee;
+      background: #FFF;
+      border-left: 0;
+      &.left{
+        border-radius: $border-radius 0 0 $border-radius;
+        border-right: 0;
+        border-left: 1px solid #eee;
+
+
+      }
+    }
+
+    &-num {
+      width: 27px;
+      height: 40px;
+      background: $color-red;
+      color: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.add-cart-button {
+  padding-left: 10px;
+  font-size: 12px;
+  &__amount {
+    color: $color-red;
+    margin-left: auto;
+    background: #FFF;
+    border-radius: 0 $border-radius $border-radius 0;
+    height: 100%;
+    padding: 0 15px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    font-size: 12px;
+
+  }
+}
+
+.cart-button{
+  padding: 5px 10px;
+  background: $color-red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 12px;
+  border-radius: $border-radius;
+  //margin-right: 10px;
+  i{
+    margin-right: 5px;
+    font-size: 10px;
+  }
+}

@@ -211,6 +211,16 @@ a {
   padding: 10px;
   box-shadow: 0 4px 24px -8px $color-shadow;
   height: 40px;
+  align-items: center;
+  .logo-wrapper{
+    height: 14px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 50px;
+    img{
+      height: inherit;
+    }
+  }
 
   &-item {
     font-size: 13px;

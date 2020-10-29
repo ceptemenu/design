@@ -102,6 +102,8 @@
 
     .address {
       font-weight: 300;
+      display: flex;
+      align-items: center;
 
       i {
         margin-right: 10px;
@@ -659,6 +661,13 @@
     font-weight: 500;
   }
 
+  &__text {
+    font-size: 10px;
+    font-weight: 300;
+    color: $color-text-light;
+    opacity: .7;
+  }
+
   &-item {
     width: 100%;
 
@@ -731,6 +740,12 @@
   }
 }
 
+#createReservation {
+  .bottom-modal-content {
+    padding-bottom: 100px;
+  }
+}
+
 .add-cart-buttons {
 
   display: flex;
@@ -757,7 +772,8 @@
       border: 1px solid #eee;
       background: #FFF;
       border-left: 0;
-      &.left{
+
+      &.left {
         border-radius: $border-radius 0 0 $border-radius;
         border-right: 0;
         border-left: 1px solid #eee;
@@ -781,6 +797,7 @@
 .add-cart-button {
   padding-left: 10px;
   font-size: 12px;
+
   &__amount {
     color: $color-red;
     margin-left: auto;
@@ -799,7 +816,7 @@
   }
 }
 
-.cart-button{
+.cart-button {
   padding: 5px 10px;
   background: $color-red;
   display: flex;
@@ -809,8 +826,9 @@
   font-size: 12px;
   border-radius: $border-radius;
   //margin-right: 10px;
-  i{
+  i {
     margin-right: 5px;
     font-size: 10px;
   }
 }
+

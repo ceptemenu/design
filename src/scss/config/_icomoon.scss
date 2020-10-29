@@ -26,6 +26,10 @@
 }
 
 
+
+.icon-credit-card:before {
+  content: "\e930";
+}
 .icon-fence:before {
   content: "\e90c";
 }
@@ -37,6 +41,9 @@
 }
 .icon-arrow-right:before {
   content: "\e902";
+}
+.icon-calendar:before {
+  content: "\e92f";
 }
 .icon-camera:before {
   content: "\e91f";

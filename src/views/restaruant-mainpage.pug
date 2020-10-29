@@ -24,7 +24,7 @@ block content
                             i.icon-bookmark
                             i.icon-bookmark-fill
                 .restaruant-mainpage.within_back_area.p-0
-                    #genel.tabcontent
+                    #genel.tabcontent.active
                         .restaruant-mainpage-slider
                             img(src="img/restaruant/gunaydin2.jpg")
                             .restaruant-mainpage-slider__count 1/4
@@ -56,7 +56,7 @@ block content
                                 i.icon.icon-map-direction
                                 | Serinsu, Üsküdar, İstanbul
                             .paytype.address
-                                i.icon.icon-qr-code-scan
+                                i.icon.icon-credit-card
                                 | Ödeme Seçenekleri
                         .divider
                         .restaruant-mainpage-buttons
@@ -72,8 +72,8 @@ block content
                             .divider-circle
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
-                                    i.icon.icon-flag
-                                .restaruant-mainpage-buttons__title Hata Bildir
+                                    i.icon.icon-calendar
+                                .restaruant-mainpage-buttons__title(onclick='$("#createReservation").addClass("active")') Rezervasyon
                         .divider
                         .food.p-20.mb-0
                             .see_all-wrapper.mt-0
@@ -162,7 +162,7 @@ block content
                                                 i.icon.icon-placeholder
                                                 span 2.5 Km
 
-                    #menu.tabcontent.active
+                    #menu.tabcontent
                         .restaruant-mainpage.within_back_area.p-0
                             .p-20.mb-10.restaruant-mainpage-summary
                                 .restaruant-mainpage-summary-image
@@ -448,7 +448,7 @@ block content
                         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
                             span Gönder Gitsin
                             i.icon.icon-arrow-right
-                #customizeFood.bottom-modal.active
+                #customizeFood.bottom-modal
                     .bottom-modal__divider(onclick='$("#customizeFood").removeClass("active")')
                         span
                     .bottom-modal-content
@@ -526,7 +526,69 @@ block content
                             .button.button--red.button--icon.button--icon--right.add-cart-button
                                 span Sepete Ekle
                                 .add-cart-button__amount 241.98 TL
+                #createReservation.bottom-modal.active
+                    .bottom-modal__divider(onclick='$("#createReservation").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Rezervasyon Yap
+                        p.bottom-modal-content__text Restoranda rezervasyon yapmak için aşağıdaki ...........
+                        .divider
+                        .customize-food
+                            .customize-food-item
+                                .customize-food-item-content
+                                .customize-food__title Rezervasyon Tarih
+                                    .customize-food__text Rezervasyon yaptıracağınız tarihi seçiniz.
+                                img.w-100(src="img/calendar.png", style="")
+                                .customize-food__title Rezervasyon Saati
+                                    .customize-food__text Rezervasyon yaptıracağınız saat aralığını seçiniz.
+                                img.w-100(src="https://raw.githubusercontent.com/henninghall/react-native-date-picker/master/docs/time-mode-android.png")
+                                .customize-food__title Masanın Özellikleri
+                                    .customize-food__text Rezerve edeceğiniz masanın özelliklerini seçebilirsiniz.
+                                .customize-food-item-content-selects
+                                    .select-item
+                                        label.tick-checkbox.strike-through
+                                            input.tick-checkbox__input(type='checkbox' checked='')
+                                            span.tick-checkbox__toggle
+                                            .tick-checkbox__content
+                                                .tick-checkbox__title
+                                                    | Priz
+                                    .select-item
+                                        label.tick-checkbox.strike-through
+                                            input.tick-checkbox__input(type='checkbox' checked='')
+                                            span.tick-checkbox__toggle
+                                            .tick-checkbox__content
+                                                .tick-checkbox__title
+                                                    | Sigara İçilebilir Alan
+                                    .select-item
+                                        label.tick-checkbox.strike-through
+                                            input.tick-checkbox__input(type='checkbox' checked='')
+                                            span.tick-checkbox__toggle
+                                            .tick-checkbox__content
+                                                .tick-checkbox__title
+                                                    | Cam Kenarı
+                                    .select-item
+                                        label.tick-checkbox.strike-through
+                                            input.tick-checkbox__input(type='checkbox' checked='')
+                                            span.tick-checkbox__toggle
+                                            .tick-checkbox__content
+                                                .tick-checkbox__title
+                                                    | Deniz Kenarı
 
+
+
+                                textarea.comment-write-text.mt-20(placeholder="Rezervasyon için ekstra notunuz varsa ekleyebilirsiniz")
+                                .customize-food__title Seçilebilir Masalar
+                                    .customize-food__text Girdiğiniz kriterlere uygun masalar listelenmiştir.
+                                    select.d-block.mt-10.w-100
+                                        option B-11
+                                        option C-22
+                                        option C-22
+                                        option C-22
+                                        option C-22
+
+                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                            span Rezervasyon Yap
+                            i.icon-arrow-right
 
 
 

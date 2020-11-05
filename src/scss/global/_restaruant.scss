@@ -742,6 +742,12 @@
 
 #createReservation {
   .bottom-modal-content {
+    padding-bottom: 60px;
+  }
+}
+
+#bill {
+  .bottom-modal-content {
     padding-bottom: 100px;
   }
 }
@@ -753,44 +759,45 @@
   align-items: center;
   background: #FFF;
 
-  .select-count {
+}
+
+.select-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+  margin-right: 10px;
+
+  &-button {
+    width: 27px;
+    border-radius: 0 $border-radius $border-radius 0;
+    height: 40px;
+    color: $color-title;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    flex-shrink: 0;
-    margin-right: 10px;
+    border: 1px solid #eee;
+    background: #FFF;
+    border-left: 0;
 
-    &-button {
-      width: 27px;
-      border-radius: 0 $border-radius $border-radius 0;
-      height: 40px;
-      color: $color-title;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #eee;
-      background: #FFF;
-      border-left: 0;
-
-      &.left {
-        border-radius: $border-radius 0 0 $border-radius;
-        border-right: 0;
-        border-left: 1px solid #eee;
+    &.left {
+      border-radius: $border-radius 0 0 $border-radius;
+      border-right: 0;
+      border-left: 1px solid #eee;
 
 
-      }
     }
+  }
 
-    &-num {
-      width: 27px;
-      height: 40px;
-      background: $color-red;
-      color: #FFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  &-num {
+    width: 27px;
+    height: 40px;
+    background: $color-red;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -832,3 +839,247 @@
   }
 }
 
+
+.bill {
+  &-order {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      /*border-bottom: 1px solid $color-divider;
+      padding-bottom: 15px;
+     */
+      margin-bottom: 15px;
+
+      &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .name {
+          color: $color-title;
+          font-size: 15px;
+        }
+
+        .date {
+          color: $color-text-light;
+          font-size: 13px;
+        }
+      }
+
+      &__table-no {
+
+      }
+    }
+
+    &-content {
+      margin-bottom: 20px;
+      padding: 10px;
+      box-shadow: 0 0 10px $color-shadow;
+      border-radius: 10px;
+
+      &__title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        border-top: 1px dashed $color-divider;
+        padding-top: 5px;
+      }
+
+      &-items {
+        margin-top: 15px;
+
+      }
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &.odendi {
+          opacity: .4;
+
+          .product {
+            &-count {
+              filter: grayscale(1);
+            }
+
+            &-name {
+              text-decoration: line-through;
+            }
+
+            &-price {
+              text-decoration: line-through;
+            }
+          }
+        }
+
+        &.secildi {
+          flex-wrap: wrap;
+
+          .product {
+            &-count {
+              background-color: $color-orange;
+            }
+          }
+
+          .secildi-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 300;
+            color: $color-orange--dark;
+            text-align: left;
+            width: 100%;
+
+            &__button {
+              background-color: $color-text-dark;
+              color: #FFF;
+              padding: 2px 6px;
+              font-size: 9px;
+              border-radius: 4px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .sil__button {
+              background-color: $color-text-dark;
+              color: #FFF;
+              padding: 0;
+              width: 20px;
+              height: 20px;
+              font-size: 8px;
+              border-radius: 4px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        .kismi_odeme {
+          position: absolute;
+          font-size: 10px;
+          color: $color-text-light;
+          opacity: .6;
+          font-weight: 300;
+        }
+
+        .product {
+          &-count {
+            margin-right: 5px;
+            background-color: $color-red;
+            color: #FFF;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            width: 20px;
+            flex-shrink: 0;
+            height: 20px;
+          }
+
+          &-name {
+            color: $color-text-dark;
+            font-size: 12px;
+            position: relative;
+          }
+
+          &-price {
+            color: $color-red;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .apply-button {
+    background-color: #FFF;
+
+    .button--light {
+      width: auto;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .button--red {
+      margin-top: 0;
+    }
+  }
+}
+
+.bill-order-content-item + .bill-order-content-item {
+  margin-top: 10px;
+}
+
+.odeme_secenekleri {
+  padding-left: 20px;
+}
+
+.odenecek_urun_sayisi {
+  .select-count {
+    margin: 20px auto;
+    width: 83px;
+  }
+}
+
+.renk_turleri {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: $color-text-light;
+  font-weight: 300;
+
+  &-item {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &.black {
+      span {
+        background-color: #b5b5b5;
+      }
+    }
+
+    &.red {
+      span {
+        background-color: $color-red;
+      }
+
+    }
+
+    &.orange {
+      span {
+        background-color: $color-orange;
+      }
+    }
+
+    span {
+      display: block;
+      border-radius: 3px;
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+    }
+
+  }
+}

@@ -9,9 +9,17 @@
   user-select: none;
   position: relative;
   box-shadow: 0 4px 24px $color-shadow;
+  transition: .3s;
 
   & + & {
     margin-top: 10px;
+  }
+
+  &--sm {
+    height: 25px;
+    font-size: 12px;
+    width: max-content;
+    padding: 0 10px;
   }
 
   &--red {
@@ -23,8 +31,35 @@
     }
   }
 
+  &--orange {
+    background-color: $color-orange;
+    color: #FFF;
+
+    &:active, &:focus {
+      background-color: $color-orange--dark;
+    }
+  }
+
+  &--gray {
+    background-color: #ddd;
+    color: #333;
+  }
+
+
+  &--outline-red {
+    border: 1px solid $color-red;
+    color: $color-red;
+    box-shadow: none;
+
+    &:active, &:focus {
+      background-color: $color-red;
+      color: #fff;
+    }
+  }
+
   &--light {
     background-color: $color-button-light;
+    border: 1px solid #eee;
 
     &:active, &:focus {
       background-color: $color-button-light--focus;

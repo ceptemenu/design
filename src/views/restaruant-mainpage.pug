@@ -16,7 +16,7 @@ block content
                     .logo-wrapper
                         img(src="img/logo.svg")
                     .back-right.d-flex
-                        .cart-button(onclick="$(this).toggleClass('active')")
+                        .cart-button(onclick='$("#bill").addClass("active")')
                             i.icon-shopping-cart
                             span 123.55 TL
 
@@ -55,7 +55,7 @@ block content
                             .address
                                 i.icon.icon-map-direction
                                 | Serinsu, Üsküdar, İstanbul
-                            .paytype.address
+                            .paytype.address(onclick='$("#bill").addClass("active")')
                                 i.icon.icon-credit-card
                                 | Ödeme Seçenekleri
                         .divider
@@ -512,9 +512,6 @@ block content
                                                         span (+5 TL)
                                 .customize-food__title Sipariş Notu
                                 textarea.comment-write-text(placeholder="Sipariş Notunuzu Ekleyebilirsiniz")
-
-
-
                         .add-cart-buttons.apply-button.d-flex.mt-20
                             .select-count
                                 .select-count-button.left
@@ -526,7 +523,7 @@ block content
                             .button.button--red.button--icon.button--icon--right.add-cart-button
                                 span Sepete Ekle
                                 .add-cart-button__amount 241.98 TL
-                #createReservation.bottom-modal.active
+                #createReservation.bottom-modal
                     .bottom-modal__divider(onclick='$("#createReservation").removeClass("active")')
                         span
                     .bottom-modal-content
@@ -589,7 +586,150 @@ block content
                         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
                             span Rezervasyon Yap
                             i.icon-arrow-right
+                #bill.bottom-modal.bill.active
+                    .bottom-modal__divider(onclick='$("#bill").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Adisyon
+                        p.bottom-modal-content__text Verdiğiniz siparişler ve ürünler aşağıda listelenmiştir.
+                        .renk_turleri
+                            .renk_turleri-item.red
+                                span
+                                p.text Ödenmedi
+                            .renk_turleri-item.orange
+                                span
+                                p.text Seçildi
+                            .renk_turleri-item.black
+                                span
+                                p.text Ödendi
+                        .divider
+                        .bill-content
+                            .bill-order
+                                .bill-order-header
+                                    .bill-order-header__title
+                                        .name Muhammet Celepci
+                                        .date 05.11.2020
+                                    .bill-order-header__table-no.status.status--danger Masa 12
+                                .bill-order-content
+                                    .bill-order-content-header
+                                        .bill-order-content__title Sipariş No: #257
+                                        .button.button--sm.button--red Tümünü Seç
+                                    .bill-order-content-items
+                                        .bill-order-content-item
+                                            .d-flex
+                                                .product-count 2
+                                                .product-name Su
+                                            .product-price 5.00 TL
+                                        .divider.divider--small
+                                        .bill-order-content-item.odendi
+                                            .d-flex
+                                                .product-count 1
+                                                .product-name Fincan Çay
+                                            .product-price 4.00 TL
+                                        .divider.divider--small
+                                        .bill-order-content-item.secildi
+                                            .d-flex
+                                                .product-count 8
+                                                .product-name Tereyağlı İskender
+                                            .product-price 80.00 TL
+                                            .secildi-text 2 Adet Seçildi
+                                                include blocks/secildi_buttons
+                                        .bill-order-content-item.odendi
+                                            .d-flex
+                                                .product-count 2
+                                                .product-name Tereyağlı İskender
+                                            .product-price 20.00 TL
+                                        .divider.divider--small
+                                        .bill-order-content-item.secildi
+                                            .d-flex
+                                                .product-count 2
+                                                .product-name Su
+                                            .product-price 5.00 TL
+                                            .secildi-text Tamamı Seçildi
+                                                include blocks/secildi_buttons
+                                        .bill-order-content-footer
+                                            .title Toplam
+                                            .amount 122.22 TL
 
+                                .bill-order-content
+                                    .bill-order-content-header
+                                        .bill-order-content__title Sipariş No: #258
+                                        .button.button--sm.button--gray Ödendi
+                                    .bill-order-content-items
+                                        .bill-order-content-item.odendi
+                                            .d-flex
+                                                .product-count 2
+                                                .product-name Su
+                                            .product-price 5.00 TL
+                                        .divider.divider--small
+                                        .bill-order-content-item.odendi
+                                            .d-flex
+                                                .product-count 1
+                                                .product-name Fincan Çay
+                                            .product-price 4.00 TL
+                                .bill-order-content
+                                    .bill-order-content-header
+                                        .bill-order-content__title Sipariş No: #258
+                                        .button.button--sm.button--orange Tümünü Kaldır
+                                    .bill-order-content-items
+                                        .bill-order-content-item.secildi
+                                            .d-flex
+                                                .product-count 2
+                                                .product-name Su
+                                            .product-price 5.00 TL
+                                            .secildi-text Tamamı Seçildi
+                                                include blocks/secildi_buttons
+                                        .divider.divider--small
+                                        .bill-order-content-item.secildi
+                                            .d-flex
+                                                .product-count 1
+                                                .product-name Fincan Çay
+                                            .product-price 4.00 TL
+                                            .secildi-text Tamamı Seçildi
+                                                include blocks/secildi_buttons
+
+
+                                        .bill-order-content-footer
+                                            .title Toplam
+                                            .amount 9.00 TL
+
+                        .apply-button.d-flex.mt-20
+                            .button.button--light
+                                span 542.00 TL
+                            .button.button--red.button--icon.button--icon--right
+                                span Hesabı Öde
+                                i.icon-arrow-right
+                #odenecek_urun_sayisi.popup.odenecek_urun_sayisi
+                    .popup-content
+                        .popup__baslik Ödenecek Ürün Sayısı Seçimi
+
+                        .divider.divider--small
+                        .popup__text
+                            b.mr-1 Tereyağlı iskender
+                            span ürününden kaç adet ödemek istediğinizi seçiniz.
+                        .select-count
+                            .select-count-button.left
+                                i.icon-minus
+                            .select-count-num 2
+                            .select-count-button
+                                i.icon-plus
+
+                        .button.button--outline-red(onclick='$("#odenecek_urun_sayisi").removeClass("active")') Tamam
+                #odeme_secenekleri.popup
+                    .popup-content
+                        .baslik Ödeme Seçenekleri
+                        .divider.divider--small
+                        ul.odeme_secenekleri
+                            li Kredi Kartı (POS)
+                            li Nakit Ödeme
+                            li Online Ödeme
+                            li Setcard
+                            li Multinet
+                            li Ticket Card
+                            li Sodexo
+                            li Sodexo
+
+                        .button.button--outline-red(onclick='$("#odeme_secenekleri").removeClass("active")') Tamam
 
 
 

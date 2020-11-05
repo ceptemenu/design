@@ -343,6 +343,11 @@ a {
   height: 2px;
   background-color: $color-divider;
   margin: 15px 0;
+  &--small{
+    margin:4px 0;
+    height: 1px;
+    opacity: .5;
+  }
 }
 
 .divider-circle {

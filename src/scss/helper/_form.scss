@@ -69,15 +69,36 @@
   }
 }
 
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & + & {
+    margin-top: 10px;
+  }
+
+  &-item {
+    width: calc(50% - 5px);
+  }
+
+  &-title {
+    color: $color-text-light;
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-align: left;
+  }
+}
+
 .input {
-  border: 1px solid transparent;
+  border: 1px solid #eee;
   color: $color-text;
   border-radius: $border-radius;
-  padding: $input-padding;
   width: 100%;
   background: #FFF;
-  padding-left: 35px;
+  padding: 0 $input-padding 0 35px;
   box-shadow: 0 4px 24px -5px $color-shadow;
+  height: 40px;
 
   &:focus {
     border-color: $color-border;
@@ -89,7 +110,7 @@
   }
 
   &.no-icon {
-    padding: $input-padding;
+    padding: 0 $input-padding;
   }
 
 
@@ -294,9 +315,11 @@ textarea {
   }
 }
 
-select{
-  border:1px solid #eee;
+select {
+  border: 1px solid #eee;
   border-radius: $border-radius;
   padding: 0 5px;
   height: 40px;
+  background: #FFF;
+  box-shadow: 0 4px 24px -5px $color-shadow;
 }

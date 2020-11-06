@@ -586,7 +586,7 @@ block content
                         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
                             span Rezervasyon Yap
                             i.icon-arrow-right
-                #bill.bottom-modal.bill.active
+                #bill.bottom-modal.bill
                     .bottom-modal__divider(onclick='$("#bill").removeClass("active")')
                         span
                     .bottom-modal-content
@@ -605,14 +605,21 @@ block content
                         .divider
                         .bill-content
                             .bill-order
+                                .button-group.mb-10.d-flex
+                                    .button.button--light.mr-3 Siparişlerim
+                                    .button.button--red.mt-0 Tüm Siparişler
                                 .bill-order-header
                                     .bill-order-header__title
-                                        .name Muhammet Celepci
-                                        .date 05.11.2020
-                                    .bill-order-header__table-no.status.status--danger Masa 12
+                                        .name.d-flex Muhammet Celepci
+                                            .status.status--danger.ml-1 +3 Kişi
+                                        .d-flex.align-items-center
+                                            .date 05.11.2020
+                                            .divider.divider-circle
+                                            .table-no.status.status--danger Masa 12
                                 .bill-order-content
                                     .bill-order-content-header
                                         .bill-order-content__title Sipariş No: #257
+                                            span Sipariş: Muhammet Celepci
                                         .button.button--sm.button--red Tümünü Seç
                                     .bill-order-content-items
                                         .bill-order-content-item
@@ -699,6 +706,107 @@ block content
                             .button.button--red.button--icon.button--icon--right
                                 span Hesabı Öde
                                 i.icon-arrow-right
+                #odemeTuruSec.bottom-modal.active
+                    .bottom-modal__divider(onclick='$("#odemeTuruSec").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Ödeme Türü Seç
+                        p.bottom-modal-content__text Ödenecek tutar
+                            b.ml-1 122.15 TL
+                        .divider
+                        .siparis-ozeti
+                            .siparis-ozeti__title Sipariş Özeti
+                            .siparis-ozeti-item
+                                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                                .siparis-ozeti-item__amount 40.00 TL
+                            .siparis-ozeti-item
+                                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                                .siparis-ozeti-item__amount 40.00 TL
+                            .siparis-ozeti-item
+                                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                                .siparis-ozeti-item__amount 40.00 TL
+                        .tumunu-gor Devamını Gör
+                            i.icon-chevron-down
+                        .divider
+                        .odeme-turu
+                            .odeme-turu__title Ödeme Türünü Seçiniz
+                            select.d-block.w-100
+                                option Kredi Kartı
+                                option Kredi Kartı Online
+                                option Nakit Ödeme
+                                option(selected) Sodexo Kart
+                            .odeme-turu-aciklama Sodexo için pos cihazı masanıza gelecektir. Lütfen tamamla diyerek ilerleyiniz.
+
+
+
+                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                            span Devam Et
+                            i.icon-arrow-right
+                #krediKartiOdeme.bottom-modal
+                    .bottom-modal__divider(onclick='$("#krediKartiOdeme").removeClass("active")')
+                        span
+                    .bottom-modal-content
+                        .bottom-modal-content__title Kredi Kartı İle Ödeme
+                        p.bottom-modal-content__text Ödenecek tutar
+                            b.ml-1 122.15 TL
+                        .divider
+                        form
+                            .input-group
+                                .input-group-title Ad Soyad
+                                .input-wrapper
+                                    input.input.no-icon(type="text",placeholder="Kart Sahibi Ad Soyad")
+                            .input-group
+                                .input-group-title Kart Numarası
+                                .input-wrapper
+                                    input.input.no-icon(type="number",placeholder="Kart Numarası")
+                            .input-group
+                                .input-group-item
+                                    .input-group-title Ay
+                                    .input-wrapper
+                                        select.w-100
+                                            option 01
+                                            option 02
+                                            option 03
+                                            option 04
+                                            option 05
+                                            option 06
+                                            option 07
+                                            option 08
+                                            option 09
+                                            option 10
+                                            option 11
+                                            option 12
+                                .input-group-item
+                                    .input-group-title Yıl
+                                    .input-wrapper
+                                        select.w-100
+                                            option 2020
+                                            option 2021
+                                            option 2022
+                                            option 2023
+                            .input-group
+                                .input-group-title CVV Kodu
+                                .input-wrapper
+                                    input.input.no-icon(type="number",placeholder="CVV Kodu")
+
+                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+                            span Devam Et
+                            i.icon-arrow-right
+                        .secure
+                            img(src='img/secure2.svg' alt='')
+                            p Kredi Kartı bilgileriniz güvenle korunmaktadır. Ve kesinlikle saklanmamaktadır.
+
+                        .accept-cards
+                            .accept-cards__item
+                                img(src='img/banka/mastercard.png' alt='')
+                            .accept-cards__item
+                                img(src='img/banka/american-express.png' alt='')
+                            .accept-cards__item
+                                img(src='img/banka/visa.png' alt='')
+                            .accept-cards__item
+                                img(src='img/banka/maestro.png' alt='')
+                            .accept-cards__item
+                                img(src='img/banka/jcb.png' alt='')
                 #odenecek_urun_sayisi.popup.odenecek_urun_sayisi
                     .popup-content
                         .popup__baslik Ödenecek Ürün Sayısı Seçimi

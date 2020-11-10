@@ -17,14 +17,13 @@ block content
                         img(src="img/logo.svg")
                     .back-right.d-flex
                         .cart-button(onclick='$("#bill").addClass("active")')
-                            i.icon-shopping-cart
-                            span 123.55 TL
-
+                            i.icon-credit-card
+                            | Adisyon
                         //.save-restaruant(onclick="$(this).toggleClass('active')")
                             i.icon-bookmark
                             i.icon-bookmark-fill
                 .restaruant-mainpage.within_back_area.p-0
-                    #genel.tabcontent.active
+                    #genel.tabcontent
                         .restaruant-mainpage-slider
                             img(src="img/restaruant/gunaydin2.jpg")
                             .restaruant-mainpage-slider__count 1/4
@@ -339,508 +338,109 @@ block content
                                     .comments-item-content
                                         .comments-item-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore, laboriosam libero mollitia qui rerum similique suscipit voluptate voluptate.
 
+                    #sepet.tabcontent.active
+                        .restaruant-mainpage.within_back_area.p-0
+                            .bill-content.p-20.mt-10
+                                .bill-title Sepetim
+                                .divider
+                                .bill-order
+                                    .bill-order-header
+                                        .bill-order-header__title
+                                            .name.d-flex Muhammet Celepci
+                                                .status.status--danger.ml-1 +3 Kişi
+                                            .d-flex.align-items-center
+                                                .date Günaydın Steak House
+                                                .divider.divider-circle
+                                                .table-no.status.status--danger Masa 12
+                                            .d-flex.align-items-center
+                                                span Toplam:
+                                                .status.status--danger.ml-1 123.99 TL
+                                    .food-item.food-item--extended.food-item
+                                        .food-item__image
+                                            img(src="img/food/hamburger.jpg")
+                                        .food-item-content
+                                            .food-item-content-top
+                                                .food-item__title Şefin Özel Burgeri
+                                                .d-flex
+                                                    .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
+                                                        i.icon.icon-plus-square
+                                                    .food-item__add-cart(style="transform:rotate(45deg)")
+                                                        i.icon-plus-circle
+                                            .food-item-content-bottom
+                                                .food-item__price 19.90 TL
+                                                .food-item__count.input-button-group
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-left
+                                                    input.input(type="text",value="1")
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-right
+
+                                    .food-item.food-item--extended
+                                        .food-item__image
+                                            img(src="img/food/iskender.jpg")
+                                        .food-item-content
+                                            .food-item-content-top
+                                                .food-item__title Tereyağlı İskender
+                                                .d-flex
+                                                    .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
+                                                        i.icon.icon-plus-square
+                                                    .food-item__add-cart(style="transform:rotate(45deg)")
+                                                        i.icon-plus-circle
+                                            .food-item-content-bottom
+                                                .food-item__price 19.90 TL
+                                                .food-item__count.input-button-group
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-left
+                                                    input.input(type="text",value="1")
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-right
+
+                                    .food-item.food-item--extended
+                                        .food-item__image
+                                            img(src="img/food/cay.jpg")
+                                        .food-item-content
+                                            .food-item-content-top
+                                                .food-item__title Çay
+                                                .d-flex
+                                                    .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
+                                                        i.icon.icon-plus-square
+                                                    .food-item__add-cart(style="transform:rotate(45deg)")
+                                                        i.icon-plus-circle
+                                            .food-item-content-bottom
+                                                .food-item__price 9.00 TL
+                                                .food-item__count.input-button-group
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-left
+                                                    input.input(type="text",value="3")
+                                                    .button.button--light.button--icon
+                                                        i.icon.icon-chevron-right
+                                .button.button--red.button--icon.button--icon--right.mt-3
+                                    span Sipariş Ver
+                                    i.icon-arrow-right
+
                 .restaruant-tabs
-                    .restaruant-tabs-item.tab-item(data-href="genel") Genel
-                    .restaruant-tabs-item.tab-item.active(data-href="menu") Menü
-                    .restaruant-tabs-item.tab-item(data-href="yorum") Yorumlar
-                #selectOrderToWriteComment.bottom-modal
-                    .bottom-modal__divider(onclick='$("#selectOrderToWriteComment").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Sipariş Seç
-                        p.bottom-modal-content__text Yorum yazmak istediğiniz siparişi aşağıdan seçerek devam ediniz.
-                        .divider
-                        .comment-write-select-order
-                            .order-item-input_wrapper
-                                input#siparis1(type="radio",name="siparis").order-item-input
-                                label(for="siparis1").order-item
-                                    .order-item-image
-                                        img(src="img/restaruant/gunaydin.jpg")
-                                        .select_area
-                                            i.icon.icon-check
-                                    .order-item-content
-                                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
-                                        .order-item-content__text
-                                            span 3x Çay
-                                            span 1x Magnolia
-                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                                            span 1x Su
-                                        .order-item-content__amount
-                                            div Toplam Tutar
-                                            span 123.53 TL
-                            .order-item-input_wrapper
-                                input#siparis2(type="radio",name="siparis").order-item-input
-                                label(for="siparis2").order-item
-                                    .order-item-image
-                                        img(src="img/restaruant/gunaydin.jpg")
-                                        .select_area
-                                            i.icon.icon-check
-                                    .order-item-content
-                                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
-                                        .order-item-content__text
-                                            span 3x Çay
-                                            span 1x Magnolia
-                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                                            span 3x Çay
-                                            span 1x Magnolia
-                                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                                            span 1x Su
-                                            span 1x Su
-                                        .order-item-content__amount
-                                            div Toplam Tutar
-                                            span 123.53 TL
-                            .apply-button.button.button--red.button--icon.button--icon--right.mt-20(onclick='$("#selectOrderToWriteComment").removeClass("active");$("#writeComment").addClass("active"); ')
-                                span Devam Et
-                                i.icon.icon-arrow-right
-                #writeComment.bottom-modal
-                    .bottom-modal__divider(onclick='$("#writeComment").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Yorum Yap
-                        p.bottom-modal-content__text Seçtiğiniz sipariş için yorum yapabilirsiniz.
-                        .divider
-                        .comment-write
-                            .order-item
-                                .order-item-image
-                                    img(src="img/restaruant/gunaydin.jpg")
-
-                                .order-item-content
-                                    .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
-                                    .order-item-content__text
-                                        span 3x Çay
-                                        span 1x Magnolia
-                                        span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                                        span 1x Su
-                                    .order-item-content__amount
-                                        div Toplam Tutar
-                                        span 123.53 TL
-                            .comment-write__title Değerlendir
-                            .comment-write-star-content
-                                i.star.icon-star-fill
-                                i.star.icon-star-fill
-                                i.star.icon-star-fill
-                                i.star.icon-star
-                                i.star.icon-star
-                            .comment-write__title Fotoğraf Yükle
-                            .comment-write-upload
-                                .comment-write-upload__image.upload-image
-                                    i.icon.icon-image
-                                .comment-write-upload__image
-                                    img(src="img/restaruant/gunaydin.jpg")
-                                    span.comment-write-upload__close
-                                        i.icon.icon-close
-                                .comment-write-upload__image
-                                    img(src="img/restaruant/gunaydin.jpg")
-                                    span.comment-write-upload__close
-                                        i.icon.icon-close
-                                .comment-write-upload__image
-                                    img(src="img/restaruant/gunaydin.jpg")
-                                    span.comment-write-upload__close
-                                        i.icon.icon-close
-                                .comment-write-upload__image
-                                    img(src="img/restaruant/gunaydin.jpg")
-                                    span.comment-write-upload__close
-                                        i.icon.icon-close
-                            .comment-write__title Yorum Yaz
-                            textarea.comment-write-text(placeholder="Siparişinizle ilgili görüşlerinizi yazın.")
-
-
-                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-                            span Gönder Gitsin
-                            i.icon.icon-arrow-right
-                #customizeFood.bottom-modal
-                    .bottom-modal__divider(onclick='$("#customizeFood").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Seçimi Onayla
-                        p.bottom-modal-content__text Seçiminizi özelleştirebilirsiniz.
-                        .divider
-                        .customize-food
-                            .customize-food-item
-                                .customize-food-item__image
-                                    img(src="img/food/hamburger.jpg")
-                                .customize-food-item-content
-                                    .customize-food-item-content__title Şefin Özel Sucuklusu
-                                    .customize-food-item-content__ingredients
-                                        | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
-                                    .customize-food__title Gramaj Seçimi
-                                    select.d-block
-                                        option 100 gram
-                                        option 200 gram (+12 TL)
-                                        option 300 gram (+24 TL)
-                                        option 400 gram (+36 TL)
-                                    .customize-food__title Özelleştir
-                                    .customize-food-item-content-selects
-                                        .select-item
-                                            label.tick-checkbox.strike-through
-                                                input.tick-checkbox__input(type='checkbox' checked='')
-                                                span.tick-checkbox__toggle
-                                                .tick-checkbox__content
-                                                    .tick-checkbox__title
-                                                        | Soğan
-                                        .select-item
-                                            label.tick-checkbox.strike-through
-                                                input.tick-checkbox__input(type='checkbox' checked='')
-                                                span.tick-checkbox__toggle
-                                                .tick-checkbox__content
-                                                    .tick-checkbox__title
-                                                        | Ketçap
-                                        .select-item
-                                            label.tick-checkbox.strike-through
-                                                input.tick-checkbox__input(type='checkbox' checked='')
-                                                span.tick-checkbox__toggle
-                                                .tick-checkbox__content
-                                                    .tick-checkbox__title
-                                                        | Mayonez
-                                    .customize-food__title Ekstra Ekle
-                                    .customize-food-item-content-selects
-                                        .select-item
-                                            label.tick-checkbox
-                                                input.tick-checkbox__input(type='checkbox')
-                                                span.tick-checkbox__toggle
-                                                .tick-checkbox__content
-                                                    .tick-checkbox__title
-                                                        | Çift Peynir
-                                                        span (+2 TL)
-                                        .select-item
-                                            label.tick-checkbox
-                                                input.tick-checkbox__input(type='checkbox')
-                                                span.tick-checkbox__toggle
-                                                .tick-checkbox__content
-                                                    .tick-checkbox__title
-                                                        | Büyük Seçim
-                                                        span (+5 TL)
-                                .customize-food__title Sipariş Notu
-                                textarea.comment-write-text(placeholder="Sipariş Notunuzu Ekleyebilirsiniz")
-                        .add-cart-buttons.apply-button.d-flex.mt-20
-                            .select-count
-                                .select-count-button.left
-                                    i.icon-minus
-                                .select-count-num 2
-                                .select-count-button
-                                    i.icon-plus
-
-                            .button.button--red.button--icon.button--icon--right.add-cart-button
-                                span Sepete Ekle
-                                .add-cart-button__amount 241.98 TL
-                #createReservation.bottom-modal
-                    .bottom-modal__divider(onclick='$("#createReservation").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Rezervasyon Yap
-                        p.bottom-modal-content__text Restoranda rezervasyon yapmak için aşağıdaki ...........
-                        .divider
-                        .customize-food
-                            .customize-food-item
-                                .customize-food-item-content
-                                .customize-food__title Rezervasyon Tarih
-                                    .customize-food__text Rezervasyon yaptıracağınız tarihi seçiniz.
-                                img.w-100(src="img/calendar.png", style="")
-                                .customize-food__title Rezervasyon Saati
-                                    .customize-food__text Rezervasyon yaptıracağınız saat aralığını seçiniz.
-                                img.w-100(src="https://raw.githubusercontent.com/henninghall/react-native-date-picker/master/docs/time-mode-android.png")
-                                .customize-food__title Masanın Özellikleri
-                                    .customize-food__text Rezerve edeceğiniz masanın özelliklerini seçebilirsiniz.
-                                .customize-food-item-content-selects
-                                    .select-item
-                                        label.tick-checkbox.strike-through
-                                            input.tick-checkbox__input(type='checkbox' checked='')
-                                            span.tick-checkbox__toggle
-                                            .tick-checkbox__content
-                                                .tick-checkbox__title
-                                                    | Priz
-                                    .select-item
-                                        label.tick-checkbox.strike-through
-                                            input.tick-checkbox__input(type='checkbox' checked='')
-                                            span.tick-checkbox__toggle
-                                            .tick-checkbox__content
-                                                .tick-checkbox__title
-                                                    | Sigara İçilebilir Alan
-                                    .select-item
-                                        label.tick-checkbox.strike-through
-                                            input.tick-checkbox__input(type='checkbox' checked='')
-                                            span.tick-checkbox__toggle
-                                            .tick-checkbox__content
-                                                .tick-checkbox__title
-                                                    | Cam Kenarı
-                                    .select-item
-                                        label.tick-checkbox.strike-through
-                                            input.tick-checkbox__input(type='checkbox' checked='')
-                                            span.tick-checkbox__toggle
-                                            .tick-checkbox__content
-                                                .tick-checkbox__title
-                                                    | Deniz Kenarı
-
-
-
-                                textarea.comment-write-text.mt-20(placeholder="Rezervasyon için ekstra notunuz varsa ekleyebilirsiniz")
-                                .customize-food__title Seçilebilir Masalar
-                                    .customize-food__text Girdiğiniz kriterlere uygun masalar listelenmiştir.
-                                    select.d-block.mt-10.w-100
-                                        option B-11
-                                        option C-22
-                                        option C-22
-                                        option C-22
-                                        option C-22
-
-                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-                            span Rezervasyon Yap
-                            i.icon-arrow-right
-                #bill.bottom-modal.bill
-                    .bottom-modal__divider(onclick='$("#bill").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Adisyon
-                        p.bottom-modal-content__text Verdiğiniz siparişler ve ürünler aşağıda listelenmiştir.
-                        .renk_turleri
-                            .renk_turleri-item.red
-                                span
-                                p.text Ödenmedi
-                            .renk_turleri-item.orange
-                                span
-                                p.text Seçildi
-                            .renk_turleri-item.black
-                                span
-                                p.text Ödendi
-                        .divider
-                        .bill-content
-                            .bill-order
-                                .button-group.mb-10.d-flex
-                                    .button.button--light.mr-3 Siparişlerim
-                                    .button.button--red.mt-0 Tüm Siparişler
-                                .bill-order-header
-                                    .bill-order-header__title
-                                        .name.d-flex Muhammet Celepci
-                                            .status.status--danger.ml-1 +3 Kişi
-                                        .d-flex.align-items-center
-                                            .date 05.11.2020
-                                            .divider.divider-circle
-                                            .table-no.status.status--danger Masa 12
-                                .bill-order-content
-                                    .bill-order-content-header
-                                        .bill-order-content__title Sipariş No: #257
-                                            span Sipariş: Muhammet Celepci
-                                        .button.button--sm.button--red Tümünü Seç
-                                    .bill-order-content-items
-                                        .bill-order-content-item
-                                            .d-flex
-                                                .product-count 2
-                                                .product-name Su
-                                            .product-price 5.00 TL
-                                        .divider.divider--small
-                                        .bill-order-content-item.odendi
-                                            .d-flex
-                                                .product-count 1
-                                                .product-name Fincan Çay
-                                            .product-price 4.00 TL
-                                        .divider.divider--small
-                                        .bill-order-content-item.secildi
-                                            .d-flex
-                                                .product-count 8
-                                                .product-name Tereyağlı İskender
-                                            .product-price 80.00 TL
-                                            .secildi-text 2 Adet Seçildi
-                                                include blocks/secildi_buttons
-                                        .bill-order-content-item.odendi
-                                            .d-flex
-                                                .product-count 2
-                                                .product-name Tereyağlı İskender
-                                            .product-price 20.00 TL
-                                        .divider.divider--small
-                                        .bill-order-content-item.secildi
-                                            .d-flex
-                                                .product-count 2
-                                                .product-name Su
-                                            .product-price 5.00 TL
-                                            .secildi-text Tamamı Seçildi
-                                                include blocks/secildi_buttons
-                                        .bill-order-content-footer
-                                            .title Toplam
-                                            .amount 122.22 TL
-
-                                .bill-order-content
-                                    .bill-order-content-header
-                                        .bill-order-content__title Sipariş No: #258
-                                        .button.button--sm.button--gray Ödendi
-                                    .bill-order-content-items
-                                        .bill-order-content-item.odendi
-                                            .d-flex
-                                                .product-count 2
-                                                .product-name Su
-                                            .product-price 5.00 TL
-                                        .divider.divider--small
-                                        .bill-order-content-item.odendi
-                                            .d-flex
-                                                .product-count 1
-                                                .product-name Fincan Çay
-                                            .product-price 4.00 TL
-                                .bill-order-content
-                                    .bill-order-content-header
-                                        .bill-order-content__title Sipariş No: #258
-                                        .button.button--sm.button--orange Tümünü Kaldır
-                                    .bill-order-content-items
-                                        .bill-order-content-item.secildi
-                                            .d-flex
-                                                .product-count 2
-                                                .product-name Su
-                                            .product-price 5.00 TL
-                                            .secildi-text Tamamı Seçildi
-                                                include blocks/secildi_buttons
-                                        .divider.divider--small
-                                        .bill-order-content-item.secildi
-                                            .d-flex
-                                                .product-count 1
-                                                .product-name Fincan Çay
-                                            .product-price 4.00 TL
-                                            .secildi-text Tamamı Seçildi
-                                                include blocks/secildi_buttons
-
-
-                                        .bill-order-content-footer
-                                            .title Toplam
-                                            .amount 9.00 TL
-
-                        .apply-button.d-flex.mt-20
-                            .button.button--light
-                                span 542.00 TL
-                            .button.button--red.button--icon.button--icon--right
-                                span Hesabı Öde
-                                i.icon-arrow-right
-                #odemeTuruSec.bottom-modal.active
-                    .bottom-modal__divider(onclick='$("#odemeTuruSec").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Ödeme Türü Seç
-                        p.bottom-modal-content__text Ödenecek tutar
-                            b.ml-1 122.15 TL
-                        .divider
-                        .siparis-ozeti
-                            .siparis-ozeti__title Sipariş Özeti
-                            .siparis-ozeti-item
-                                .siparis-ozeti-item__title 2x Tereyağlı İskender
-                                .siparis-ozeti-item__amount 40.00 TL
-                            .siparis-ozeti-item
-                                .siparis-ozeti-item__title 2x Tereyağlı İskender
-                                .siparis-ozeti-item__amount 40.00 TL
-                            .siparis-ozeti-item
-                                .siparis-ozeti-item__title 2x Tereyağlı İskender
-                                .siparis-ozeti-item__amount 40.00 TL
-                        .tumunu-gor Devamını Gör
-                            i.icon-chevron-down
-                        .divider
-                        .odeme-turu
-                            .odeme-turu__title Ödeme Türünü Seçiniz
-                            select.d-block.w-100
-                                option Kredi Kartı
-                                option Kredi Kartı Online
-                                option Nakit Ödeme
-                                option(selected) Sodexo Kart
-                            .odeme-turu-aciklama Sodexo için pos cihazı masanıza gelecektir. Lütfen tamamla diyerek ilerleyiniz.
-
-
-
-                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-                            span Devam Et
-                            i.icon-arrow-right
-                #krediKartiOdeme.bottom-modal
-                    .bottom-modal__divider(onclick='$("#krediKartiOdeme").removeClass("active")')
-                        span
-                    .bottom-modal-content
-                        .bottom-modal-content__title Kredi Kartı İle Ödeme
-                        p.bottom-modal-content__text Ödenecek tutar
-                            b.ml-1 122.15 TL
-                        .divider
-                        form
-                            .input-group
-                                .input-group-title Ad Soyad
-                                .input-wrapper
-                                    input.input.no-icon(type="text",placeholder="Kart Sahibi Ad Soyad")
-                            .input-group
-                                .input-group-title Kart Numarası
-                                .input-wrapper
-                                    input.input.no-icon(type="number",placeholder="Kart Numarası")
-                            .input-group
-                                .input-group-item
-                                    .input-group-title Ay
-                                    .input-wrapper
-                                        select.w-100
-                                            option 01
-                                            option 02
-                                            option 03
-                                            option 04
-                                            option 05
-                                            option 06
-                                            option 07
-                                            option 08
-                                            option 09
-                                            option 10
-                                            option 11
-                                            option 12
-                                .input-group-item
-                                    .input-group-title Yıl
-                                    .input-wrapper
-                                        select.w-100
-                                            option 2020
-                                            option 2021
-                                            option 2022
-                                            option 2023
-                            .input-group
-                                .input-group-title CVV Kodu
-                                .input-wrapper
-                                    input.input.no-icon(type="number",placeholder="CVV Kodu")
-
-                        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-                            span Devam Et
-                            i.icon-arrow-right
-                        .secure
-                            img(src='img/secure2.svg' alt='')
-                            p Kredi Kartı bilgileriniz güvenle korunmaktadır. Ve kesinlikle saklanmamaktadır.
-
-                        .accept-cards
-                            .accept-cards__item
-                                img(src='img/banka/mastercard.png' alt='')
-                            .accept-cards__item
-                                img(src='img/banka/american-express.png' alt='')
-                            .accept-cards__item
-                                img(src='img/banka/visa.png' alt='')
-                            .accept-cards__item
-                                img(src='img/banka/maestro.png' alt='')
-                            .accept-cards__item
-                                img(src='img/banka/jcb.png' alt='')
-                #odenecek_urun_sayisi.popup.odenecek_urun_sayisi
-                    .popup-content
-                        .popup__baslik Ödenecek Ürün Sayısı Seçimi
-
-                        .divider.divider--small
-                        .popup__text
-                            b.mr-1 Tereyağlı iskender
-                            span ürününden kaç adet ödemek istediğinizi seçiniz.
-                        .select-count
-                            .select-count-button.left
-                                i.icon-minus
-                            .select-count-num 2
-                            .select-count-button
-                                i.icon-plus
-
-                        .button.button--outline-red(onclick='$("#odenecek_urun_sayisi").removeClass("active")') Tamam
-                #odeme_secenekleri.popup
-                    .popup-content
-                        .popup__baslik
-                            i.icon.icon-credit-card.mr-2
-                            | Ödeme Seçenekleri
-                        .divider.divider--small
-                        ul.odeme_secenekleri
-                            li Kredi Kartı (POS)
-                            li Nakit Ödeme
-                            li Online Ödeme
-                            li Setcard
-                            li Multinet
-                            li Ticket Card
-                            li Sodexo
-                            li Sodexo
-
-                        .button.button--outline-red(onclick='$("#odeme_secenekleri").removeClass("active")') Tamam
-
+                    .restaruant-tabs-item.tab-item(data-href="genel")
+                        i.icon-home
+                        | Genel
+                    .restaruant-tabs-item.tab-item(data-href="yorum")
+                        i.icon-message-square
+                        | Yorumlar
+                    .restaruant-tabs-item.tab-item(data-href="menu")
+                        i.icon-book
+                        | Menü
+                    .restaruant-tabs-item.tab-item.restaruant-tabs-item--more.active(data-href="sepet")
+                        div
+                            i.icon-shopping-cart
+                            | Sepet
+                        span 123.99 TL
+                include blocks/yorum-icin-siparis-sec
+                include blocks/yorum-yaz
+                include blocks/rezervasyon
+                include blocks/adisyon
+                include blocks/odeme-turu-sec
+                include blocks/kredi-karti-odeme
+                include blocks/odenecek-urun-sayisi
+                include blocks/odeme-secenekleri
 
 
 

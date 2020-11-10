@@ -1,0 +1,36 @@
+#odemeTuruSec.bottom-modal
+    .bottom-modal__divider(onclick='$("#odemeTuruSec").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Ödeme Türü Seç
+        p.bottom-modal-content__text Ödenecek tutar
+            b.ml-1 122.15 TL
+        .divider
+        .siparis-ozeti
+            .siparis-ozeti__title Sipariş Özeti
+            .siparis-ozeti-item
+                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__amount 40.00 TL
+            .siparis-ozeti-item
+                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__amount 40.00 TL
+            .siparis-ozeti-item
+                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__amount 40.00 TL
+        .tumunu-gor Devamını Gör
+            i.icon-chevron-down
+        .divider
+        .odeme-turu
+            .odeme-turu__title Ödeme Türünü Seçiniz
+            select.d-block.w-100
+                option Kredi Kartı
+                option Kredi Kartı Online
+                option Nakit Ödeme
+                option(selected) Sodexo Kart
+            .odeme-turu-aciklama Sodexo için pos cihazı masanıza gelecektir. Lütfen tamamla diyerek ilerleyiniz.
+
+
+
+        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+            span Devam Et
+            i.icon-arrow-right

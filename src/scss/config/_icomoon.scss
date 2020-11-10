@@ -26,9 +26,11 @@
 }
 
 
-
 .icon-credit-card:before {
   content: "\e930";
+}
+.icon-menu_book:before {
+  content: "\e933";
 }
 .icon-fence:before {
   content: "\e90c";
@@ -42,6 +44,9 @@
 .icon-arrow-right:before {
   content: "\e902";
 }
+.icon-book:before {
+  content: "\e934";
+}
 .icon-calendar:before {
   content: "\e92f";
 }
@@ -51,11 +56,20 @@
 .icon-check:before {
   content: "\e903";
 }
+.icon-chevron-down:before {
+  content: "\e931";
+}
 .icon-chevron-left:before {
   content: "\e917";
 }
 .icon-chevron-right:before {
   content: "\e918";
+}
+.icon-chevron-up:before {
+  content: "\e932";
+}
+.icon-clock:before {
+  content: "\e92e";
 }
 .icon-edit:before {
   content: "\e929";
@@ -93,9 +107,6 @@
 .icon-phone-call:before {
   content: "\e91c";
 }
-.icon-plus:before {
-  content: "\e92e";
-}
 .icon-plus-circle:before {
   content: "\e926";
 }
@@ -117,6 +128,9 @@
 .icon-trash-2:before {
   content: "\e928";
 }
+.icon-trending-up:before {
+  content: "\e935";
+}
 .icon-user:before {
   content: "\e920";
 }
@@ -125,6 +139,9 @@
 }
 .icon-wifi-off:before {
   content: "\e922";
+}
+.icon-x-circle:before {
+  content: "\e936";
 }
 .icon-star:before {
   content: "\e92a";
@@ -152,6 +169,9 @@
 }
 .icon-close:before {
   content: "\e900";
+}
+.icon-qr-code:before {
+  content: "\e937";
 }
 .icon-qr-code-scan:before {
   content: "\e906";

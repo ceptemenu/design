@@ -1,0 +1,17 @@
+.rezervasyon-detay {
+  background-image: url("../img/running-man.svg");
+  background-size: 100px;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &__icon {
+      margin-right: 10px;
+      font-size: 20px
+    }
+  }
+}

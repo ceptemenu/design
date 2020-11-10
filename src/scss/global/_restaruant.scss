@@ -203,6 +203,29 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+    font-size: 12px;
+
+    i {
+      font-size: 13px;
+    }
+
+    &--more {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 5px;
+      }
+
+      span {
+        color: $color-red;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 1em;
+      }
+    }
 
     &.active {
       border-bottom-color: $color-red;
@@ -841,6 +864,14 @@
 
 
 .bill {
+  &-title {
+    font-size: 20px;
+    text-align: center;
+    color: $color-title;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
   &-order {
     .button {
       font-size: 13px;
@@ -1049,6 +1080,16 @@
 
 .bill-order-content-item + .bill-order-content-item {
   margin-top: 10px;
+}
+
+#sepet {
+  .food-item {
+    height: 60px;
+  }
+
+  .food-item + .food-item {
+    margin-top: 10px;
+  }
 }
 
 .odeme_secenekleri {

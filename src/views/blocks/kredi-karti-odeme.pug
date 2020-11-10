@@ -1,0 +1,65 @@
+#krediKartiOdeme.bottom-modal
+    .bottom-modal__divider(onclick='$("#krediKartiOdeme").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Kredi Kartı İle Ödeme
+        p.bottom-modal-content__text Ödenecek tutar
+            b.ml-1 122.15 TL
+        .divider
+        form
+            .input-group
+                .input-group-title Ad Soyad
+                .input-wrapper
+                    input.input.no-icon(type="text",placeholder="Kart Sahibi Ad Soyad")
+            .input-group
+                .input-group-title Kart Numarası
+                .input-wrapper
+                    input.input.no-icon(type="number",placeholder="Kart Numarası")
+            .input-group
+                .input-group-item
+                    .input-group-title Ay
+                    .input-wrapper
+                        select.w-100
+                            option 01
+                            option 02
+                            option 03
+                            option 04
+                            option 05
+                            option 06
+                            option 07
+                            option 08
+                            option 09
+                            option 10
+                            option 11
+                            option 12
+                .input-group-item
+                    .input-group-title Yıl
+                    .input-wrapper
+                        select.w-100
+                            option 2020
+                            option 2021
+                            option 2022
+                            option 2023
+            .input-group
+                .input-group-title CVV Kodu
+                .input-wrapper
+                    input.input.no-icon(type="number",placeholder="CVV Kodu")
+
+        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+            span Devam Et
+            i.icon-arrow-right
+        .secure
+            img(src='img/secure2.svg' alt='')
+            p Kredi Kartı bilgileriniz güvenle korunmaktadır. Ve kesinlikle saklanmamaktadır.
+
+        .accept-cards
+            .accept-cards__item
+                img(src='img/banka/mastercard.png' alt='')
+            .accept-cards__item
+                img(src='img/banka/american-express.png' alt='')
+            .accept-cards__item
+                img(src='img/banka/visa.png' alt='')
+            .accept-cards__item
+                img(src='img/banka/maestro.png' alt='')
+            .accept-cards__item
+                img(src='img/banka/jcb.png' alt='')

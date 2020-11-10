@@ -1,0 +1,56 @@
+#writeComment.bottom-modal
+    .bottom-modal__divider(onclick='$("#writeComment").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Yorum Yap
+        p.bottom-modal-content__text Seçtiğiniz sipariş için yorum yapabilirsiniz.
+        .divider
+        .comment-write
+            .order-item
+                .order-item-image
+                    img(src="img/restaruant/gunaydin.jpg")
+
+                .order-item-content
+                    .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                    .order-item-content__text
+                        span 3x Çay
+                        span 1x Magnolia
+                        span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                        span 1x Su
+                    .order-item-content__amount
+                        div Toplam Tutar
+                        span 123.53 TL
+            .comment-write__title Değerlendir
+            .comment-write-star-content
+                i.star.icon-star-fill
+                i.star.icon-star-fill
+                i.star.icon-star-fill
+                i.star.icon-star
+                i.star.icon-star
+            .comment-write__title Fotoğraf Yükle
+            .comment-write-upload
+                .comment-write-upload__image.upload-image
+                    i.icon.icon-image
+                .comment-write-upload__image
+                    img(src="img/restaruant/gunaydin.jpg")
+                    span.comment-write-upload__close
+                        i.icon.icon-close
+                .comment-write-upload__image
+                    img(src="img/restaruant/gunaydin.jpg")
+                    span.comment-write-upload__close
+                        i.icon.icon-close
+                .comment-write-upload__image
+                    img(src="img/restaruant/gunaydin.jpg")
+                    span.comment-write-upload__close
+                        i.icon.icon-close
+                .comment-write-upload__image
+                    img(src="img/restaruant/gunaydin.jpg")
+                    span.comment-write-upload__close
+                        i.icon.icon-close
+            .comment-write__title Yorum Yaz
+            textarea.comment-write-text(placeholder="Siparişinizle ilgili görüşlerinizi yazın.")
+
+
+        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+            span Gönder Gitsin
+            i.icon.icon-arrow-right

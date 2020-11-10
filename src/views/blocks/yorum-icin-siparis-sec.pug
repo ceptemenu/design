@@ -1,0 +1,49 @@
+#selectOrderToWriteComment.bottom-modal
+    .bottom-modal__divider(onclick='$("#selectOrderToWriteComment").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Sipariş Seç
+        p.bottom-modal-content__text Yorum yazmak istediğiniz siparişi aşağıdan seçerek devam ediniz.
+        .divider
+        .comment-write-select-order
+            .order-item-input_wrapper
+                input#siparis1(type="radio",name="siparis").order-item-input
+                label(for="siparis1").order-item
+                    .order-item-image
+                        img(src="img/restaruant/gunaydin.jpg")
+                        .select_area
+                            i.icon.icon-check
+                    .order-item-content
+                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                        .order-item-content__text
+                            span 3x Çay
+                            span 1x Magnolia
+                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                            span 1x Su
+                        .order-item-content__amount
+                            div Toplam Tutar
+                            span 123.53 TL
+            .order-item-input_wrapper
+                input#siparis2(type="radio",name="siparis").order-item-input
+                label(for="siparis2").order-item
+                    .order-item-image
+                        img(src="img/restaruant/gunaydin.jpg")
+                        .select_area
+                            i.icon.icon-check
+                    .order-item-content
+                        .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                        .order-item-content__text
+                            span 3x Çay
+                            span 1x Magnolia
+                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                            span 3x Çay
+                            span 1x Magnolia
+                            span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
+                            span 1x Su
+                            span 1x Su
+                        .order-item-content__amount
+                            div Toplam Tutar
+                            span 123.53 TL
+            .apply-button.button.button--red.button--icon.button--icon--right.mt-20(onclick='$("#selectOrderToWriteComment").removeClass("active");$("#writeComment").addClass("active"); ')
+                span Devam Et
+                i.icon.icon-arrow-right

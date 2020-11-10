@@ -1,0 +1,120 @@
+#bill.bottom-modal.bill
+    .bottom-modal__divider(onclick='$("#bill").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Adisyon
+        p.bottom-modal-content__text Verdiğiniz siparişler ve ürünler aşağıda listelenmiştir.
+        .renk_turleri
+            .renk_turleri-item.red
+                span
+                p.text Ödenmedi
+            .renk_turleri-item.orange
+                span
+                p.text Seçildi
+            .renk_turleri-item.black
+                span
+                p.text Ödendi
+        .divider
+        .bill-content
+            .bill-order
+                .button-group.mb-10.d-flex
+                    .button.button--light.mr-3 Siparişlerim
+                    .button.button--red.mt-0 Tüm Siparişler
+                .bill-order-header
+                    .bill-order-header__title
+                        .name.d-flex Muhammet Celepci
+                            .status.status--danger.ml-1 +3 Kişi
+                        .d-flex.align-items-center
+                            .date 05.11.2020
+                            .divider.divider-circle
+                            .table-no.status.status--danger Masa 12
+                .bill-order-content
+                    .bill-order-content-header
+                        .bill-order-content__title Sipariş No: #257
+                            span Sipariş: Muhammet Celepci
+                        .button.button--sm.button--red Tümünü Seç
+                    .bill-order-content-items
+                        .bill-order-content-item
+                            .d-flex
+                                .product-count 2
+                                .product-name Su
+                            .product-price 5.00 TL
+                        .divider.divider--small
+                        .bill-order-content-item.odendi
+                            .d-flex
+                                .product-count 1
+                                .product-name Fincan Çay
+                            .product-price 4.00 TL
+                        .divider.divider--small
+                        .bill-order-content-item.secildi
+                            .d-flex
+                                .product-count 8
+                                .product-name Tereyağlı İskender
+                            .product-price 80.00 TL
+                            .secildi-text 2 Adet Seçildi
+                                include secildi_buttons
+                        .bill-order-content-item.odendi
+                            .d-flex
+                                .product-count 2
+                                .product-name Tereyağlı İskender
+                            .product-price 20.00 TL
+                        .divider.divider--small
+                        .bill-order-content-item.secildi
+                            .d-flex
+                                .product-count 2
+                                .product-name Su
+                            .product-price 5.00 TL
+                            .secildi-text Tamamı Seçildi
+                                include secildi_buttons
+                        .bill-order-content-footer
+                            .title Toplam
+                            .amount 122.22 TL
+
+                .bill-order-content
+                    .bill-order-content-header
+                        .bill-order-content__title Sipariş No: #258
+                        .button.button--sm.button--gray Ödendi
+                    .bill-order-content-items
+                        .bill-order-content-item.odendi
+                            .d-flex
+                                .product-count 2
+                                .product-name Su
+                            .product-price 5.00 TL
+                        .divider.divider--small
+                        .bill-order-content-item.odendi
+                            .d-flex
+                                .product-count 1
+                                .product-name Fincan Çay
+                            .product-price 4.00 TL
+                .bill-order-content
+                    .bill-order-content-header
+                        .bill-order-content__title Sipariş No: #258
+                        .button.button--sm.button--orange Tümünü Kaldır
+                    .bill-order-content-items
+                        .bill-order-content-item.secildi
+                            .d-flex
+                                .product-count 2
+                                .product-name Su
+                            .product-price 5.00 TL
+                            .secildi-text Tamamı Seçildi
+                                include secildi_buttons
+                        .divider.divider--small
+                        .bill-order-content-item.secildi
+                            .d-flex
+                                .product-count 1
+                                .product-name Fincan Çay
+                            .product-price 4.00 TL
+                            .secildi-text Tamamı Seçildi
+                                include secildi_buttons
+
+
+                        .bill-order-content-footer
+                            .title Toplam
+                            .amount 9.00 TL
+
+        .apply-button.d-flex.mt-20
+            .button.button--light
+                span 542.00 TL
+            .button.button--red.button--icon.button--icon--right
+                span Hesabı Öde
+                i.icon-arrow-right

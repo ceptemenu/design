@@ -240,6 +240,48 @@ block content
                                 .search-filter__apply-button.button.button--red.button--icon.button--icon--right
                                     span Filtreleri Uygula
                                     i.icon.icon-arrow-right
+                    #checkin.bottom-modal.active
+                        .bottom-modal__divider(onclick='$("#checkin").removeClass("active")')
+                            span
+                        .bottom-modal-content
+                            .bottom-modal-content__title Rezervasyonun Yaklaşıyor
+                            p.bottom-modal-content__text
+                                | Bir adet rezervasyonun yaklaşıyor. Lütfen checkin yaparak rezervasyonunuzu onaylayın.
+                                div.mt-1
+                                    | Kalan Süre:
+                                    b.ml-1 5 Saat 22 Dk
+                            .divider
+                            .rezervasyon-detay
+                                .rezervasyon-detay-item
+                                    .rezervasyon-detay-item__icon
+                                        i.icon-home
+                                    .rezervasyon-detay-item__text
+                                        | Günaydın Steak House
+                                .rezervasyon-detay-item
+                                    .rezervasyon-detay-item__icon
+                                        i.icon-user
+                                    .rezervasyon-detay-item__text
+                                        | 5 Kişilik
+                                .rezervasyon-detay-item
+                                    .rezervasyon-detay-item__icon
+                                        i.icon-calendar
+                                    .rezervasyon-detay-item__text
+                                        | 22 Ekim 2021
+                                .rezervasyon-detay-item
+                                    .rezervasyon-detay-item__icon
+                                        i.icon-clock
+                                    .rezervasyon-detay-item__text
+                                        | 19:00
+
+                            .apply-button.d-flex.mt-20.button-group
+                                .button.button--light.button--icon.button--icon--left
+                                    i.icon-x-circle
+                                    span İptal Et
+                                .button.button--red.button--icon.button--icon--left
+                                    i.icon-check
+                                    span Onayla
+                            p.bottom-modal-content__text.mt-3 Not: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolores doloribus ea expedita.
+
 
 
 

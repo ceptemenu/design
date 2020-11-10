@@ -285,8 +285,7 @@ a {
   flex: 1;
   min-height: calc(100% - 30px);
   padding: $padding-normal;
-
-
+  height: 100%;
 }
 
 @media (max-width: 992px) {
@@ -328,7 +327,8 @@ a {
 
 .tabcontent {
   display: none;
-
+  flex: 1;
+  height: 100%;
   &.active {
     display: block;
   }

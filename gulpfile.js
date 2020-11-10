@@ -10,12 +10,12 @@ const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const fsCache = require('gulp-fs-cache');
 const autoprefix = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 const browser_sync = require('browser-sync').create();
 
 const images_path = './src/assets/img/**/*.{gif,svg,jpg,jpeg,png,webp}';
 const fonts_path = './src/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}';
-
 
 
 // Sass dosyalarını işler, browser uyumluluğu sağlar,
@@ -25,16 +25,17 @@ gulp.task('css', function () {
 
     return gulp.src('./src/scss/style.scss')
         .pipe(cssFsCache)
+        .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'})).on('error', function (err) {
             console.log(err.toString());
             this.emit('end');
         })
-        .pipe(cssFsCache.restore)
         .pipe(autoprefix('last 15 version'))
+        .pipe(sourcemaps.write('./maps'))
+        .pipe(cssFsCache.restore)
         .pipe(gulp.dest('dist/css'))
         .pipe(browser_sync.stream());
 });
-
 
 // JS dosyalarını sıkıştırır
 // ve hepsini birleştirerek JS klasörüne kaydeder.

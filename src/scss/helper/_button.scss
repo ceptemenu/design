@@ -25,6 +25,7 @@
   &--red {
     background-color: $color-red;
     color: #FFF;
+    border: 1px solid $color-red;
 
     &:active, &:focus {
       background-color: $color-red--dark;
@@ -34,6 +35,7 @@
   &--orange {
     background-color: $color-orange;
     color: #FFF;
+    border: 1px solid $color-orange;
 
     &:active, &:focus {
       background-color: $color-orange--dark;
@@ -59,7 +61,7 @@
 
   &--light {
     background-color: $color-button-light;
-    border: 1px solid #eee;
+    border: 1px solid $color-text;
 
     &:active, &:focus {
       background-color: $color-button-light--focus;
@@ -92,5 +94,23 @@
   &--xs {
     display: inline-flex;
     font-size: 14px;
+  }
+}
+
+.button-group {
+  justify-content: space-between;
+
+  .button {
+    width: calc(50% - 7px);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      position: static;
+      margin-right: 5px;
+      transform: unset;
+    }
   }
 }

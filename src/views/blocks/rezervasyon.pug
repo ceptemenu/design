@@ -1,0 +1,63 @@
+#createReservation.bottom-modal
+    .bottom-modal__divider(onclick='$("#createReservation").removeClass("active")')
+        span
+    .bottom-modal-content
+        .bottom-modal-content__title Rezervasyon Yap
+        p.bottom-modal-content__text Restoranda rezervasyon yapmak için aşağıdaki ...........
+        .divider
+        .customize-food
+            .customize-food-item
+                .customize-food-item-content
+                .customize-food__title Rezervasyon Tarih
+                    .customize-food__text Rezervasyon yaptıracağınız tarihi seçiniz.
+                img.w-100(src="img/calendar.png", style="")
+                .customize-food__title Rezervasyon Saati
+                    .customize-food__text Rezervasyon yaptıracağınız saat aralığını seçiniz.
+                img.w-100(src="https://raw.githubusercontent.com/henninghall/react-native-date-picker/master/docs/time-mode-android.png")
+                .customize-food__title Masanın Özellikleri
+                    .customize-food__text Rezerve edeceğiniz masanın özelliklerini seçebilirsiniz.
+                .customize-food-item-content-selects
+                    .select-item
+                        label.tick-checkbox.strike-through
+                            input.tick-checkbox__input(type='checkbox' checked='')
+                            span.tick-checkbox__toggle
+                            .tick-checkbox__content
+                                .tick-checkbox__title
+                                    | Priz
+                    .select-item
+                        label.tick-checkbox.strike-through
+                            input.tick-checkbox__input(type='checkbox' checked='')
+                            span.tick-checkbox__toggle
+                            .tick-checkbox__content
+                                .tick-checkbox__title
+                                    | Sigara İçilebilir Alan
+                    .select-item
+                        label.tick-checkbox.strike-through
+                            input.tick-checkbox__input(type='checkbox' checked='')
+                            span.tick-checkbox__toggle
+                            .tick-checkbox__content
+                                .tick-checkbox__title
+                                    | Cam Kenarı
+                    .select-item
+                        label.tick-checkbox.strike-through
+                            input.tick-checkbox__input(type='checkbox' checked='')
+                            span.tick-checkbox__toggle
+                            .tick-checkbox__content
+                                .tick-checkbox__title
+                                    | Deniz Kenarı
+
+
+
+                textarea.comment-write-text.mt-20(placeholder="Rezervasyon için ekstra notunuz varsa ekleyebilirsiniz")
+                .customize-food__title Seçilebilir Masalar
+                    .customize-food__text Girdiğiniz kriterlere uygun masalar listelenmiştir.
+                    select.d-block.mt-10.w-100
+                        option B-11
+                        option C-22
+                        option C-22
+                        option C-22
+                        option C-22
+
+        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
+            span Rezervasyon Yap
+            i.icon-arrow-right

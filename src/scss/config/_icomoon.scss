@@ -26,8 +26,14 @@
 }
 
 
+
+
+
 .icon-credit-card:before {
   content: "\e930";
+}
+.icon-gps_fixed:before {
+  content: "\e93a";
 }
 .icon-menu_book:before {
   content: "\e933";
@@ -43,6 +49,9 @@
 }
 .icon-arrow-right:before {
   content: "\e902";
+}
+.icon-award:before {
+  content: "\e938";
 }
 .icon-book:before {
   content: "\e934";
@@ -85,6 +94,9 @@
 }
 .icon-image:before {
   content: "\e92c";
+}
+.icon-info:before {
+  content: "\e939";
 }
 .icon-lock:before {
   content: "\e90e";
@@ -142,6 +154,12 @@
 }
 .icon-x-circle:before {
   content: "\e936";
+}
+.icon-heart-o:before {
+  content: "\e93b";
+}
+.icon-heart:before {
+  content: "\e93c";
 }
 .icon-star:before {
   content: "\e92a";

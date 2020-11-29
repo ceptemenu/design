@@ -1,0 +1,85 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    .back-item
+                        i.icon-chevron-left
+                    .title Hesabım
+                .within_back_area
+                    .profile
+                        .profile-header
+                            .profile-header-image
+                                img(src="img/muhammet.jpg")
+                            .profile-header-info
+                                .profile-header__name Muhammet Celepci
+                                .profile-header__title
+                                    i.icon-trending-up
+                                    | Acemi Kaşif
+                                .profile-header__loc
+                                    i.icon-map-pin
+                                    | Kdz. Ereğli / Zonguldak
+                        .kampanya
+                            .kampanya__title %20 İndirim
+                            .kampanya__text Herşeyi indirdik. Tıkla ye.
+                        .profile-menu
+                            a(href="profile-bilgilerim.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-user
+                                .profile-menu-item__title
+                                    | Profil Bilgilerim
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-guvenlik.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-lock
+                                .profile-menu-item__title
+                                    | Güvenlik
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-adreslerim.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-map-pin
+                                .profile-menu-item__title
+                                    | Adreslerim
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-onceki-siparislerim.html").profile-menu-item
+                                .profile-menu-item__icon.active
+                                    i.icon-shopping-cart
+                                .profile-menu-item__title
+                                    | Önceki Siparişlerim
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-yorumlarim.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-message-square
+                                .profile-menu-item__title
+                                    | Yorumlarım
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-favori-restoranlarim.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-heart-o
+                                .profile-menu-item__title
+                                    | Favori Restoranlarım
+                                i.profile-menu-item__go.icon-chevron-right
+                            a(href="profile-rezervasyonlarim.html").profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-calendar
+                                .profile-menu-item__title
+                                    | Rezervasyonlarım
+                                i.profile-menu-item__go.icon-chevron-right
+                            .profile-menu-item
+                                .profile-menu-item__icon
+                                    i.icon-trending-up
+                                .profile-menu-item__title
+                                    | Kazanımlarım
+                                i.profile-menu-item__go.icon-chevron-right
+
+
+
+

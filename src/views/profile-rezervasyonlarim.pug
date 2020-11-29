@@ -1,0 +1,112 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Önceki Siparişlerim
+                .within_back_area
+                    .profile
+                        .profile-content
+                            .profile-content__title
+                                i.icon-calendar.mr-2
+                                |  REZERVASYONLARIM
+                            .profile-content-info.mt-0
+                                i.icon-info
+                                | Lorem ipsum dolor sit amet.
+                            .divider.divider--small
+                            .rezervasyon-item.mt-10
+                                .rezervasyon-item__image
+                                    img(src="img/restaruant/gunaydin2.jpg")
+                                .rezervasyon-content
+                                    .rezervasyon-item__title Günaydın Steakhouse
+                                    .rezervasyon-detay
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-user
+                                            .rezervasyon-detay-item__text
+                                                | 5 Kişilik
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-calendar
+                                            .rezervasyon-detay-item__text
+                                                | 22 Ekim 2021
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-clock
+                                            .rezervasyon-detay-item__text
+                                                | 19:00
+                                .apply-button.d-flex.mt-10.button-group.w-100
+                                    .button.button--light.button--icon.button--icon--left.button--md
+                                        i.icon-x-circle
+                                        span İptal Et
+                                    .button.button--red.button--icon.button--icon--left.button--md
+                                        i.icon-check
+                                        span Onayla
+
+                            .rezervasyon-item.mt-10
+                                .rezervasyon-item__image
+                                    img(src="img/restaruant/gunaydin2.jpg")
+                                .rezervasyon-content
+                                    .rezervasyon-item__title Günaydın Steakhouse
+                                    .rezervasyon-detay
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-user
+                                            .rezervasyon-detay-item__text
+                                                | 5 Kişilik
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-calendar
+                                            .rezervasyon-detay-item__text
+                                                | 22 Ekim 2021
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-clock
+                                            .rezervasyon-detay-item__text
+                                                | 19:00
+                                .apply-button.d-flex.mt-10.button-group.w-100
+                                    .button.button--light.button--icon.button--icon--left.button--md
+                                        i.icon-x-circle
+                                        span İptal Et
+                                    .button.button--red.button--icon.button--icon--left.button--md
+                                        i.icon-check
+                                        span Onayla
+
+                            .divider
+                            .profile-content__title
+                                i.icon-calendar.mr-2
+                                | GEÇMİŞ REZERVASYONLARIM
+                            .profile-content-info.mt-0
+                                i.icon-info
+                                | Lorem ipsum dolor sit amet.
+                            .rezervasyon-item.mt-10.gecmis
+                                .rezervasyon-item__image
+                                    img(src="img/restaruant/gunaydin2.jpg")
+                                .rezervasyon-content
+                                    .rezervasyon-item__title Günaydın Steakhouse
+                                    .rezervasyon-detay
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-user
+                                            .rezervasyon-detay-item__text
+                                                | 5 Kişilik
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-calendar
+                                            .rezervasyon-detay-item__text
+                                                | 22 Ekim 2021
+                                        .rezervasyon-detay-item
+                                            .rezervasyon-detay-item__icon
+                                                i.icon-clock
+                                            .rezervasyon-detay-item__text
+                                                | 19:00

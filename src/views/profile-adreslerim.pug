@@ -1,0 +1,49 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Adreslerim
+                .within_back_area
+                    .profile
+                        .profile-content
+                            .form-content
+                                .profile-content__title
+                                    i.icon-map-pin.mr-2
+                                    | KONUM SEÇİMİ
+                                .profile-content-info.mt-0
+                                    | Konumunuz kapalıyken aramaları seçtiğiniz lokasyona göre yapacağız.
+                                .divider.divider--small
+                                .adres
+                                    .button.button--outline-red.button--icon.button--icon--left.mb-20
+                                        i.icon-gps_fixed
+                                        span Konumumu Bul
+                                    .title.text-left.mb-10 Kayıtlı Adresler
+                                    label.radio.w-100.adres-item
+                                        .radio__content
+                                            .adres-item__title.radio__title
+                                                | Çankaya / Ankara
+                                        input.radio__input(type='radio' name="adres" checked='')
+                                        span.radio__toggle
+                                    label.radio.w-100.adres-item
+                                        .radio__content
+                                            .adres-item__title.radio__title
+                                                | Çankaya / Ankara
+                                        input.radio__input(type='radio' name="adres" checked='')
+                                        span.radio__toggle
+
+
+
+
+
+

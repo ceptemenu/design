@@ -57,8 +57,8 @@
       justify-content: center;
       align-items: center;
       right: 5px;
-      top: 7px;
-      border-radius: 10px;
+      top: 5px;
+      border-radius: 4px;
       background: $color-red;
 
       i {
@@ -83,10 +83,11 @@
   }
 
   &-title {
-    color: $color-text-light;
+    color: #6c7886;
     margin-bottom: 5px;
     font-weight: 400;
     text-align: left;
+    font-size: 13px;
   }
 }
 
@@ -97,7 +98,7 @@
   width: 100%;
   background: #FFF;
   padding: 0 $input-padding 0 35px;
-  box-shadow: 0 4px 24px -5px $color-shadow;
+  box-shadow: 0 4px 10px -5px $color-shadow;
   height: 40px;
 
   &:focus {
@@ -121,7 +122,7 @@
 }
 
 .input-icon {
-  color: rgba($color-light, .5);
+  color: #6c7886;
   font-size: 18px;
   user-select: none;
 }
@@ -245,6 +246,94 @@
     background-position-y: 50%;
     background-size: 13px;
 
+  }
+
+  &__title {
+    color: $color-text;
+    font-size: 11px;
+    font-weight: 500;
+
+    span {
+      color: $color-text-light;
+      margin-left: 5px;
+      font-size: 10px;
+      font-weight: 300;
+    }
+  }
+
+  &__txt {
+    font-size: 15px;
+    color: $color-text-light;
+    font-weight: 300;
+  }
+
+  &__link {
+    color: $color-title;
+    font-weight: 400;
+  }
+}
+
+
+.radio {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+
+  &.w-100 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+
+    &:checked {
+      & + span {
+        &::after {
+          transform: scale(1) translate(50%, 50%);
+          opacity: 1;
+        }
+      }
+
+      & ~ span + .radio__content .radio__title {
+        text-decoration: none;
+        color: $color-text;
+      }
+    }
+
+  }
+
+
+  &__toggle {
+    outline: none;
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    border-radius: 50%;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    background-color: #eee;
+    flex-shrink: 0;
+    transition: $transition-fast;
+    margin-right: 5px;
+
+    &::after {
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: $color-red;
+      transform: scale(0) translate(50%, 50%);
+      transform-origin: bottom;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transition: .3s;
+    }
   }
 
   &__title {

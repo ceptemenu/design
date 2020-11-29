@@ -1,0 +1,96 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Favori Restoranlarım
+                .within_back_area
+                    .profile
+                        .profile-content
+
+                            .profile-content__title
+                                i.icon-heart.mr-2
+                                | FAVORİ RESTORANLARIM
+                            .profile-content-info.mt-0
+                                i.icon-info
+                                | Lorem ipsum dolor sit amet.
+                            .divider.divider--small
+                            .search_area.mb-10.mt-10
+                                .input-wrapper.search
+                                    input.no-icon.input(type="text",placeholder="Restoranlarda ara")
+                                    .filter.js-open-search-filter-modal
+                                        i.icon-search.input-icon
+                            .search-result-item
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+                                        .restaruant-item-save.saved
+                                            i.icon-heart
+                            .search-result-item.mt-10
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+                                        .restaruant-item-save.saved
+                                            i.icon-heart
+                            .search-result-item.mt-10
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+                                        .restaruant-item-save.saved
+                                            i.icon-heart
+                            .search-result-item.mt-10
+                                .restaruant-item
+                                    .restaruant-item-image
+                                        img(src="img/restaruant/starbucks.jpg")
+                                    .restaruant-item-content
+                                        .title Starbucks Coffee
+                                        .category Cafe - Pastane
+                                        .restaruant-item-content-footer
+                                            .rating
+                                                i.icon.icon-star
+                                                span 4.2
+                                            .distance
+                                                i.icon.icon-placeholder
+                                                span 2.5 Km
+                                        .restaruant-item-save.saved
+                                            i.icon-heart

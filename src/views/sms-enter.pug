@@ -1,0 +1,25 @@
+extends blocks/layout
+block vars
+
+block append head
+    title Kayıt Ol
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .sms
+                    .sms__title SMS ONAY
+                    .sms__text Telefonunuza gönderilen 6 haneli kodu girin.
+                    .sms-input-wrapper.d-flex
+                        input.sms-input.input
+                        input.sms-input.input
+                        input.sms-input.input
+                        input.sms-input.input
+                        input.sms-input.input
+                    .button.button--red.mt-4
+                        | Onayla
+
+
+

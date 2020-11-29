@@ -36,7 +36,8 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       position: relative;
-overflow: hidden;
+      overflow: hidden;
+
       &.full {
         height: 680px;
         margin-top: 10px;
@@ -212,12 +213,32 @@ a {
   box-shadow: 0 4px 24px -8px $color-shadow;
   height: 40px;
   align-items: center;
-  .logo-wrapper{
+  background: #FFF;
+
+  &-w-title {
+    position: relative;
+
+    .title {
+      text-align: center;
+    }
+
+    .back {
+      &-item {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .logo-wrapper {
     height: 14px;
     display: flex;
     align-items: flex-start;
     margin-left: 50px;
-    img{
+
+    img {
       height: inherit;
     }
   }
@@ -286,6 +307,8 @@ a {
   min-height: calc(100% - 30px);
   padding: $padding-normal;
   height: 100%;
+  max-height: calc(100% - 30px);
+  overflow-y: auto;
 }
 
 @media (max-width: 992px) {
@@ -329,6 +352,7 @@ a {
   display: none;
   flex: 1;
   height: 100%;
+
   &.active {
     display: block;
   }
@@ -343,8 +367,9 @@ a {
   height: 2px;
   background-color: $color-divider;
   margin: 15px 0;
-  &--small{
-    margin:4px 0;
+
+  &--small {
+    margin: 4px 0;
     height: 1px;
     opacity: .5;
   }
@@ -378,8 +403,41 @@ a {
     background: #FFF;
     font-size: 10px;
     text-align: center;
-    & + .button{
+
+    & + .button {
       border-radius: 0 .25rem .25rem 0;
     }
+  }
+}
+
+.henuz-yok {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+
+  &__icon {
+    width: 100px;
+
+    img {
+      width: inherit;
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    color: $color-text-light;
+    font-size: 24px;
+    font-weight: 500 ;
+    opacity: .5;
+  }
+  &__text{
+    color: $color-text-light;
+    font-size: 12px;
+  }
+  &__button{
+    margin-top: 15px;
   }
 }

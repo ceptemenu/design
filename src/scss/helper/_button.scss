@@ -22,6 +22,16 @@
     padding: 0 10px;
   }
 
+  &--md {
+    height: 33px;
+    font-size: 11px;
+    width: max-content;
+    padding: 0 10px;
+    i{
+      font-size: 15px!important;
+    }
+  }
+
   &--red {
     background-color: $color-red;
     color: #FFF;

@@ -1,0 +1,56 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Güvenlik
+                .within_back_area
+                    .profile
+                        .profile-content
+                            .form-content
+                                .profile-content__title
+                                    i.icon-lock.mr-2
+                                    | ŞİFRE GÜNCELLE
+                                .profile-content-info.mt-0
+                                    i.icon-info
+                                    | Şifrenizi güncelleyebilirsiniz.
+                                .divider.divider--small
+                                .input-group
+                                    .input-group-title Eski Şifre
+                                    .input-wrapper.password
+                                        i.icon-lock.input-icon
+                                        input.input(type="password",placeholder="Eski Şifre")
+                                        .password-see(onclick="togglePassSee()")
+                                            i.icon-eye-close
+                                            i.icon-eye
+                                .input-group
+                                    .input-group-title Yeni Şifre
+                                    .input-wrapper.password
+                                        i.icon-lock.input-icon
+                                        input.input(type="password",placeholder="Yeni Şifre")
+                                        .password-see(onclick="togglePassSee()")
+                                            i.icon-eye-close
+                                            i.icon-eye
+                                .input-group
+                                    .input-group-title Yeni Şifre Tekrar
+                                    .input-wrapper.password
+                                        i.icon-lock.input-icon
+                                        input.input(type="password",placeholder="Yeni Şifre Tekrar")
+                                        .password-see(onclick="togglePassSee()")
+                                            i.icon-eye-close
+
+                                .button.button--red.mt-20 Güncelle
+
+
+
+

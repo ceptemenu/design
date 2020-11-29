@@ -1,0 +1,56 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Profil Bilgilerim
+                .within_back_area
+                    .profile
+                        .profile-header
+                            .profile-header-image
+                                img(src="img/mehmet.jpg")
+                            .profile-header-info
+                                .profile-header__name Mehmet Baz
+                                .profile-header__title
+                                    i.icon-trending-up
+                                    | Acemi Kaşif
+                                .profile-header__loc
+                                    i.icon-map-pin
+                                    | Kdz. Ereğli / Zonguldak
+                        .divider.divider--small
+                        .profile-content
+                            .form-content
+                                .profile-content-info
+                                    i.icon-info
+                                    | Profil bilgilerini düzenleyebilirsin.
+                                .divider.divider--small
+                                .input-group
+                                    .input-group-title Ad Soyad
+                                    .input-wrapper
+                                        i.icon-user.input-icon
+                                        input.input(type="text",placeholder="İsim Soyisim", value="Mehmet Baz")
+                                .input-group
+                                    .input-group-title Telefon Numarası
+                                    .input-wrapper
+                                        i.icon-mobile.input-icon
+                                        input.input(type="phone",placeholder="Telefon Numarası",value="+90 536 666 22 31")
+                                .input-group
+                                    .input-group-title E-mail
+                                    .input-wrapper
+                                        i.icon-mail.input-icon
+                                        input.input(type="text",placeholder="E-mail",value="mehmetbaz@gmail.com")
+                                .button.button--red.mt-20 Kaydet
+
+
+
+

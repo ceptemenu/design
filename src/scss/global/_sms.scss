@@ -1,0 +1,30 @@
+.sms {
+  flex: 1;
+  padding: 20px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: $color-title;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $color-text;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  &-input {
+    &-wrapper{
+      margin-top: 40px;
+      justify-content: space-between;
+    }
+    width: 45px;
+    padding: 0 5px;
+    font-size: 26px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,79 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back.back-w-title
+                    a(href="profile.html").back-item
+                        i.icon-chevron-left
+                    .title Yorumlarım
+                .within_back_area
+                    .profile
+                        .profile-content
+                            .profile-content__title
+                                i.icon-map-pin.mr-2
+                                | YORUMLARIM
+                            .profile-content-info.mt-0
+                                | Daha önce yaptığınız yorumları inceleyebilirsiniz.
+                            .divider.divider--small
+                            .comments.mt-20.comments--profile
+                                .search_area.mb-20
+                                    .input-wrapper.search
+                                        input.no-icon.input(type="text",placeholder="Yorumlarda ara")
+                                        .filter.js-open-search-filter-modal
+                                            i.icon-search.input-icon
+                                .comments-item.p-20
+                                    .comments-item-head
+                                        .comments-item-profile
+                                            .comments-item-profile__image
+                                                img(src="img/restaruant/gunaydin2.jpg")
+                                            .comments-item-info
+                                                .comments-item-profile__name
+                                                    | Günaydın Steakhouse
+                                                .comments-item-profile__star
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star
+                                                .comments-item__date 13.10.2020
+                                    .comments-item-content
+                                        .comments-item-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore, laboriosam libero mollitia qui rerum similique suscipit voluptate voluptate.
+                                        .comments-item-content-images
+                                            .comments-item-content-images__item
+                                                img(src="img/bg1.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg2.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg3.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg1.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg2.jpg")
+                                            .comments-item-content-images__item
+                                                img(src="img/bg3.jpg")
+                                .divider
+                                .comments-item.p-20
+                                    .comments-item-head
+                                        .comments-item-profile
+                                            .comments-item-profile__image
+                                                img(src="img/mehmet.jpg")
+                                            .comments-item-info
+                                                .comments-item-profile__name
+                                                    | Mehmet Baz
+                                                .comments-item-profile__star
+                                                    i.icon-star-fill
+                                                    i.icon-star-fill
+                                                    i.icon-star
+                                                    i.icon-star
+                                                    i.icon-star
+                                            .comments-item__date 17.10.2020
+                                    .comments-item-content
+                                        .comments-item-content__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore, laboriosam libero mollitia qui rerum similique suscipit voluptate voluptate.

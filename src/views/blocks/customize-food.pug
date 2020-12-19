@@ -1,56 +1,75 @@
-#writeComment.bottom-modal
-    .bottom-modal__divider(onclick='$("#writeComment").removeClass("active")')
+#customizeFood.bottom-modal
+    .bottom-modal__divider(onclick='$("#customizeFood").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Yorum Yap
-        p.bottom-modal-content__text Seçtiğiniz sipariş için yorum yapabilirsiniz.
+        .bottom-modal-content__title Seçimi Onayla
+        p.bottom-modal-content__text Seçiminizi özelleştirebilirsiniz.
         .divider
-        .comment-write
-            .order-item
-                .order-item-image
-                    img(src="img/restaruant/gunaydin.jpg")
+        .customize-food
+            .customize-food-item
+                .customize-food-item__image
+                    img(src="img/food/hamburger.jpg")
+                .customize-food-item-content
+                    .customize-food-item-content__title Şefin Özel Sucuklusu
+                    .customize-food-item-content__ingredients
+                        | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                    .customize-food__title Gramaj Seçimi
+                    select.d-block
+                        option 100 gram
+                        option 200 gram (+12 TL)
+                        option 300 gram (+24 TL)
+                        option 400 gram (+36 TL)
+                    .customize-food__title Özelleştir
+                    .customize-food-item-content-selects
+                        .select-item
+                            label.tick-checkbox.strike-through
+                                input.tick-checkbox__input(type='checkbox' checked='')
+                                span.tick-checkbox__toggle
+                                .tick-checkbox__content
+                                    .tick-checkbox__title
+                                        | Soğan
+                        .select-item
+                            label.tick-checkbox.strike-through
+                                input.tick-checkbox__input(type='checkbox' checked='')
+                                span.tick-checkbox__toggle
+                                .tick-checkbox__content
+                                    .tick-checkbox__title
+                                        | Ketçap
+                        .select-item
+                            label.tick-checkbox.strike-through
+                                input.tick-checkbox__input(type='checkbox' checked='')
+                                span.tick-checkbox__toggle
+                                .tick-checkbox__content
+                                    .tick-checkbox__title
+                                        | Mayonez
+                    .customize-food__title Ekstra Ekle
+                    .customize-food-item-content-selects
+                        .select-item
+                            label.tick-checkbox
+                                input.tick-checkbox__input(type='checkbox')
+                                span.tick-checkbox__toggle
+                                .tick-checkbox__content
+                                    .tick-checkbox__title
+                                        | Çift Peynir
+                                        span (+2 TL)
+                        .select-item
+                            label.tick-checkbox
+                                input.tick-checkbox__input(type='checkbox')
+                                span.tick-checkbox__toggle
+                                .tick-checkbox__content
+                                    .tick-checkbox__title
+                                        | Büyük Seçim
+                                        span (+5 TL)
+                .customize-food__title Sipariş Notu
+                textarea.comment-write-text(placeholder="Sipariş Notunuzu Ekleyebilirsiniz")
+        .add-cart-buttons.apply-button.d-flex.mt-20
+            .select-count
+                .select-count-button.left
+                    i.icon-minus
+                .select-count-num 2
+                .select-count-button
+                    i.icon-plus
 
-                .order-item-content
-                    .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
-                    .order-item-content__text
-                        span 3x Çay
-                        span 1x Magnolia
-                        span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                        span 1x Su
-                    .order-item-content__amount
-                        div Toplam Tutar
-                        span 123.53 TL
-            .comment-write__title Değerlendir
-            .comment-write-star-content
-                i.star.icon-star-fill
-                i.star.icon-star-fill
-                i.star.icon-star-fill
-                i.star.icon-star
-                i.star.icon-star
-            .comment-write__title Fotoğraf Yükle
-            .comment-write-upload
-                .comment-write-upload__image.upload-image
-                    i.icon.icon-image
-                .comment-write-upload__image
-                    img(src="img/restaruant/gunaydin.jpg")
-                    span.comment-write-upload__close
-                        i.icon.icon-close
-                .comment-write-upload__image
-                    img(src="img/restaruant/gunaydin.jpg")
-                    span.comment-write-upload__close
-                        i.icon.icon-close
-                .comment-write-upload__image
-                    img(src="img/restaruant/gunaydin.jpg")
-                    span.comment-write-upload__close
-                        i.icon.icon-close
-                .comment-write-upload__image
-                    img(src="img/restaruant/gunaydin.jpg")
-                    span.comment-write-upload__close
-                        i.icon.icon-close
-            .comment-write__title Yorum Yaz
-            textarea.comment-write-text(placeholder="Siparişinizle ilgili görüşlerinizi yazın.")
-
-
-        .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-            span Gönder Gitsin
-            i.icon.icon-arrow-right
+            .button.button--red.button--icon.button--icon--right.add-cart-button
+                span Sepete Ekle
+                .add-cart-button__amount 241.98 TL

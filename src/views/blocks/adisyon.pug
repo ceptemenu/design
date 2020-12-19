@@ -53,6 +53,12 @@
                             .product-price 80.00 TL
                             .secildi-text 2 Adet Seçildi
                                 include secildi_buttons
+                        .bill-order-content-item
+                            .d-flex(onclick='$("#odenecek_urun_sayisi").addClass("active")')
+                                .product-count 1
+                                .product-name Tereyağlı İskender
+                                    i.icon-info.ml-1
+                            .product-price 10.00 TL
                         .bill-order-content-item.odendi
                             .d-flex
                                 .product-count 2
@@ -115,6 +121,6 @@
         .apply-button.d-flex.mt-20
             .button.button--light
                 span 542.00 TL
-            .button.button--red.button--icon.button--icon--right
+            .button.button--red.button--icon.button--icon--right(onclick='$("#odemeTuruSec").addClass("active")')
                 span Hesabı Öde
                 i.icon-arrow-right

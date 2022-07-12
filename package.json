@@ -1,11 +1,7 @@
 {
-  "name": "cepteMenu",
+  "name": "ceptemenu-design",
   "version": "1.0.0",
   "description": "Ceptemenu Design System",
-  "main": "script.js",
-  "scripts": {
-    "test": "test"
-  },
   "author": "Muhammed Celepci",
   "license": "ISC",
   "dependencies": {

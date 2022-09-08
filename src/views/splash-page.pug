@@ -2,16 +2,17 @@ extends blocks/layout
 block vars
 
 block append head
-    title Splash Page
+    title Splash Page Alternate
 block append svg
 
 block content
     .maincontainer
         .device-container
-            .safearea
-                .splash-page
-                    img(src="img/logo-white.svg")
-                    p Cebindeki Menü
+            .safearea.full
+                .splash-page-alternate
+                    .logo-wrapper
+                        img(src="img/logo-white.svg")
+                        p Cebindeki Menü
 
 
 

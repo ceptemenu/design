@@ -28,7 +28,7 @@ gulp.task('css', function () {
         .pipe(autoprefix('last 15 version'))
         .pipe(sourcemaps.write('./maps'))
         .pipe(cssFsCache.restore)
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('public/css'))
         .pipe(browser_sync.stream());
 });
 
@@ -42,7 +42,7 @@ gulp.task('js', function () {
         })
         .pipe(jsFsCache.restore)
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('public/js'))
         .pipe(browser_sync.stream());
 });
 
@@ -54,22 +54,22 @@ gulp.task('pug', function () {
             console.log(err.toString());
             this.emit('end');
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('public'))
         .pipe(browser_sync.stream());
 
 });
 
 gulp.task('move_images', function() {
-	return gulp.src(images_path).pipe(gulp.dest('dist/img'));
+	return gulp.src(images_path).pipe(gulp.dest('public/img'));
 });
 
 gulp.task('move_fonts', function() {
-	return gulp.src(fonts_path).pipe(gulp.dest('dist/fonts'));
+	return gulp.src(fonts_path).pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('watch', function () {
     browser_sync.init({
-        server: 'dist',
+        server: 'public',
         files: ["dist/css/style.css", "dist/js/*.js", "dist/*.html"],
         browser: "chrome",
         online: true,
@@ -82,4 +82,5 @@ gulp.task('watch', function () {
     gulp.watch(images_path, gulp.series('move_images'));
 });
 
-gulp.task('default', gulp.series('css', 'js', 'pug', 'move_fonts', 'move_images', 'watch', function(){}));
+gulp.task('default', gulp.series('css', 'js', 'pug', 'move_fonts', 'move_images'));
+gulp.task('dev', gulp.series('default', 'watch'))

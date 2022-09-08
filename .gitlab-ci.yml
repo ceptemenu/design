@@ -5,12 +5,7 @@ before_script:
   - yarn
 pages:
   script:
-    - yarn
-    - yarn gulp css
-    - yarn gulp js
-    - yarn gulp pug
-    - yarn gulp move_fonts
-    - yarn gulp move_images
+    - yarn gulp
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL

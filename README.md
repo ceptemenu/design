@@ -1,7 +1,30 @@
-# Cepte Menü
+# Design
 
-### Kurulum
-* Projeyi klonlayın.
-* Terminalden ```npm install``` komutu ile ilgili paketleri yükleyin.
-* ```gulp``` komutu ile projeyi başlatın.
-* Proje ```http://localhost:3000/``` konumunda başlayacak.
+Pre-design for the "Cepte Menu" application.
+
+## Installation
+
+Clone the project and change current working directory.
+
+```
+$ git clone git@github.com:ceptemenu/design.git && cd design
+```
+
+Install dependencies.
+
+```
+$ yarn
+```
+
+Build pre-design.
+
+```
+$ yarn gulp
+```
+
+or start for development (watch).
+
+```
+$ yarn gulp dev
+```
+

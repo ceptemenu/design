@@ -1,8 +1,9 @@
-# Design
+Design
+===
 
 Pre-design for the "Cepte Menu" application.
 
-## Installation
+### Installation
 
 Clone the project and change current working directory.
 

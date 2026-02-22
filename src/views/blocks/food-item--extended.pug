@@ -3,12 +3,12 @@
         img(src="img/food/hamburger.jpg")
     .food-item-content
         .food-item-content-top
-            .food-item__title Şefin Özel Burgeri
+            .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
             .food-item__add-cart(onclick='$("#customizeFood").addClass("active")')
                 i.icon.icon-plus-square
         .food-item-content-middle
-            .food-item__ingredients
-                | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+            .food-item__ingredients(data-i18n="food.burgerIngredients")
+                | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
         .food-item-content-bottom
             .food-item__price 19.90 TL
             .food-item__count.input-button-group

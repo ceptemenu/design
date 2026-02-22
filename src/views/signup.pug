@@ -2,7 +2,7 @@ extends blocks/layout
 block vars
 
 block append head
-    title Kayıt Ol
+    title Sign Up
 block append svg
 
 block content
@@ -10,43 +10,43 @@ block content
         .device-container
             .safearea
                 .loginarea-image
-                    .loginarea-image-title KAYIT OL
+                    .loginarea-image-title(data-i18n="signup.title") SIGN UP
                 .loginarea-form
                     .input-wrapper
                         i.icon-user.input-icon
-                        input.input(type="text",placeholder="İsim Soyisim")
+                        input.input(type="text",placeholder="Full Name",data-i18n-placeholder="signup.fullName")
                     .input-wrapper
                         i.icon-mobile.input-icon
-                        input.input(type="phone",placeholder="Telefon Numarası")
+                        input.input(type="phone",placeholder="Phone Number",data-i18n-placeholder="signup.phone")
                     .input-wrapper
                         i.icon-mail.input-icon
                         input.input(type="text",placeholder="E-mail")
                     .input-wrapper.password
                         i.icon-lock.input-icon
-                        input.input(type="password",placeholder="Şifre")
+                        input.input(type="password",placeholder="Password",data-i18n-placeholder="signup.password")
                         .password-see(onclick="togglePassSee()")
                             i.icon-eye-close
                             i.icon-eye
                     .input-wrapper.password
                         i.icon-lock.input-icon
-                        input.input(type="password",placeholder="Şifre Tekrar")
+                        input.input(type="password",placeholder="Repeat Password",data-i18n-placeholder="signup.passwordRepeat")
                         .password-see(onclick="togglePassSee()")
                             i.icon-eye-close
                             i.icon-eye
-                    .button.button--red.mt-3 Kayıt Ol
+                    .button.button--red.mt-3(data-i18n="signup.signupButton") Sign Up
                     small.mb-2.mt-1.d-block
-                        | Kayıt olduğunuz takdirde
-                        a(href="#") gizlilik sözleşmesini
-                        | okuyup kabul etmiş varsayılırsınız.
+                        span(data-i18n="signup.terms1") By signing up
+                        a(href="#",data-i18n="signup.privacyPolicy") privacy agreement
+                        span(data-i18n="signup.terms2") you are deemed to have read and accepted.
                     .button.button--light.button--icon.button--icon--left
                         img(src="img/facebook.svg")
-                        span Facebook ile Bağlan
+                        span(data-i18n="login.facebookLogin") Sign In with Facebook
                     .button.button--light.button--icon.button--icon--left
                         img(src="img/google.svg")
-                        span Google ile Bağlan
+                        span(data-i18n="login.googleLogin") Sign In with Google
                     .loginarea-text.mt-3
-                        span Üyeliğin Var mı?
-                        a Hemen Giriş Yap
+                        span(data-i18n="signup.hasAccount") Already have an account?
+                        a(data-i18n="signup.loginNow") Sign In Now
 
 
 

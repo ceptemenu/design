@@ -13,20 +13,20 @@ block content
                 .back.back-w-title
                     a(href="profile.html").back-item
                         i.icon-chevron-left
-                    .title Yorumlarım
+                    .title(data-i18n="myReviews.title") My Reviews
                 .within_back_area
                     .profile
                         .profile-content
                             .profile-content__title
                                 i.icon-map-pin.mr-2
-                                | YORUMLARIM
+                                span(data-i18n="myReviews.titleUpper") MY REVIEWS
                             .profile-content-info.mt-0
-                                | Daha önce yaptığınız yorumları inceleyebilirsiniz.
+                                span(data-i18n="myReviews.desc") You can review the comments you made before.
                             .divider.divider--small
                             .comments.mt-20.comments--profile
                                 .search_area.mb-20
                                     .input-wrapper.search
-                                        input.no-icon.input(type="text",placeholder="Yorumlarda ara")
+                                        input.no-icon.input(type="text",data-i18n-placeholder="myReviews.searchPlaceholder",placeholder="Search reviews")
                                         .filter.js-open-search-filter-modal
                                             i.icon-search.input-icon
                                 .comments-item.p-20

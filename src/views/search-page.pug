@@ -7,14 +7,14 @@ block append head
 block append svg
 
 block content
-    // Bu sayfa index sayfasının arama focus state'i olarak dizayn edilmiştir.
+    // This page is designed as the search focus state of the index page.
     .maincontainer
         .device-container
             .safearea
                 .back
                     .back-item
                         i.icon-chevron-left
-                        span Geri Dön
+                        span(data-i18n="common.goBack") Go Back
                 .within_back_area
                     .search_area
                         small.location
@@ -24,10 +24,10 @@ block content
                                 | Kdz. Ereğli / Zonguldak
                         .input-wrapper.search
                             i.icon-search.input-icon
-                            input.input(type="text",placeholder="Şimdi Keşfet...")
+                            input.input(type="text",placeholder="Discover Now...",data-i18n-placeholder="index.discoverNow")
                             .filter.js-open-search-filter-modal
                                 i.icon-filter.input-icon
-                    .title.mt-10 Arama Sonuçları
+                    .title.mt-10(data-i18n="search.searchResults") Search Results
                     .search-result-wrapper
                         .search-result-item.mt-10
                             .restaruant-item
@@ -35,7 +35,7 @@ block content
                                     img(src="img/restaruant/starbucks.jpg")
                                 .restaruant-item-content
                                     .title Starbucks Coffee
-                                    .category Cafe - Pastane
+                                    .category(data-i18n="restaurantType.cafePastry") Cafe - Pastry
                                     .restaruant-item-content-footer
                                         .rating
                                             i.icon.icon-star
@@ -48,28 +48,28 @@ block content
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                        .food-item__ingredients(data-i18n="food.burgerIngredients")
+                                            | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
                                     .food-item-content-bottom
                                         .food-item__price 19.90 TL
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                        .food-item__ingredients(data-i18n="food.burgerIngredients")
+                                            | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
                                     .food-item-content-bottom
                                         .food-item__price 17.00 TL
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi
+                                        .food-item__ingredients(data-i18n="food.burgerIngredientsShort")
+                                            | 200g Special Hamburger Patty
                                     .food-item-content-bottom
                                         .food-item__price 122.00 TL
                         .search-result-item.mt-10
@@ -78,7 +78,7 @@ block content
                                     img(src="img/restaruant/starbucks.jpg")
                                 .restaruant-item-content
                                     .title Starbucks Coffee
-                                    .category Cafe - Pastane
+                                    .category(data-i18n="restaurantType.cafePastry") Cafe - Pastry
                                     .restaruant-item-content-footer
                                         .rating
                                             i.icon.icon-star
@@ -91,35 +91,29 @@ block content
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                        .food-item__ingredients(data-i18n="food.burgerIngredients")
+                                            | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
                                     .food-item-content-bottom
                                         .food-item__price 19.90 TL
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
+                                        .food-item__ingredients(data-i18n="food.burgerIngredients")
+                                            | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
                                     .food-item-content-bottom
                                         .food-item__price 17.00 TL
                             .food-item.food-item--extended
                                 .food-item-content
                                     .food-item-content-top
-                                        .food-item__title Şefin Özel Burgeri
+                                        .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                     .food-item-content-middle
-                                        .food-item__ingredients
-                                            | 200gr Özel Hamburger Köftesi
+                                        .food-item__ingredients(data-i18n="food.burgerIngredientsShort")
+                                            | 200g Special Hamburger Patty
                                     .food-item-content-bottom
                                         .food-item__price 122.00 TL
-
-
-
-
-
-
 
 

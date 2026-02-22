@@ -2,24 +2,24 @@
     .bottom-modal__divider(onclick='$("#bill").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Adisyon
-        p.bottom-modal-content__text Verdiğiniz siparişler ve ürünler aşağıda listelenmiştir.
+        .bottom-modal-content__title(data-i18n="bill.title") Bill
+        p.bottom-modal-content__text(data-i18n="bill.desc") Your orders and products are listed below.
         .renk_turleri
             .renk_turleri-item.red
                 span
-                p.text Ödenmedi
+                p.text(data-i18n="bill.unpaid") Unpaid
             .renk_turleri-item.orange
                 span
-                p.text Seçildi
+                p.text(data-i18n="bill.selected") Selected
             .renk_turleri-item.black
                 span
-                p.text Ödendi
+                p.text(data-i18n="bill.paid") Paid
         .divider
         .bill-content
             .bill-order
                 .button-group.mb-10.d-flex
-                    .button.button--light.mr-3 Siparişlerim
-                    .button.button--red.mt-0 Tüm Siparişler
+                    .button.button--light.mr-3(data-i18n="bill.myOrders") My Orders
+                    .button.button--red.mt-0(data-i18n="bill.allOrders") All Orders
                 .bill-order-header
                     .bill-order-header__title
                         .name.d-flex Muhammet Celepci
@@ -27,100 +27,100 @@
                         .d-flex.align-items-center
                             .date 05.11.2020
                             .divider.divider-circle
-                            .table-no.status.status--danger Masa 12
+                            .table-no.status.status--danger(data-i18n="bill.table12") Table 12
                 .bill-order-content
                     .bill-order-content-header
-                        .bill-order-content__title Sipariş No: #257
+                        .bill-order-content__title(data-i18n="bill.orderNo") Order No: #257
                             span Sipariş: Muhammet Celepci
-                        .button.button--sm.button--red Tümünü Seç
+                        .button.button--sm.button--red(data-i18n="bill.selectAll") Select All
                     .bill-order-content-items
                         .bill-order-content-item
                             .d-flex
                                 .product-count 2
-                                .product-name Su
+                                .product-name(data-i18n="food.water") Water
                             .product-price 5.00 TL
                         .divider.divider--small
                         .bill-order-content-item.odendi
                             .d-flex
                                 .product-count 1
-                                .product-name Fincan Çay
+                                .product-name(data-i18n="food.cupOfTea") Cup of Tea
                             .product-price 4.00 TL
                         .divider.divider--small
                         .bill-order-content-item.secildi
                             .d-flex
                                 .product-count 8
-                                .product-name Tereyağlı İskender
+                                .product-name(data-i18n="food.butterIskender") Butter Iskender
                             .product-price 80.00 TL
-                            .secildi-text 2 Adet Seçildi
+                            .secildi-text(data-i18n="bill.itemsSelected") 2 Items Selected
                                 include secildi_buttons
                         .bill-order-content-item
                             .d-flex(onclick='$("#odenecek_urun_sayisi").addClass("active")')
                                 .product-count 1
-                                .product-name Tereyağlı İskender
+                                .product-name(data-i18n="food.butterIskender") Butter Iskender
                                     i.icon-info.ml-1
                             .product-price 10.00 TL
                         .bill-order-content-item.odendi
                             .d-flex
                                 .product-count 2
-                                .product-name Tereyağlı İskender
+                                .product-name(data-i18n="food.butterIskender") Butter Iskender
                             .product-price 20.00 TL
                         .divider.divider--small
                         .bill-order-content-item.secildi
                             .d-flex
                                 .product-count 2
-                                .product-name Su
+                                .product-name(data-i18n="food.water") Water
                             .product-price 5.00 TL
-                            .secildi-text Tamamı Seçildi
+                            .secildi-text(data-i18n="bill.allSelected") All Selected
                                 include secildi_buttons
                         .bill-order-content-footer
-                            .title Toplam
+                            .title(data-i18n="common.total") Total
                             .amount 122.22 TL
 
                 .bill-order-content
                     .bill-order-content-header
-                        .bill-order-content__title Sipariş No: #258
-                        .button.button--sm.button--gray Ödendi
+                        .bill-order-content__title(data-i18n="bill.orderNo") Order No: #258
+                        .button.button--sm.button--gray(data-i18n="bill.paid") Paid
                     .bill-order-content-items
                         .bill-order-content-item.odendi
                             .d-flex
                                 .product-count 2
-                                .product-name Su
+                                .product-name(data-i18n="food.water") Water
                             .product-price 5.00 TL
                         .divider.divider--small
                         .bill-order-content-item.odendi
                             .d-flex
                                 .product-count 1
-                                .product-name Fincan Çay
+                                .product-name(data-i18n="food.cupOfTea") Cup of Tea
                             .product-price 4.00 TL
                 .bill-order-content
                     .bill-order-content-header
-                        .bill-order-content__title Sipariş No: #258
-                        .button.button--sm.button--orange Tümünü Kaldır
+                        .bill-order-content__title(data-i18n="bill.orderNo") Order No: #258
+                        .button.button--sm.button--orange(data-i18n="bill.removeAll") Remove All
                     .bill-order-content-items
                         .bill-order-content-item.secildi
                             .d-flex
                                 .product-count 2
-                                .product-name Su
+                                .product-name(data-i18n="food.water") Water
                             .product-price 5.00 TL
-                            .secildi-text Tamamı Seçildi
+                            .secildi-text(data-i18n="bill.allSelected") All Selected
                                 include secildi_buttons
                         .divider.divider--small
                         .bill-order-content-item.secildi
                             .d-flex
                                 .product-count 1
-                                .product-name Fincan Çay
+                                .product-name(data-i18n="food.cupOfTea") Cup of Tea
                             .product-price 4.00 TL
-                            .secildi-text Tamamı Seçildi
+                            .secildi-text(data-i18n="bill.allSelected") All Selected
                                 include secildi_buttons
 
 
                         .bill-order-content-footer
-                            .title Toplam
+                            .title(data-i18n="common.total") Total
                             .amount 9.00 TL
 
         .apply-button.d-flex.mt-20
             .button.button--light
                 span 542.00 TL
             .button.button--red.button--icon.button--icon--right(onclick='$("#odemeTuruSec").addClass("active")')
-                span Hesabı Öde
+                span(data-i18n="bill.payBill") Pay Bill
                 i.icon-arrow-right

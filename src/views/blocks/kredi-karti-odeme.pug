@@ -2,22 +2,22 @@
     .bottom-modal__divider(onclick='$("#krediKartiOdeme").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Kredi Kartı İle Ödeme
-        p.bottom-modal-content__text Ödenecek tutar
+        .bottom-modal-content__title(data-i18n="creditCard.title") Credit Card Payment
+        p.bottom-modal-content__text(data-i18n="paymentType.amountToPay") Amount to be paid
             b.ml-1 122.15 TL
         .divider
         form
             .input-group
-                .input-group-title Ad Soyad
+                .input-group-title(data-i18n="creditCard.fullName") Full Name
                 .input-wrapper
-                    input.input.no-icon(type="text",placeholder="Kart Sahibi Ad Soyad")
+                    input.input.no-icon(type="text",placeholder="Cardholder Full Name",data-i18n-placeholder="creditCard.cardholderName")
             .input-group
-                .input-group-title Kart Numarası
+                .input-group-title(data-i18n="creditCard.cardNumber") Card Number
                 .input-wrapper
-                    input.input.no-icon(type="number",placeholder="Kart Numarası")
+                    input.input.no-icon(type="number",placeholder="Card Number",data-i18n-placeholder="creditCard.cardNumber")
             .input-group
                 .input-group-item
-                    .input-group-title Ay
+                    .input-group-title(data-i18n="creditCard.month") Month
                     .input-wrapper
                         select.w-100
                             option 01
@@ -33,7 +33,7 @@
                             option 11
                             option 12
                 .input-group-item
-                    .input-group-title Yıl
+                    .input-group-title(data-i18n="creditCard.year") Year
                     .input-wrapper
                         select.w-100
                             option 2020
@@ -41,16 +41,16 @@
                             option 2022
                             option 2023
             .input-group
-                .input-group-title CVV Kodu
+                .input-group-title(data-i18n="creditCard.cvv") CVV Code
                 .input-wrapper
-                    input.input.no-icon(type="number",placeholder="CVV Kodu")
+                    input.input.no-icon(type="number",placeholder="CVV Code",data-i18n-placeholder="creditCard.cvv")
 
         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-            span Devam Et
+            span(data-i18n="common.continue") Continue
             i.icon-arrow-right
         .secure
             img(src='img/secure2.svg' alt='')
-            p Kredi Kartı bilgileriniz güvenle korunmaktadır. Ve kesinlikle saklanmamaktadır.
+            p(data-i18n="creditCard.securityNote") Your credit card information is securely protected and is never stored.
 
         .accept-cards
             .accept-cards__item

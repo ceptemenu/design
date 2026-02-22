@@ -17,10 +17,10 @@
     "gulp-fs-cache": "^0.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-tinypng-compress": "^1.2.5",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
-    "node-sass": "^4.13.0"
+    "sass": "^1.77.0"
   }
 }

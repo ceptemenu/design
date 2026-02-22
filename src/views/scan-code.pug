@@ -13,20 +13,20 @@ block content
                 .back
                     .back-item
                         i.icon-chevron-left
-                        span Geri Dön
+                        span(data-i18n="common.goBack") Go Back
                 .enter_code.within_back_area
                     .scan_code-icon
                         i.icon-qr-code
                     .scan_code-text
-                        | Masanızdaki QR kodunu taratın. Telefonunuzdan sipariş verme rahatlığını doyasıya yaşayın.
+                        span(data-i18n="scanCode.text") Scan the QR code on your table. Enjoy the convenience of ordering from your phone.
                     .button.button--red.button--icon--left.button--icon.scan_code-button
                         i.icon-qr-code
-                        span Qr Kodu Tara
+                        span(data-i18n="scanCode.scanButton") Scan QR Code
 
                     .scan_code-divider
-                        span ya da
+                        span(data-i18n="common.or") or
                     .button.button--light.button--icon.button--icon--left
                         i.icon-keyboard
-                        span Kodu el ile gir
-                    small.mt-1.text--light Kamera problemi yaşıyorsanız kodu el ile girebilirsiniz.
+                        span(data-i18n="scanCode.manualEntry") Enter code manually
+                    small.mt-1.text--light(data-i18n="scanCode.cameraIssue") If you have camera problems, you can enter the code manually.
 

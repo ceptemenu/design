@@ -1,11 +1,11 @@
 #odenecek_urun_sayisi.popup.odenecek_urun_sayisi
     .popup-content
-        .popup__baslik Ödenecek Ürün Sayısı Seçimi
+        .popup__baslik(data-i18n="productQty.title") Product Quantity Selection
 
         .divider.divider--small
         .popup__text
-            b.mr-1 Tereyağlı iskender
-            span ürününden kaç adet ödemek istediğinizi seçiniz.
+            b.mr-1(data-i18n="food.butterIskender") Butter Iskender
+            span(data-i18n="productQty.selectQty") select how many of this product you want to pay for.
         .select-count
             .select-count-button.left
                 i.icon-minus
@@ -13,4 +13,4 @@
             .select-count-button
                 i.icon-plus-square
 
-        .button.button--outline-red(onclick='$("#odenecek_urun_sayisi").removeClass("active")') Tamam
+        .button.button--outline-red(onclick='$("#odenecek_urun_sayisi").removeClass("active")', data-i18n="common.ok") OK

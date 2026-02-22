@@ -1,10 +1,12 @@
 const gulp = require('gulp');
 const changed = require('gulp-changed');
+const fs = require('fs');
+const path = require('path');
 
 const tinypng = require('gulp-tinypng-compress');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
 const fsCache = require('gulp-fs-cache');
 const autoprefix = require('gulp-autoprefixer');
@@ -59,6 +61,22 @@ gulp.task('pug', function () {
 
 });
 
+gulp.task('locales', function (done) {
+    var localesDir = './src/locales';
+    var outDir = './public/locales';
+    if (!fs.existsSync(outDir)) {
+        fs.mkdirSync(outDir, { recursive: true });
+    }
+    var files = fs.readdirSync(localesDir).filter(function(f) { return f.endsWith('.json'); });
+    files.forEach(function(file) {
+        var lang = path.basename(file, '.json');
+        var content = fs.readFileSync(path.join(localesDir, file), 'utf8');
+        var js = 'window.__i18n_' + lang + ' = ' + content + ';';
+        fs.writeFileSync(path.join(outDir, file + '.js'), js);
+    });
+    done();
+});
+
 gulp.task('move_images', function() {
 	return gulp.src(images_path).pipe(gulp.dest('public/img'));
 });
@@ -78,9 +96,10 @@ gulp.task('watch', function () {
     gulp.watch('./src/views/**/*.pug', {usePolling:true},gulp.series('pug'));
     gulp.watch('./src/scss/**/*.scss', gulp.series('css'));
     gulp.watch('./src/js/**/*.js', gulp.series('js'));
+    gulp.watch('./src/locales/**/*.json', gulp.series('locales'));
     gulp.watch(fonts_path, gulp.series('move_fonts'));
     gulp.watch(images_path, gulp.series('move_images'));
 });
 
-gulp.task('default', gulp.series('css', 'js', 'pug', 'move_fonts', 'move_images'));
+gulp.task('default', gulp.series('css', 'js', 'locales', 'pug', 'move_fonts', 'move_images'));
 gulp.task('dev', gulp.series('default', 'watch'))

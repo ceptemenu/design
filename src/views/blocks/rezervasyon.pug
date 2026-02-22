@@ -2,55 +2,55 @@
     .bottom-modal__divider(onclick='$("#createReservation").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Rezervasyon Yap
-        p.bottom-modal-content__text Restoranda rezervasyon yapmak için aşağıdaki ...........
+        .bottom-modal-content__title(data-i18n="reservation.makeReservation") Make Reservation
+        p.bottom-modal-content__text(data-i18n="reservation.desc") To make a reservation at the restaurant, below ...........
         .divider
         .customize-food
             .customize-food-item
                 .customize-food-item-content
-                .customize-food__title Rezervasyon Tarih
-                    .customize-food__text Rezervasyon yaptıracağınız tarihi seçiniz.
+                .customize-food__title(data-i18n="reservation.date") Reservation Date
+                    .customize-food__text(data-i18n="reservation.dateDesc") Select the date for your reservation.
                 img.w-100(src="img/calendar.png", style="")
-                .customize-food__title Rezervasyon Saati
-                    .customize-food__text Rezervasyon yaptıracağınız saat aralığını seçiniz.
+                .customize-food__title(data-i18n="reservation.time") Reservation Time
+                    .customize-food__text(data-i18n="reservation.timeDesc") Select the time range for your reservation.
                 img.w-100(src="https://raw.githubusercontent.com/henninghall/react-native-date-picker/master/docs/time-mode-android.png")
-                .customize-food__title Masanın Özellikleri
-                    .customize-food__text Rezerve edeceğiniz masanın özelliklerini seçebilirsiniz.
+                .customize-food__title(data-i18n="reservation.tableFeatures") Table Features
+                    .customize-food__text(data-i18n="reservation.tableFeaturesDesc") You can select the features of the table you want to reserve.
                 .customize-food-item-content-selects
                     .select-item
                         label.tick-checkbox.strike-through
                             input.tick-checkbox__input(type='checkbox' checked='')
                             span.tick-checkbox__toggle
                             .tick-checkbox__content
-                                .tick-checkbox__title
-                                    | Priz
+                                .tick-checkbox__title(data-i18n="reservation.powerOutlet")
+                                    | Power Outlet
                     .select-item
                         label.tick-checkbox.strike-through
                             input.tick-checkbox__input(type='checkbox' checked='')
                             span.tick-checkbox__toggle
                             .tick-checkbox__content
-                                .tick-checkbox__title
-                                    | Sigara İçilebilir Alan
+                                .tick-checkbox__title(data-i18n="filter.smokingArea")
+                                    | Smoking Area
                     .select-item
                         label.tick-checkbox.strike-through
                             input.tick-checkbox__input(type='checkbox' checked='')
                             span.tick-checkbox__toggle
                             .tick-checkbox__content
-                                .tick-checkbox__title
-                                    | Cam Kenarı
+                                .tick-checkbox__title(data-i18n="reservation.windowSide")
+                                    | Window Side
                     .select-item
                         label.tick-checkbox.strike-through
                             input.tick-checkbox__input(type='checkbox' checked='')
                             span.tick-checkbox__toggle
                             .tick-checkbox__content
-                                .tick-checkbox__title
-                                    | Deniz Kenarı
+                                .tick-checkbox__title(data-i18n="reservation.seaside")
+                                    | Seaside
 
 
 
-                textarea.comment-write-text.mt-20(placeholder="Rezervasyon için ekstra notunuz varsa ekleyebilirsiniz")
-                .customize-food__title Seçilebilir Masalar
-                    .customize-food__text Girdiğiniz kriterlere uygun masalar listelenmiştir.
+                textarea.comment-write-text.mt-20(placeholder="If you have extra notes for the reservation, you can add them",data-i18n-placeholder="reservation.notePlaceholder")
+                .customize-food__title(data-i18n="reservation.availableTables") Available Tables
+                    .customize-food__text(data-i18n="reservation.availableTablesDesc") Tables matching your criteria are listed.
                     select.d-block.mt-10.w-100
                         option B-11
                         option C-22
@@ -59,5 +59,5 @@
                         option C-22
 
         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-            span Rezervasyon Yap
+            span(data-i18n="reservation.makeReservation") Make Reservation
             i.icon-arrow-right

@@ -13,25 +13,25 @@ block content
                 .back
                     .back-item
                         i.icon-chevron-left
-                        span Geri Dön
+                        span(data-i18n="common.goBack") Go Back
                 .within_back_area.enter_code
                     .enter_code-icon
                         i.icon-keyboard
                     .enter_code-text.mb-20.text-center
-                        | Hemen restoran/cafe'den bir kod talep edin. Telefonunuzdan sipariş verme rahatlığını doyasıya yaşayın.
+                        span(data-i18n="enterCode.text") Request a code from the restaurant/cafe right away. Enjoy the convenience of ordering from your phone.
                     .enter_code-form.w-100
                         .input-wrapper.input-number
                             i.icon-keyboard.input-icon
-                            input.input(type="number",placeholder="Kodu Girin")
+                            input.input(type="number",placeholder="Enter Code",data-i18n-placeholder="enterCode.placeholder")
                     .button.button--red.enter_code-button.mt-20
-                        span Onayla
+                        span(data-i18n="common.confirm") Confirm
 
                     .scan_code-divider
-                        span ya da
+                        span(data-i18n="common.or") or
                     .button.button--light.button--icon.button--icon--left
                         i.icon-qr-code
-                        span QR Kodu Taratın
-                    small.mt-1.text--light Kameranızı kullanarak masadaki QR kodu okutabilirsiniz.
+                        span(data-i18n="enterCode.scanQR") Scan QR Code
+                    small.mt-1.text--light(data-i18n="enterCode.cameraInfo") You can scan the QR code on the table using your camera.
 
 
 

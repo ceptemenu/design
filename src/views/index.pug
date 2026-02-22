@@ -19,9 +19,9 @@ block content
                                 i.icon-qr-code-scan
 
                         .welcome_area
-                            .welcome_area-title Hoşgeldin
+                            .welcome_area-title(data-i18n="index.welcome") Welcome
                                 span Mehmet
-                            .welcome_area-subtitle Hemen yemeklerine bayılacağın restoranı keşfet
+                            .welcome_area-subtitle(data-i18n="index.subtitle") Discover the restaurant whose food you'll love
                         .search_area
                             small.location
                                 .location-icon
@@ -30,67 +30,67 @@ block content
                                     | Kdz. Ereğli / Zonguldak
                             .input-wrapper.search
                                 i.icon-search.input-icon
-                                input.input(type="text",placeholder="Şimdi Keşfet...")
+                                input.input(type="text",placeholder="Discover Now...",data-i18n-placeholder="index.discoverNow")
                                 .filter.js-open-search-filter-modal
                                     i.icon-filter.input-icon
                         .food_category
                             .see_all-wrapper
-                                .see_all-title Kategoriler
-                                .see_all-button Hepsini Gör
+                                .see_all-title(data-i18n="index.categories") Categories
+                                .see_all-button(data-i18n="common.seeAll") See All
                                     i.icon-arrow-right
                             .food_category-slider
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/burger.png")
-                                    .food_category-item-title Burger
+                                    .food_category-item-title(data-i18n="category.burger") Burger
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/makarna.png")
-                                    .food_category-item-title Makarna
+                                    .food_category-item-title(data-i18n="category.pasta") Pasta
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/kahve.png")
-                                    .food_category-item-title Kahve
+                                    .food_category-item-title(data-i18n="category.coffee") Coffee
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/kebap.png")
-                                    .food_category-item-title Kebap
+                                    .food_category-item-title(data-i18n="category.kebab") Kebab
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/steak.png")
-                                    .food_category-item-title Steak
+                                    .food_category-item-title(data-i18n="category.steak") Steak
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/burger.png")
-                                    .food_category-item-title Kahve
+                                    .food_category-item-title(data-i18n="category.coffee") Coffee
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/burger.png")
-                                    .food_category-item-title Burger
+                                    .food_category-item-title(data-i18n="category.burger") Burger
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/makarna.png")
-                                    .food_category-item-title Makarna
+                                    .food_category-item-title(data-i18n="category.pasta") Pasta
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/kahve.png")
-                                    .food_category-item-title Kahve
+                                    .food_category-item-title(data-i18n="category.coffee") Coffee
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/kebap.png")
-                                    .food_category-item-title Kebap
+                                    .food_category-item-title(data-i18n="category.kebab") Kebab
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/steak.png")
-                                    .food_category-item-title Steak
+                                    .food_category-item-title(data-i18n="category.steak") Steak
                                 .food_category-item
                                     .food_category-item-image
                                         img(src="img/categories/burger.png")
-                                    .food_category-item-title Kahve
+                                    .food_category-item-title(data-i18n="category.coffee") Coffee
                         .restaruants
                             .see_all-wrapper
-                                .see_all-title Yakınındaki Restoranlar
-                                .see_all-button Hepsini Gör
+                                .see_all-title(data-i18n="index.nearbyRestaurants") Nearby Restaurants
+                                .see_all-button(data-i18n="common.seeAll") See All
                                     i.icon-arrow-right
                             .restaruants-slider
                                 .restaruant-item
@@ -100,7 +100,7 @@ block content
                                             i.icon-heart-o
                                     .restaruant-item-content
                                         .title Günaydın Steak House
-                                        .category Türk Mutfağı - Izgara
+                                        .category(data-i18n="restaurantType.turkishGrill") Turkish Cuisine - Grill
                                         .restaruant-item-content-footer
                                             .rating
                                                 i.icon.icon-star
@@ -120,7 +120,7 @@ block content
                                             i.icon-heart
                                     .restaruant-item-content
                                         .title Starbucks Coffee
-                                        .category Cafe - Pastane
+                                        .category(data-i18n="restaurantType.cafePastry") Cafe - Pastry
                                         .restaruant-item-content-footer
                                             .rating
                                                 i.icon.icon-star
@@ -137,10 +137,10 @@ block content
                             .search-filter
                                 .search-filter__clear
                                     i.icon.icon-trash-2.mr-2
-                                    span Filtreleri Temizle
+                                    span(data-i18n="filter.clearFilters") Clear Filters
                                 .search-filter-section
-                                    .search-filter-section__title Konum
-                                        span Konum Değiştir
+                                    .search-filter-section__title(data-i18n="filter.location") Location
+                                        span(data-i18n="filter.changeLocation") Change Location
                                     .location.d-flex
                                         .location-icon.mr-1
                                             i.icon-map-pin
@@ -148,8 +148,8 @@ block content
                                             | Kdz. Ereğli / Zonguldak
                                 .divider
                                 .search-filter-section
-                                    .search-filter-section__title Mesafe
-                                        span 1 Km İçinde
+                                    .search-filter-section__title(data-i18n="filter.distance") Distance
+                                        span(data-i18n="filter.withinKm") Within 1 Km
                                     .line-filter
                                         .line-filter__text 1Km
                                         .line-filter__bar
@@ -158,43 +158,43 @@ block content
 
                                 .divider
                                 .search-filter-section
-                                    .search-filter-section__title Restoran İçi Özellikler
+                                    .search-filter-section__title(data-i18n="filter.restaurantFeatures") In-Restaurant Features
                                     label.switch(for='switch1').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Wifi
-                                            .search-filter-item__subtitle Restoran içi ücretsiz wifi
+                                            .search-filter-item__title(data-i18n="filter.wifi") Wifi
+                                            .search-filter-item__subtitle(data-i18n="filter.wifiFree") Free wifi in restaurant
                                         .search-filter-item-right
                                             input#switch1.switch__input(type='checkbox' checked='')
                                             span.switch__toggle
                                     label.switch(for='switch2').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Canlı Müzik
-                                            .search-filter-item__subtitle Canlı Müzik Keyfi
+                                            .search-filter-item__title(data-i18n="filter.liveMusic") Live Music
+                                            .search-filter-item__subtitle(data-i18n="filter.liveMusicEnjoy") Enjoy Live Music
                                         .search-filter-item-right
                                             input#switch2.switch__input(type='checkbox' checked='')
                                             span.switch__toggle
                                     label.switch(for='switch3').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Sigara İçilebilir Alan
+                                            .search-filter-item__title(data-i18n="filter.smokingArea") Smoking Area
                                         .search-filter-item-right
                                             input#switch3.switch__input(type='checkbox')
                                             span.switch__toggle
                                     label.switch(for='switch4').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Sigara İçilmeyen Alan
-                                            .search-filter-item__subtitle Bu alanda dumansız keyif sürebilirsiniz
+                                            .search-filter-item__title(data-i18n="filter.nonSmokingArea") Non-Smoking Area
+                                            .search-filter-item__subtitle(data-i18n="filter.nonSmokingDesc") Enjoy a smoke-free experience in this area
                                         .search-filter-item-right
                                             input#switch4.switch__input(type='checkbox' checked='')
                                             span.switch__toggle
                                 .divider
                                 .search-filter-section
-                                    .search-filter-section__title Ödeme Seçenekleri
+                                    .search-filter-section__title(data-i18n="filter.paymentOptions") Payment Options
                                     label.switch(for='switch11').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Hepsi
-                                            .search-filter-item__subtitle Tüm ödeme seçeneklerini dahil eder
+                                            .search-filter-item__title(data-i18n="filter.all") All
+                                            .search-filter-item__subtitle(data-i18n="filter.allPaymentDesc") Includes all payment options
                                         .search-filter-item-right
-                                            input#switch11.switch__input(type='checkbox' checked='')
+                                            input#switch11.switch__input.js-filter-all(type='checkbox' checked='')
                                             span.switch__toggle
                                     label.switch(for='switch22').search-filter-item
                                         .search-filter-item-left
@@ -202,7 +202,7 @@ block content
                                         .search-filter-item-right
                                             input#switch22.switch__input(type='checkbox' checked='')
                                             span.switch__toggle
-                                    label.switch(for='switch3').search-filter-item
+                                    label.switch(for='switch33').search-filter-item
                                         .search-filter-item-left
                                             .search-filter-item__title Ticket
                                         .search-filter-item-right
@@ -210,50 +210,23 @@ block content
                                             span.switch__toggle
                                     label.switch(for='switch44').search-filter-item
                                         .search-filter-item-left
-                                            .search-filter-item__title Online Ödeme
+                                            .search-filter-item__title(data-i18n="filter.onlinePayment") Online Payment
                                         .search-filter-item-right
                                             input#switch44.switch__input(type='checkbox' checked='')
                                             span.switch__toggle
-                                .search-filter-section
-                                    .search-filter-section__title Ödeme Seçenekleri
-                                    label.switch(for='switch111').search-filter-item
-                                        .search-filter-item-left
-                                            .search-filter-item__title Hepsi
-                                            .search-filter-item__subtitle Tüm ödeme seçeneklerini dahil eder
-                                        .search-filter-item-right
-                                            input#switch111.switch__input(type='checkbox' checked='')
-                                            span.switch__toggle
-                                    label.switch(for='switch222').search-filter-item
-                                        .search-filter-item-left
-                                            .search-filter-item__title Sodexo
-                                        .search-filter-item-right
-                                            input#switch222.switch__input(type='checkbox' checked='')
-                                            span.switch__toggle
-                                    label.switch(for='switch333').search-filter-item
-                                        .search-filter-item-left
-                                            .search-filter-item__title Ticket
-                                        .search-filter-item-right
-                                            input#switch333.switch__input(type='checkbox')
-                                            span.switch__toggle
-                                    label.switch(for='switch444').search-filter-item
-                                        .search-filter-item-left
-                                            .search-filter-item__title Online Ödeme
-                                        .search-filter-item-right
-                                            input#switch444.switch__input(type='checkbox' checked='')
-                                            span.switch__toggle
                                 .search-filter__apply-button.button.button--red.button--icon.button--icon--right
-                                    span Filtreleri Uygula
+                                    span(data-i18n="filter.applyFilters") Apply Filters
                                     i.icon.icon-arrow-right
                     #checkin.bottom-modal
                         .bottom-modal__divider(onclick='$("#checkin").removeClass("active")')
                             span
                         .bottom-modal-content
-                            .bottom-modal-content__title Rezervasyonun Yaklaşıyor
-                            p.bottom-modal-content__text
-                                | Bir adet rezervasyonun yaklaşıyor. Lütfen checkin yaparak rezervasyonunuzu onaylayın.
+                            .bottom-modal-content__title(data-i18n="checkin.title") Your Reservation is Coming Up
+                            p.bottom-modal-content__text(data-i18n="checkin.desc")
+                                | You have a reservation coming up. Please check in to confirm your reservation.
                                 div.mt-1
-                                    | Kalan Süre:
-                                    b.ml-1 5 Saat 22 Dk
+                                    span(data-i18n="checkin.timeRemaining") Time Remaining:
+                                    b.ml-1(data-i18n="checkin.hoursMinutes") 5 Hours 22 Min
                             .divider
                             .rezervasyon-detay
                                 .rezervasyon-detay-item
@@ -264,13 +237,13 @@ block content
                                 .rezervasyon-detay-item
                                     .rezervasyon-detay-item__icon
                                         i.icon-user
-                                    .rezervasyon-detay-item__text
-                                        | 5 Kişilik
+                                    .rezervasyon-detay-item__text(data-i18n="reservations.people5")
+                                        | 5 People
                                 .rezervasyon-detay-item
                                     .rezervasyon-detay-item__icon
                                         i.icon-calendar
                                     .rezervasyon-detay-item__text
-                                        | 22 Ekim 2021
+                                        | October 22, 2021
                                 .rezervasyon-detay-item
                                     .rezervasyon-detay-item__icon
                                         i.icon-clock
@@ -280,14 +253,11 @@ block content
                             .apply-button.d-flex.mt-20.button-group
                                 .button.button--light.button--icon.button--icon--left
                                     i.icon-x-circle
-                                    span İptal Et
+                                    span(data-i18n="common.cancel") Cancel
                                 .button.button--red.button--icon.button--icon--left
                                     i.icon-check
-                                    span Onayla
-                            p.bottom-modal-content__text.mt-3 Not: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolores doloribus ea expedita.
-
-
-
+                                    span(data-i18n="common.confirm") Confirm
+                            p.bottom-modal-content__text.mt-3 Note: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolores doloribus ea expedita.
 
 
 

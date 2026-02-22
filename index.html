@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,10 +29,10 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
@@ -39,77 +43,77 @@
                 <div class="scan_code"><i class="icon-qr-code-scan"></i></div>
               </div>
               <div class="welcome_area">
-                <div class="welcome_area-title">Hoşgeldin<span>Mehmet</span></div>
-                <div class="welcome_area-subtitle">Hemen yemeklerine bayılacağın restoranı keşfet</div>
+                <div class="welcome_area-title" data-i18n="index.welcome">Welcome<span>Mehmet</span></div>
+                <div class="welcome_area-subtitle" data-i18n="index.subtitle">Discover the restaurant whose food you'll love</div>
               </div>
               <div class="search_area"><small class="location">
                   <div class="location-icon"><i class="icon-map-pin"></i></div>
                   <div class="location-text">Kdz. Ereğli / Zonguldak</div></small>
                 <div class="input-wrapper search"><i class="icon-search input-icon"></i>
-                  <input class="input" type="text" placeholder="Şimdi Keşfet...">
+                  <input class="input" type="text" placeholder="Discover Now..." data-i18n-placeholder="index.discoverNow">
                   <div class="filter js-open-search-filter-modal"><i class="icon-filter input-icon"></i></div>
                 </div>
               </div>
               <div class="food_category">
                 <div class="see_all-wrapper">
-                  <div class="see_all-title">Kategoriler</div>
-                  <div class="see_all-button">Hepsini Gör<i class="icon-arrow-right"></i></div>
+                  <div class="see_all-title" data-i18n="index.categories">Categories</div>
+                  <div class="see_all-button" data-i18n="common.seeAll">See All<i class="icon-arrow-right"></i></div>
                 </div>
                 <div class="food_category-slider">
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                    <div class="food_category-item-title">Burger</div>
+                    <div class="food_category-item-title" data-i18n="category.burger">Burger</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/makarna.png"></div>
-                    <div class="food_category-item-title">Makarna</div>
+                    <div class="food_category-item-title" data-i18n="category.pasta">Pasta</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/kahve.png"></div>
-                    <div class="food_category-item-title">Kahve</div>
+                    <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/kebap.png"></div>
-                    <div class="food_category-item-title">Kebap</div>
+                    <div class="food_category-item-title" data-i18n="category.kebab">Kebab</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/steak.png"></div>
-                    <div class="food_category-item-title">Steak</div>
+                    <div class="food_category-item-title" data-i18n="category.steak">Steak</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                    <div class="food_category-item-title">Kahve</div>
+                    <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                    <div class="food_category-item-title">Burger</div>
+                    <div class="food_category-item-title" data-i18n="category.burger">Burger</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/makarna.png"></div>
-                    <div class="food_category-item-title">Makarna</div>
+                    <div class="food_category-item-title" data-i18n="category.pasta">Pasta</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/kahve.png"></div>
-                    <div class="food_category-item-title">Kahve</div>
+                    <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/kebap.png"></div>
-                    <div class="food_category-item-title">Kebap</div>
+                    <div class="food_category-item-title" data-i18n="category.kebab">Kebab</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/steak.png"></div>
-                    <div class="food_category-item-title">Steak</div>
+                    <div class="food_category-item-title" data-i18n="category.steak">Steak</div>
                   </div>
                   <div class="food_category-item">
                     <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                    <div class="food_category-item-title">Kahve</div>
+                    <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                   </div>
                 </div>
               </div>
               <div class="restaruants">
                 <div class="see_all-wrapper">
-                  <div class="see_all-title">Yakınındaki Restoranlar</div>
-                  <div class="see_all-button">Hepsini Gör<i class="icon-arrow-right"></i></div>
+                  <div class="see_all-title" data-i18n="index.nearbyRestaurants">Nearby Restaurants</div>
+                  <div class="see_all-button" data-i18n="common.seeAll">See All<i class="icon-arrow-right"></i></div>
                 </div>
                 <div class="restaruants-slider">
                   <div class="restaruant-item">
@@ -118,7 +122,7 @@
                     </div>
                     <div class="restaruant-item-content">
                       <div class="title">Günaydın Steak House</div>
-                      <div class="category">Türk Mutfağı - Izgara</div>
+                      <div class="category" data-i18n="restaurantType.turkishGrill">Turkish Cuisine - Grill</div>
                       <div class="restaruant-item-content-footer">
                         <div class="rating"><i class="icon icon-star"></i><span>4.2</span></div>
                         <div class="distance"><i class="icon icon-map-pin"></i><span>< 0.5 Km</span></div>
@@ -132,7 +136,7 @@
                     </div>
                     <div class="restaruant-item-content">
                       <div class="title">Starbucks Coffee</div>
-                      <div class="category">Cafe - Pastane</div>
+                      <div class="category" data-i18n="restaurantType.cafePastry">Cafe - Pastry</div>
                       <div class="restaruant-item-content-footer">
                         <div class="rating"><i class="icon icon-star"></i><span>4.2</span></div>
                         <div class="distance"><i class="icon icon-map-pin"></i><span>2.5 Km</span></div>
@@ -143,17 +147,17 @@
               </div>
             </div>
             <div class="tabbar">
-              <div class="tabbar-item"><i class="icon-home"></i><span>Anasayfa</span></div>
-              <div class="tabbar-item discover"><i class="icon-chevron-up"></i><span>Keşfet</span></div><a class="tabbar-item active" href="profile.html"><i class="icon-user"></i><span>Profilim</span>
+              <div class="tabbar-item"><i class="icon-home"></i><span data-i18n="tabbar.home">Home</span></div>
+              <div class="tabbar-item discover"><i class="icon-chevron-up"></i><span data-i18n="tabbar.discover">Discover</span></div><a class="tabbar-item active" href="profile.html"><i class="icon-user"></i><span data-i18n="tabbar.profile">My Profile</span>
                 <div class="bildirim-icon"></div></a>
             </div>
             <div class="bottom-modal" id="search_filter_modal">
               <div class="bottom-modal__divider" onclick="$(&quot;#search_filter_modal&quot;).removeClass(&quot;active&quot;)"><span></span></div>
               <div class="bottom-modal-content">
                 <div class="search-filter">
-                  <div class="search-filter__clear"><i class="icon icon-trash-2 mr-2"></i><span>Filtreleri Temizle</span></div>
+                  <div class="search-filter__clear"><i class="icon icon-trash-2 mr-2"></i><span data-i18n="filter.clearFilters">Clear Filters</span></div>
                   <div class="search-filter-section">
-                    <div class="search-filter-section__title">Konum<span>Konum Değiştir</span></div>
+                    <div class="search-filter-section__title" data-i18n="filter.location">Location<span data-i18n="filter.changeLocation">Change Location</span></div>
                     <div class="location d-flex">
                       <div class="location-icon mr-1"><i class="icon-map-pin"></i></div>
                       <div class="location-text">Kdz. Ereğli / Zonguldak</div>
@@ -161,7 +165,7 @@
                   </div>
                   <div class="divider"></div>
                   <div class="search-filter-section">
-                    <div class="search-filter-section__title">Mesafe<span>1 Km İçinde</span></div>
+                    <div class="search-filter-section__title" data-i18n="filter.distance">Distance<span data-i18n="filter.withinKm">Within 1 Km</span></div>
                     <div class="line-filter">
                       <div class="line-filter__text">1Km</div>
                       <div class="line-filter__bar"><span class="line-filter__circle"></span></div>
@@ -170,11 +174,11 @@
                   </div>
                   <div class="divider"></div>
                   <div class="search-filter-section">
-                    <div class="search-filter-section__title">Restoran İçi Özellikler</div>
+                    <div class="search-filter-section__title" data-i18n="filter.restaurantFeatures">In-Restaurant Features</div>
                     <label class="switch search-filter-item" for="switch1">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Wifi</div>
-                        <div class="search-filter-item__subtitle">Restoran içi ücretsiz wifi</div>
+                        <div class="search-filter-item__title" data-i18n="filter.wifi">Wifi</div>
+                        <div class="search-filter-item__subtitle" data-i18n="filter.wifiFree">Free wifi in restaurant</div>
                       </div>
                       <div class="search-filter-item-right">
                         <input class="switch__input" id="switch1" type="checkbox" checked=""><span class="switch__toggle"></span>
@@ -182,8 +186,8 @@
                     </label>
                     <label class="switch search-filter-item" for="switch2">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Canlı Müzik</div>
-                        <div class="search-filter-item__subtitle">Canlı Müzik Keyfi</div>
+                        <div class="search-filter-item__title" data-i18n="filter.liveMusic">Live Music</div>
+                        <div class="search-filter-item__subtitle" data-i18n="filter.liveMusicEnjoy">Enjoy Live Music</div>
                       </div>
                       <div class="search-filter-item-right">
                         <input class="switch__input" id="switch2" type="checkbox" checked=""><span class="switch__toggle"></span>
@@ -191,7 +195,7 @@
                     </label>
                     <label class="switch search-filter-item" for="switch3">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Sigara İçilebilir Alan</div>
+                        <div class="search-filter-item__title" data-i18n="filter.smokingArea">Smoking Area</div>
                       </div>
                       <div class="search-filter-item-right">
                         <input class="switch__input" id="switch3" type="checkbox"><span class="switch__toggle"></span>
@@ -199,8 +203,8 @@
                     </label>
                     <label class="switch search-filter-item" for="switch4">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Sigara İçilmeyen Alan</div>
-                        <div class="search-filter-item__subtitle">Bu alanda dumansız keyif sürebilirsiniz</div>
+                        <div class="search-filter-item__title" data-i18n="filter.nonSmokingArea">Non-Smoking Area</div>
+                        <div class="search-filter-item__subtitle" data-i18n="filter.nonSmokingDesc">Enjoy a smoke-free experience in this area</div>
                       </div>
                       <div class="search-filter-item-right">
                         <input class="switch__input" id="switch4" type="checkbox" checked=""><span class="switch__toggle"></span>
@@ -209,14 +213,14 @@
                   </div>
                   <div class="divider"></div>
                   <div class="search-filter-section">
-                    <div class="search-filter-section__title">Ödeme Seçenekleri</div>
+                    <div class="search-filter-section__title" data-i18n="filter.paymentOptions">Payment Options</div>
                     <label class="switch search-filter-item" for="switch11">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Hepsi</div>
-                        <div class="search-filter-item__subtitle">Tüm ödeme seçeneklerini dahil eder</div>
+                        <div class="search-filter-item__title" data-i18n="filter.all">All</div>
+                        <div class="search-filter-item__subtitle" data-i18n="filter.allPaymentDesc">Includes all payment options</div>
                       </div>
                       <div class="search-filter-item-right">
-                        <input class="switch__input" id="switch11" type="checkbox" checked=""><span class="switch__toggle"></span>
+                        <input class="switch__input js-filter-all" id="switch11" type="checkbox" checked=""><span class="switch__toggle"></span>
                       </div>
                     </label>
                     <label class="switch search-filter-item" for="switch22">
@@ -227,7 +231,7 @@
                         <input class="switch__input" id="switch22" type="checkbox" checked=""><span class="switch__toggle"></span>
                       </div>
                     </label>
-                    <label class="switch search-filter-item" for="switch3">
+                    <label class="switch search-filter-item" for="switch33">
                       <div class="search-filter-item-left">
                         <div class="search-filter-item__title">Ticket</div>
                       </div>
@@ -237,59 +241,23 @@
                     </label>
                     <label class="switch search-filter-item" for="switch44">
                       <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Online Ödeme</div>
+                        <div class="search-filter-item__title" data-i18n="filter.onlinePayment">Online Payment</div>
                       </div>
                       <div class="search-filter-item-right">
                         <input class="switch__input" id="switch44" type="checkbox" checked=""><span class="switch__toggle"></span>
                       </div>
                     </label>
                   </div>
-                  <div class="search-filter-section">
-                    <div class="search-filter-section__title">Ödeme Seçenekleri</div>
-                    <label class="switch search-filter-item" for="switch111">
-                      <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Hepsi</div>
-                        <div class="search-filter-item__subtitle">Tüm ödeme seçeneklerini dahil eder</div>
-                      </div>
-                      <div class="search-filter-item-right">
-                        <input class="switch__input" id="switch111" type="checkbox" checked=""><span class="switch__toggle"></span>
-                      </div>
-                    </label>
-                    <label class="switch search-filter-item" for="switch222">
-                      <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Sodexo</div>
-                      </div>
-                      <div class="search-filter-item-right">
-                        <input class="switch__input" id="switch222" type="checkbox" checked=""><span class="switch__toggle"></span>
-                      </div>
-                    </label>
-                    <label class="switch search-filter-item" for="switch333">
-                      <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Ticket</div>
-                      </div>
-                      <div class="search-filter-item-right">
-                        <input class="switch__input" id="switch333" type="checkbox"><span class="switch__toggle"></span>
-                      </div>
-                    </label>
-                    <label class="switch search-filter-item" for="switch444">
-                      <div class="search-filter-item-left">
-                        <div class="search-filter-item__title">Online Ödeme</div>
-                      </div>
-                      <div class="search-filter-item-right">
-                        <input class="switch__input" id="switch444" type="checkbox" checked=""><span class="switch__toggle"></span>
-                      </div>
-                    </label>
-                  </div>
-                  <div class="search-filter__apply-button button button--red button--icon button--icon--right"><span>Filtreleri Uygula</span><i class="icon icon-arrow-right"></i></div>
+                  <div class="search-filter__apply-button button button--red button--icon button--icon--right"><span data-i18n="filter.applyFilters">Apply Filters</span><i class="icon icon-arrow-right"></i></div>
                 </div>
               </div>
             </div>
             <div class="bottom-modal" id="checkin">
               <div class="bottom-modal__divider" onclick="$(&quot;#checkin&quot;).removeClass(&quot;active&quot;)"><span></span></div>
               <div class="bottom-modal-content">
-                <div class="bottom-modal-content__title">Rezervasyonun Yaklaşıyor</div>
-                <p class="bottom-modal-content__text">Bir adet rezervasyonun yaklaşıyor. Lütfen checkin yaparak rezervasyonunuzu onaylayın.
-                  <div class="mt-1">Kalan Süre:<b class="ml-1">5 Saat 22 Dk</b></div>
+                <div class="bottom-modal-content__title" data-i18n="checkin.title">Your Reservation is Coming Up</div>
+                <p class="bottom-modal-content__text" data-i18n="checkin.desc">You have a reservation coming up. Please check in to confirm your reservation.
+                  <div class="mt-1"><span data-i18n="checkin.timeRemaining">Time Remaining:</span><b class="ml-1" data-i18n="checkin.hoursMinutes">5 Hours 22 Min</b></div>
                 </p>
                 <div class="divider"></div>
                 <div class="rezervasyon-detay">
@@ -299,11 +267,11 @@
                   </div>
                   <div class="rezervasyon-detay-item">
                     <div class="rezervasyon-detay-item__icon"><i class="icon-user"></i></div>
-                    <div class="rezervasyon-detay-item__text">5 Kişilik</div>
+                    <div class="rezervasyon-detay-item__text" data-i18n="reservations.people5">5 People</div>
                   </div>
                   <div class="rezervasyon-detay-item">
                     <div class="rezervasyon-detay-item__icon"><i class="icon-calendar"></i></div>
-                    <div class="rezervasyon-detay-item__text">22 Ekim 2021</div>
+                    <div class="rezervasyon-detay-item__text">October 22, 2021</div>
                   </div>
                   <div class="rezervasyon-detay-item">
                     <div class="rezervasyon-detay-item__icon"><i class="icon-clock"></i></div>
@@ -311,20 +279,22 @@
                   </div>
                 </div>
                 <div class="apply-button d-flex mt-20 button-group">
-                  <div class="button button--light button--icon button--icon--left"><i class="icon-x-circle"></i><span>İptal Et</span></div>
-                  <div class="button button--red button--icon button--icon--left"><i class="icon-check"></i><span>Onayla</span></div>
+                  <div class="button button--light button--icon button--icon--left"><i class="icon-x-circle"></i><span data-i18n="common.cancel">Cancel</span></div>
+                  <div class="button button--red button--icon button--icon--left"><i class="icon-check"></i><span data-i18n="common.confirm">Confirm</span></div>
                 </div>
-                <p class="bottom-modal-content__text mt-3">Not: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolores doloribus ea expedita.</p>
+                <p class="bottom-modal-content__text mt-3">Note: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam consectetur dolores doloribus ea expedita.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,35 +29,37 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
           <div class="back">
-            <div class="back-item"><i class="icon-chevron-left"></i><span>Geri Dön</span></div>
+            <div class="back-item"><i class="icon-chevron-left"></i><span data-i18n="common.goBack">Go Back</span></div>
           </div>
           <div class="within_back_area enter_code">
             <div class="enter_code-icon"><i class="icon-keyboard"></i></div>
-            <div class="enter_code-text mb-20 text-center">Hemen restoran/cafe'den bir kod talep edin. Telefonunuzdan sipariş verme rahatlığını doyasıya yaşayın.</div>
+            <div class="enter_code-text mb-20 text-center"><span data-i18n="enterCode.text">Request a code from the restaurant/cafe right away. Enjoy the convenience of ordering from your phone.</span></div>
             <div class="enter_code-form w-100">
               <div class="input-wrapper input-number"><i class="icon-keyboard input-icon"></i>
-                <input class="input" type="number" placeholder="Kodu Girin">
+                <input class="input" type="number" placeholder="Enter Code" data-i18n-placeholder="enterCode.placeholder">
               </div>
             </div>
-            <div class="button button--red enter_code-button mt-20"><span>Onayla</span></div>
-            <div class="scan_code-divider"><span>ya da</span></div>
-            <div class="button button--light button--icon button--icon--left"><i class="icon-qr-code"></i><span>QR Kodu Taratın</span></div><small class="mt-1 text--light">Kameranızı kullanarak masadaki QR kodu okutabilirsiniz.</small>
+            <div class="button button--red enter_code-button mt-20"><span data-i18n="common.confirm">Confirm</span></div>
+            <div class="scan_code-divider"><span data-i18n="common.or">or</span></div>
+            <div class="button button--light button--icon button--icon--left"><i class="icon-qr-code"></i><span data-i18n="enterCode.scanQR">Scan QR Code</span></div><small class="mt-1 text--light" data-i18n="enterCode.cameraInfo">You can scan the QR code on the table using your camera.</small>
           </div>
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

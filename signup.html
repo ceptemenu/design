@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--base(href="http://wunderdesigns.at/demo/ceptemenu/")-->
-    <title>Kayıt Ol</title>
+    <title>Sign Up</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,46 +29,48 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
           <div class="loginarea-image">
-            <div class="loginarea-image-title">KAYIT OL</div>
+            <div class="loginarea-image-title" data-i18n="signup.title">SIGN UP</div>
           </div>
           <div class="loginarea-form">
             <div class="input-wrapper"><i class="icon-user input-icon"></i>
-              <input class="input" type="text" placeholder="İsim Soyisim">
+              <input class="input" type="text" placeholder="Full Name" data-i18n-placeholder="signup.fullName">
             </div>
             <div class="input-wrapper"><i class="icon-mobile input-icon"></i>
-              <input class="input" type="phone" placeholder="Telefon Numarası">
+              <input class="input" type="phone" placeholder="Phone Number" data-i18n-placeholder="signup.phone">
             </div>
             <div class="input-wrapper"><i class="icon-mail input-icon"></i>
               <input class="input" type="text" placeholder="E-mail">
             </div>
             <div class="input-wrapper password"><i class="icon-lock input-icon"></i>
-              <input class="input" type="password" placeholder="Şifre">
+              <input class="input" type="password" placeholder="Password" data-i18n-placeholder="signup.password">
               <div class="password-see" onclick="togglePassSee()"><i class="icon-eye-close"></i><i class="icon-eye"></i></div>
             </div>
             <div class="input-wrapper password"><i class="icon-lock input-icon"></i>
-              <input class="input" type="password" placeholder="Şifre Tekrar">
+              <input class="input" type="password" placeholder="Repeat Password" data-i18n-placeholder="signup.passwordRepeat">
               <div class="password-see" onclick="togglePassSee()"><i class="icon-eye-close"></i><i class="icon-eye"></i></div>
             </div>
-            <div class="button button--red mt-3">Kayıt Ol</div><small class="mb-2 mt-1 d-block">Kayıt olduğunuz takdirde<a href="#">gizlilik sözleşmesini</a>okuyup kabul etmiş varsayılırsınız.</small>
-            <div class="button button--light button--icon button--icon--left"><img src="img/facebook.svg"><span>Facebook ile Bağlan</span></div>
-            <div class="button button--light button--icon button--icon--left"><img src="img/google.svg"><span>Google ile Bağlan</span></div>
-            <div class="loginarea-text mt-3"><span>Üyeliğin Var mı?</span><a>Hemen Giriş Yap</a></div>
+            <div class="button button--red mt-3" data-i18n="signup.signupButton">Sign Up</div><small class="mb-2 mt-1 d-block"><span data-i18n="signup.terms1">By signing up</span><a href="#" data-i18n="signup.privacyPolicy">privacy agreement</a><span data-i18n="signup.terms2">you are deemed to have read and accepted.</span></small>
+            <div class="button button--light button--icon button--icon--left"><img src="img/facebook.svg"><span data-i18n="login.facebookLogin">Sign In with Facebook</span></div>
+            <div class="button button--light button--icon button--icon--left"><img src="img/google.svg"><span data-i18n="login.googleLogin">Sign In with Google</span></div>
+            <div class="loginarea-text mt-3"><span data-i18n="signup.hasAccount">Already have an account?</span><a data-i18n="signup.loginNow">Sign In Now</a></div>
           </div>
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

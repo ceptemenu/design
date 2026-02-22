@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,10 +29,10 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
@@ -36,7 +40,7 @@
             <div class="back-item"><i class="icon-chevron-left"></i></div>
             <div class="logo-wrapper"><img src="img/logo.svg"></div>
             <div class="back-right d-flex">
-              <div class="cart-button" onclick="$(&quot;#bill&quot;).addClass(&quot;active&quot;)"><i class="icon-credit-card"></i>Adisyon</div>
+              <div class="cart-button" onclick="$(&quot;#bill&quot;).addClass(&quot;active&quot;)"><i class="icon-credit-card"></i><span data-i18n="restaurant.bill">Bill</span></div>
               <!--.save-restaruant(onclick="$(this).toggleClass('active')")
               i.icon-bookmark
               i.icon-bookmark-fill
@@ -52,7 +56,7 @@
               <div class="p-20">
                 <div class="restaruant-mainpage-name">Günaydın Steakhouse</div>
                 <div class="restaruant-mainpage-sub_info">
-                  <div class="rating tab-item" data-href="yorum"><i class="icon icon-star"></i><span>4.2</span><small class="ml-1">(33 Yorum)</small></div>
+                  <div class="rating tab-item" data-href="yorum"><i class="icon icon-star"></i><span>4.2</span><small class="ml-1" data-i18n="restaurant.reviews33">(33 Reviews)</small></div>
                   <div class="divider-circle"></div>
                   <div class="distance"><i class="icon icon-map-pin"></i><span>< 1 Km</span></div>
                 </div>
@@ -61,72 +65,72 @@
                 <div class="d-flex align-items-center">
                   <div class="status status--success">
                     <div class="status__circle"></div>
-                    <div class="status__text">Açık</div>
+                    <div class="status__text" data-i18n="restaurant.open">Open</div>
                   </div>
-                  <!-- Tıklandığında popup şeklinde tüm detay görülebilir-->
+                  <!-- Click to see all details in popup-->
                   <div class="divider-circle"></div>
                   <div class="work-hours">10:00 - 02:00</div>
                   <!--.status.status--danger
                   .status__circle
-                  .status__text Kapalı
+                  .status__text(data-i18n="restaurant.closed") Closed
                   -->
                 </div>
                 <div class="address"><i class="icon icon-map-direction"></i>Serinsu, Üsküdar, İstanbul</div>
-                <div class="paytype address" onclick="$(&quot;#odeme_secenekleri&quot;).addClass(&quot;active&quot;)"><i class="icon icon-credit-card"></i>Ödeme Seçenekleri</div>
+                <div class="paytype address" onclick="$(&quot;#odeme_secenekleri&quot;).addClass(&quot;active&quot;)"><i class="icon icon-credit-card"></i><span data-i18n="restaurant.paymentOptions">Payment Options</span></div>
               </div>
               <div class="divider"></div>
               <div class="restaruant-mainpage-buttons">
                 <div class="restaruant-mainpage-buttons__item">
                   <div class="restaruant-mainpage-buttons__icon"><i class="icon icon-phone-call"></i></div>
-                  <div class="restaruant-mainpage-buttons__title">Ara</div>
+                  <div class="restaruant-mainpage-buttons__title" data-i18n="restaurant.call">Call</div>
                 </div>
                 <div class="divider-circle"></div>
                 <div class="restaruant-mainpage-buttons__item">
                   <div class="restaruant-mainpage-buttons__icon"><i class="icon icon-navigation"></i></div>
-                  <div class="restaruant-mainpage-buttons__title">Beni Götür</div>
+                  <div class="restaruant-mainpage-buttons__title" data-i18n="restaurant.takeMe">Take Me</div>
                 </div>
                 <div class="divider-circle"></div>
                 <div class="restaruant-mainpage-buttons__item">
                   <div class="restaruant-mainpage-buttons__icon"><i class="icon icon-calendar"></i></div>
-                  <div class="restaruant-mainpage-buttons__title" onclick="$(&quot;#createReservation&quot;).addClass(&quot;active&quot;)">Rezervasyon</div>
+                  <div class="restaruant-mainpage-buttons__title" data-i18n="restaurant.reservation" onclick="$(&quot;#createReservation&quot;).addClass(&quot;active&quot;)">Reservation</div>
                 </div>
               </div>
               <div class="divider"></div>
               <div class="food p-20 mb-0">
                 <div class="see_all-wrapper mt-0">
-                  <div class="see_all-title">En Çok Tercih Edilenler</div>
-                  <div class="see_all-button tab-item" data-href="menu">Hepsini Gör<i class="icon-arrow-right"></i></div>
+                  <div class="see_all-title" data-i18n="restaurant.mostPreferred">Most Preferred</div>
+                  <div class="see_all-button tab-item" data-href="menu" data-i18n="common.seeAll">See All<i class="icon-arrow-right"></i></div>
                 </div>
                 <div class="food-slider">
                   <div class="food-item">
                     <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
-                    <div class="food-item__title">Şefin Özel Burgeri</div>
+                    <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                   </div>
                   <div class="food-item">
                     <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
-                    <div class="food-item__title">Şefin Özel Burgeri</div>
+                    <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                   </div>
                   <div class="food-item">
                     <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
-                    <div class="food-item__title">Şefin Özel Burgeri</div>
+                    <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                   </div>
                 </div>
               </div>
               <div class="divider"></div>
               <div class="p-20 restaruant-mainpage-info">
-                <div class="title">Daha Fazla Bilgi</div>
+                <div class="title" data-i18n="restaurant.moreInfo">More Information</div>
                 <div class="pins">
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-guitar"></i></div>
-                    <div class="pins-item-title">Canlı Müzik</div>
+                    <div class="pins-item-title" data-i18n="filter.liveMusic">Live Music</div>
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-no-smoking"></i></div>
-                    <div class="pins-item-title">Sigarasız Alan</div>
+                    <div class="pins-item-title" data-i18n="restaurant.nonSmokingArea">Non-Smoking Area</div>
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-cigarette"></i></div>
-                    <div class="pins-item-title">Sigara İçilebilir Alan</div>
+                    <div class="pins-item-title" data-i18n="restaurant.smokingArea">Smoking Area</div>
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-wifi"></i></div>
@@ -134,22 +138,22 @@
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-check"></i></div>
-                    <div class="pins-item-title">İç Mekan</div>
+                    <div class="pins-item-title" data-i18n="restaurant.indoor">Indoor</div>
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-fence"></i></div>
-                    <div class="pins-item-title">Dış Mekan</div>
+                    <div class="pins-item-title" data-i18n="restaurant.outdoor">Outdoor</div>
                   </div>
                   <div class="pins-item">
                     <div class="pins-item-icon"><i class="icon icon-alcohol"></i></div>
-                    <div class="pins-item-title">Alkol İçilebilir</div>
+                    <div class="pins-item-title" data-i18n="restaurant.alcoholAllowed">Alcohol Allowed</div>
                   </div>
                 </div>
               </div>
               <div class="divider"></div>
               <div class="restaruants p-20">
                 <div class="see_all-wrapper mt-0">
-                  <div class="see_all-title">Benzer Restoranlar</div>
+                  <div class="see_all-title" data-i18n="restaurant.similarRestaurants">Similar Restaurants</div>
                 </div>
                 <div class="restaruants-slider">
                   <div class="restaruant-item">
@@ -158,7 +162,7 @@
                     </div>
                     <div class="restaruant-item-content">
                       <div class="title">Günaydın Steak House</div>
-                      <div class="category">Türk Mutfağı - Izgara</div>
+                      <div class="category" data-i18n="restaurantType.turkishGrill">Turkish Cuisine - Grill</div>
                       <div class="restaruant-item-content-footer">
                         <div class="rating"><i class="icon icon-star"></i><span>4.2</span></div>
                         <div class="distance"><i class="icon icon-placeholder"></i><span>< 0.5 Km</span></div>
@@ -172,7 +176,7 @@
                     </div>
                     <div class="restaruant-item-content">
                       <div class="title">Starbucks Coffee</div>
-                      <div class="category">Cafe - Pastane</div>
+                      <div class="category" data-i18n="restaurantType.cafePastry">Cafe - Pastry</div>
                       <div class="restaruant-item-content-footer">
                         <div class="rating"><i class="icon icon-star"></i><span>4.2</span></div>
                         <div class="distance"><i class="icon icon-placeholder"></i><span>2.5 Km</span></div>
@@ -189,7 +193,7 @@
                   <div class="restaruant-mainpage-summary-info">
                     <div class="restaruant-mainpage-name">Günaydın Steakhouse</div>
                     <div class="restaruant-mainpage-sub_info">
-                      <div class="rating tab-item" data-href="yorum"><i class="icon icon-star"></i><span>4.2</span><small class="ml-1">(33 Yorum)</small></div>
+                      <div class="rating tab-item" data-href="yorum"><i class="icon icon-star"></i><span>4.2</span><small class="ml-1" data-i18n="restaurant.reviews33">(33 Reviews)</small></div>
                       <div class="divider-circle"></div>
                       <div class="distance"><i class="icon icon-map-pin"></i><span>< 1 Km</span></div>
                     </div>
@@ -197,81 +201,81 @@
                 </div>
                 <div class="p-20">
                   <div class="input-wrapper search"><i class="icon-search input-icon"></i>
-                    <input class="input" type="text" placeholder="Ne yemek istersin">
+                    <input class="input" type="text" placeholder="What do you want to eat" data-i18n-placeholder="restaurant.whatToEat">
                     <div class="filter"><i class="icon-search input-icon"></i></div>
                   </div>
                 </div>
                 <div class="p-20">
                   <div class="food_category">
                     <div class="see_all-wrapper">
-                      <div class="see_all-title">Kategoriler</div>
-                      <div class="see_all-button">Hepsini Gör<i class="icon-arrow-right"></i></div>
+                      <div class="see_all-title" data-i18n="index.categories">Categories</div>
+                      <div class="see_all-button" data-i18n="common.seeAll">See All<i class="icon-arrow-right"></i></div>
                     </div>
                     <div class="food_category-slider">
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                        <div class="food_category-item-title">Burgerler</div>
+                        <div class="food_category-item-title" data-i18n="category.burgers">Burgers</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/makarna.png"></div>
-                        <div class="food_category-item-title">Makarnalar</div>
+                        <div class="food_category-item-title" data-i18n="category.pastas">Pastas</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/kahve.png"></div>
-                        <div class="food_category-item-title">Sıcak İçecekler</div>
+                        <div class="food_category-item-title" data-i18n="category.hotDrinks">Hot Drinks</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/kebap.png"></div>
-                        <div class="food_category-item-title">Kebap</div>
+                        <div class="food_category-item-title" data-i18n="category.kebab">Kebab</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/steak.png"></div>
-                        <div class="food_category-item-title">Steak</div>
+                        <div class="food_category-item-title" data-i18n="category.steak">Steak</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                        <div class="food_category-item-title">Kahve</div>
+                        <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                        <div class="food_category-item-title">Burger</div>
+                        <div class="food_category-item-title" data-i18n="category.burger">Burger</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/makarna.png"></div>
-                        <div class="food_category-item-title">Makarna</div>
+                        <div class="food_category-item-title" data-i18n="category.pasta">Pasta</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/kahve.png"></div>
-                        <div class="food_category-item-title">Kahve</div>
+                        <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/kebap.png"></div>
-                        <div class="food_category-item-title">Kebap</div>
+                        <div class="food_category-item-title" data-i18n="category.kebab">Kebab</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/steak.png"></div>
-                        <div class="food_category-item-title">Steak</div>
+                        <div class="food_category-item-title" data-i18n="category.steak">Steak</div>
                       </div>
                       <div class="food_category-item">
                         <div class="food_category-item-image"><img src="img/categories/burger.png"></div>
-                        <div class="food_category-item-title">Kahve</div>
+                        <div class="food_category-item-title" data-i18n="category.coffee">Coffee</div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="p-20">
                   <div class="foods-menu">
-                    <div class="foods-menu__title">En Çok Tercih Edilenler</div>
+                    <div class="foods-menu__title" data-i18n="restaurant.mostPreferred">Most Preferred</div>
                     <div class="foods-menu-items">
                       <div class="food-item food-item--extended food-item">
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -287,11 +291,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -307,11 +311,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -327,11 +331,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -346,17 +350,17 @@
                     </div>
                   </div>
                   <div class="foods-menu">
-                    <div class="foods-menu__title">Burgerler</div>
+                    <div class="foods-menu__title" data-i18n="category.burgers">Burgers</div>
                     <div class="foods-menu-items">
                       <div class="food-item food-item--extended food-item">
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -372,11 +376,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -392,11 +396,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -412,11 +416,11 @@
                         <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                         <div class="food-item-content">
                           <div class="food-item-content-top">
-                            <div class="food-item__title">Şefin Özel Burgeri</div>
+                            <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                             <div class="food-item__add-cart" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                           </div>
                           <div class="food-item-content-middle">
-                            <div class="food-item__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
+                            <div class="food-item__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
                           </div>
                           <div class="food-item-content-bottom">
                             <div class="food-item__price">19.90 TL</div>
@@ -436,19 +440,19 @@
             <div class="tabcontent" id="yorum">
               <div class="restaruant-mainpage within_back_area p-0">
                 <div class="comments-head p-20 mt-10">
-                  <div class="comments-add" onclick="$(&quot;#selectOrderToWriteComment&quot;).addClass(&quot;active&quot;); "><i class="icon-edit mr-2"></i><span>Yorum Yaz</span></div>
+                  <div class="comments-add" onclick="$(&quot;#selectOrderToWriteComment&quot;).addClass(&quot;active&quot;); "><i class="icon-edit mr-2"></i><span data-i18n="restaurant.writeReview">Write Review</span></div>
                   <div class="input-wrapper search"><i class="icon-search input-icon"></i>
-                    <input class="input" type="text" placeholder="Yorumlarda Ara">
+                    <input class="input" type="text" placeholder="Search Reviews" data-i18n-placeholder="restaurant.searchReviews">
                   </div>
                   <div class="comments-filter-wrapper">
-                    <div class="comments-filter-item active">Yorumlarım</div>
-                    <div class="comments-filter-item">En Güncel</div>
-                    <div class="comments-filter-item">Fotoğraflı</div>
-                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span>5 Yıldız</span></div>
-                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span>4 Yıldız</span></div>
-                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span>3 Yıldız</span></div>
-                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span>2 Yıldız</span></div>
-                    <div class="comments-filter-item"><i class="icon-star"></i><span>1 Yıldız</span></div>
+                    <div class="comments-filter-item active" data-i18n="restaurant.myReviews">My Reviews</div>
+                    <div class="comments-filter-item" data-i18n="restaurant.mostRecent">Most Recent</div>
+                    <div class="comments-filter-item" data-i18n="restaurant.withPhotos">With Photos</div>
+                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span data-i18n="restaurant.stars5">5 Stars</span></div>
+                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span data-i18n="restaurant.stars4">4 Stars</span></div>
+                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span data-i18n="restaurant.stars3">3 Stars</span></div>
+                    <div class="comments-filter-item"><i class="icon-star-fill"></i><span data-i18n="restaurant.stars2">2 Stars</span></div>
+                    <div class="comments-filter-item"><i class="icon-star"></i><span data-i18n="restaurant.stars1">1 Star</span></div>
                   </div>
                 </div>
                 <div class="divider"></div>
@@ -498,20 +502,20 @@
             <div class="tabcontent" id="sepet">
               <div class="restaruant-mainpage within_back_area p-0">
                 <div class="bill-content p-20 mt-10">
-                  <div class="bill-title">Sepetim</div>
+                  <div class="bill-title" data-i18n="restaurant.myCart">My Cart</div>
                   <div class="divider"></div>
                   <div class="bill-order">
                     <div class="bill-order-header">
                       <div class="bill-order-header__title">
                         <div class="name d-flex">Muhammet Celepci
-                          <div class="status status--danger ml-1">+3 Kişi</div>
+                          <div class="status status--danger ml-1">+3 People</div>
                         </div>
                         <div class="d-flex align-items-center">
                           <div class="date">Günaydın Steak House</div>
                           <div class="divider divider-circle"></div>
-                          <div class="table-no status status--danger">Masa 12</div>
+                          <div class="table-no status status--danger">Table 12</div>
                         </div>
-                        <div class="d-flex align-items-center"><span>Toplam:</span>
+                        <div class="d-flex align-items-center"><span data-i18n="common.total">Total:</span>
                           <div class="status status--danger ml-1">123.99 TL</div>
                         </div>
                       </div>
@@ -520,7 +524,7 @@
                       <div class="food-item__image"><img src="img/food/hamburger.jpg"></div>
                       <div class="food-item-content">
                         <div class="food-item-content-top">
-                          <div class="food-item__title">Şefin Özel Burgeri</div>
+                          <div class="food-item__title" data-i18n="food.chefsSpecialBurger">Chef's Special Burger</div>
                           <div class="d-flex">
                             <div class="food-item__add-cart mr-1" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                             <div class="food-item__add-cart" style="transform:rotate(45deg)"><i class="icon-plus-circle"></i></div>
@@ -540,7 +544,7 @@
                       <div class="food-item__image"><img src="img/food/iskender.jpg"></div>
                       <div class="food-item-content">
                         <div class="food-item-content-top">
-                          <div class="food-item__title">Tereyağlı İskender</div>
+                          <div class="food-item__title" data-i18n="food.butterIskender">Butter Iskender</div>
                           <div class="d-flex">
                             <div class="food-item__add-cart mr-1" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                             <div class="food-item__add-cart" style="transform:rotate(45deg)"><i class="icon-plus-circle"></i></div>
@@ -560,7 +564,7 @@
                       <div class="food-item__image"><img src="img/food/cay.jpg"></div>
                       <div class="food-item-content">
                         <div class="food-item-content-top">
-                          <div class="food-item__title">Çay</div>
+                          <div class="food-item__title" data-i18n="food.tea">Tea</div>
                           <div class="d-flex">
                             <div class="food-item__add-cart mr-1" onclick="$(&quot;#customizeFood&quot;).addClass(&quot;active&quot;)"><i class="icon icon-plus-square"></i></div>
                             <div class="food-item__add-cart" style="transform:rotate(45deg)"><i class="icon-plus-circle"></i></div>
@@ -577,24 +581,24 @@
                       </div>
                     </div>
                   </div>
-                  <div class="button button--red button--icon button--icon--right mt-3"><span>Sipariş Ver</span><i class="icon-arrow-right"></i></div>
+                  <div class="button button--red button--icon button--icon--right mt-3"><span data-i18n="restaurant.placeOrder">Place Order</span><i class="icon-arrow-right"></i></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="restaruant-tabs">
-            <div class="restaruant-tabs-item tab-item active" data-href="genel"><i class="icon-home"></i>Genel</div>
-            <div class="restaruant-tabs-item tab-item" data-href="yorum"><i class="icon-message-square"></i>Yorumlar</div>
-            <div class="restaruant-tabs-item tab-item" data-href="menu"><i class="icon-book"></i>Menü</div>
+            <div class="restaruant-tabs-item tab-item active" data-href="genel"><i class="icon-home"></i><span data-i18n="restaurant.general">General</span></div>
+            <div class="restaruant-tabs-item tab-item" data-href="yorum"><i class="icon-message-square"></i><span data-i18n="restaurant.reviews">Reviews</span></div>
+            <div class="restaruant-tabs-item tab-item" data-href="menu"><i class="icon-book"></i><span data-i18n="restaurant.menu">Menu</span></div>
             <div class="restaruant-tabs-item tab-item restaruant-tabs-item--more" data-href="sepet">
-              <div><i class="icon-shopping-cart"></i>Sepet</div><span>123.99 TL</span>
+              <div><i class="icon-shopping-cart"></i><span data-i18n="restaurant.cart">Cart</span></div><span>123.99 TL</span>
             </div>
           </div>
           <div class="bottom-modal" id="selectOrderToWriteComment">
             <div class="bottom-modal__divider" onclick="$(&quot;#selectOrderToWriteComment&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Sipariş Seç</div>
-              <p class="bottom-modal-content__text">Yorum yazmak istediğiniz siparişi aşağıdan seçerek devam ediniz.</p>
+              <div class="bottom-modal-content__title" data-i18n="orderSelect.title">Select Order</div>
+              <p class="bottom-modal-content__text" data-i18n="orderSelect.desc">Select the order you want to review below to continue.</p>
               <div class="divider"></div>
               <div class="comment-write-select-order">
                 <div class="order-item-input_wrapper">
@@ -604,10 +608,10 @@
                       <div class="select_area"><i class="icon icon-check"></i></div>
                     </div>
                     <div class="order-item-content">
-                      <div class="order-item-content__title">13 Ekim 2020 Tarihli Sipariş</div>
-                      <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>1x Su</span></div>
+                      <div class="order-item-content__title" data-i18n="orderSelect.orderDated">Order Dated October 13, 2020</div>
+                      <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>1x Water</span></div>
                       <div class="order-item-content__amount">
-                        <div>Toplam Tutar</div><span>123.53 TL</span>
+                        <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                       </div>
                     </div>
                   </label>
@@ -619,38 +623,38 @@
                       <div class="select_area"><i class="icon icon-check"></i></div>
                     </div>
                     <div class="order-item-content">
-                      <div class="order-item-content__title">13 Ekim 2020 Tarihli Sipariş</div>
-                      <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>1x Su</span><span>1x Su</span></div>
+                      <div class="order-item-content__title" data-i18n="orderSelect.orderDated">Order Dated October 13, 2020</div>
+                      <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>1x Water</span><span>1x Water</span></div>
                       <div class="order-item-content__amount">
-                        <div>Toplam Tutar</div><span>123.53 TL</span>
+                        <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                       </div>
                     </div>
                   </label>
                 </div>
-                <div class="apply-button button button--red button--icon button--icon--right mt-20" onclick="$(&quot;#selectOrderToWriteComment&quot;).removeClass(&quot;active&quot;);$(&quot;#writeComment&quot;).addClass(&quot;active&quot;); "><span>Devam Et</span><i class="icon icon-arrow-right"></i></div>
+                <div class="apply-button button button--red button--icon button--icon--right mt-20" onclick="$(&quot;#selectOrderToWriteComment&quot;).removeClass(&quot;active&quot;);$(&quot;#writeComment&quot;).addClass(&quot;active&quot;); "><span data-i18n="common.continue">Continue</span><i class="icon icon-arrow-right"></i></div>
               </div>
             </div>
           </div>
           <div class="bottom-modal" id="writeComment">
             <div class="bottom-modal__divider" onclick="$(&quot;#writeComment&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Yorum Yap</div>
-              <p class="bottom-modal-content__text">Seçtiğiniz sipariş için yorum yapabilirsiniz.</p>
+              <div class="bottom-modal-content__title" data-i18n="writeReview.title">Write Review</div>
+              <p class="bottom-modal-content__text" data-i18n="writeReview.desc">You can review the order you selected.</p>
               <div class="divider"></div>
               <div class="comment-write">
                 <div class="order-item">
                   <div class="order-item-image"><img src="img/restaruant/gunaydin.jpg"></div>
                   <div class="order-item-content">
-                    <div class="order-item-content__title">13 Ekim 2020 Tarihli Sipariş</div>
-                    <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>1x Su</span></div>
+                    <div class="order-item-content__title" data-i18n="orderSelect.orderDated">Order Dated October 13, 2020</div>
+                    <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>1x Water</span></div>
                     <div class="order-item-content__amount">
-                      <div>Toplam Tutar</div><span>123.53 TL</span>
+                      <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                     </div>
                   </div>
                 </div>
-                <div class="comment-write__title">Değerlendir</div>
+                <div class="comment-write__title" data-i18n="writeReview.rate">Rate</div>
                 <div class="comment-write-star-content"><i class="star icon-star-fill"></i><i class="star icon-star-fill"></i><i class="star icon-star-fill"></i><i class="star icon-star"></i><i class="star icon-star"></i></div>
-                <div class="comment-write__title">Fotoğraf Yükle</div>
+                <div class="comment-write__title" data-i18n="writeReview.uploadPhoto">Upload Photo</div>
                 <div class="comment-write-upload">
                   <div class="comment-write-upload__image upload-image"><i class="icon icon-image"></i></div>
                   <div class="comment-write-upload__image"><img src="img/restaruant/gunaydin.jpg"><span class="comment-write-upload__close"><i class="icon icon-close"></i></span></div>
@@ -658,36 +662,36 @@
                   <div class="comment-write-upload__image"><img src="img/restaruant/gunaydin.jpg"><span class="comment-write-upload__close"><i class="icon icon-close"></i></span></div>
                   <div class="comment-write-upload__image"><img src="img/restaruant/gunaydin.jpg"><span class="comment-write-upload__close"><i class="icon icon-close"></i></span></div>
                 </div>
-                <div class="comment-write__title">Yorum Yaz</div>
-                <textarea class="comment-write-text" placeholder="Siparişinizle ilgili görüşlerinizi yazın."></textarea>
+                <div class="comment-write__title" data-i18n="writeReview.writeReview">Write Review</div>
+                <textarea class="comment-write-text" placeholder="Write your opinions about your order." data-i18n-placeholder="writeReview.placeholder"></textarea>
               </div>
-              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span>Gönder Gitsin</span><i class="icon icon-arrow-right"></i></div>
+              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span data-i18n="writeReview.submit">Submit</span><i class="icon icon-arrow-right"></i></div>
             </div>
           </div>
           <div class="bottom-modal" id="createReservation">
             <div class="bottom-modal__divider" onclick="$(&quot;#createReservation&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Rezervasyon Yap</div>
-              <p class="bottom-modal-content__text">Restoranda rezervasyon yapmak için aşağıdaki ...........</p>
+              <div class="bottom-modal-content__title" data-i18n="reservation.makeReservation">Make Reservation</div>
+              <p class="bottom-modal-content__text" data-i18n="reservation.desc">To make a reservation at the restaurant, below ...........</p>
               <div class="divider"></div>
               <div class="customize-food">
                 <div class="customize-food-item">
                   <div class="customize-food-item-content"></div>
-                  <div class="customize-food__title">Rezervasyon Tarih
-                    <div class="customize-food__text">Rezervasyon yaptıracağınız tarihi seçiniz.</div>
+                  <div class="customize-food__title" data-i18n="reservation.date">Reservation Date
+                    <div class="customize-food__text" data-i18n="reservation.dateDesc">Select the date for your reservation.</div>
                   </div><img class="w-100" src="img/calendar.png">
-                  <div class="customize-food__title">Rezervasyon Saati
-                    <div class="customize-food__text">Rezervasyon yaptıracağınız saat aralığını seçiniz.</div>
+                  <div class="customize-food__title" data-i18n="reservation.time">Reservation Time
+                    <div class="customize-food__text" data-i18n="reservation.timeDesc">Select the time range for your reservation.</div>
                   </div><img class="w-100" src="https://raw.githubusercontent.com/henninghall/react-native-date-picker/master/docs/time-mode-android.png">
-                  <div class="customize-food__title">Masanın Özellikleri
-                    <div class="customize-food__text">Rezerve edeceğiniz masanın özelliklerini seçebilirsiniz.</div>
+                  <div class="customize-food__title" data-i18n="reservation.tableFeatures">Table Features
+                    <div class="customize-food__text" data-i18n="reservation.tableFeaturesDesc">You can select the features of the table you want to reserve.</div>
                   </div>
                   <div class="customize-food-item-content-selects">
                     <div class="select-item">
                       <label class="tick-checkbox strike-through">
                         <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                         <div class="tick-checkbox__content">
-                          <div class="tick-checkbox__title">Priz</div>
+                          <div class="tick-checkbox__title" data-i18n="reservation.powerOutlet">Power Outlet</div>
                         </div>
                       </label>
                     </div>
@@ -695,7 +699,7 @@
                       <label class="tick-checkbox strike-through">
                         <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                         <div class="tick-checkbox__content">
-                          <div class="tick-checkbox__title">Sigara İçilebilir Alan</div>
+                          <div class="tick-checkbox__title" data-i18n="filter.smokingArea">Smoking Area</div>
                         </div>
                       </label>
                     </div>
@@ -703,7 +707,7 @@
                       <label class="tick-checkbox strike-through">
                         <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                         <div class="tick-checkbox__content">
-                          <div class="tick-checkbox__title">Cam Kenarı</div>
+                          <div class="tick-checkbox__title" data-i18n="reservation.windowSide">Window Side</div>
                         </div>
                       </label>
                     </div>
@@ -711,14 +715,14 @@
                       <label class="tick-checkbox strike-through">
                         <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                         <div class="tick-checkbox__content">
-                          <div class="tick-checkbox__title">Deniz Kenarı</div>
+                          <div class="tick-checkbox__title" data-i18n="reservation.seaside">Seaside</div>
                         </div>
                       </label>
                     </div>
                   </div>
-                  <textarea class="comment-write-text mt-20" placeholder="Rezervasyon için ekstra notunuz varsa ekleyebilirsiniz"></textarea>
-                  <div class="customize-food__title">Seçilebilir Masalar
-                    <div class="customize-food__text">Girdiğiniz kriterlere uygun masalar listelenmiştir.</div>
+                  <textarea class="comment-write-text mt-20" placeholder="If you have extra notes for the reservation, you can add them" data-i18n-placeholder="reservation.notePlaceholder"></textarea>
+                  <div class="customize-food__title" data-i18n="reservation.availableTables">Available Tables
+                    <div class="customize-food__text" data-i18n="reservation.availableTablesDesc">Tables matching your criteria are listed.</div>
                     <select class="d-block mt-10 w-100">
                       <option>B-11</option>
                       <option>C-22</option>
@@ -729,31 +733,31 @@
                   </div>
                 </div>
               </div>
-              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span>Rezervasyon Yap</span><i class="icon-arrow-right"></i></div>
+              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span data-i18n="reservation.makeReservation">Make Reservation</span><i class="icon-arrow-right"></i></div>
             </div>
           </div>
           <div class="bottom-modal bill" id="bill">
             <div class="bottom-modal__divider" onclick="$(&quot;#bill&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Adisyon</div>
-              <p class="bottom-modal-content__text">Verdiğiniz siparişler ve ürünler aşağıda listelenmiştir.</p>
+              <div class="bottom-modal-content__title" data-i18n="bill.title">Bill</div>
+              <p class="bottom-modal-content__text" data-i18n="bill.desc">Your orders and products are listed below.</p>
               <div class="renk_turleri">
                 <div class="renk_turleri-item red"><span></span>
-                  <p class="text">Ödenmedi</p>
+                  <p class="text" data-i18n="bill.unpaid">Unpaid</p>
                 </div>
                 <div class="renk_turleri-item orange"><span></span>
-                  <p class="text">Seçildi</p>
+                  <p class="text" data-i18n="bill.selected">Selected</p>
                 </div>
                 <div class="renk_turleri-item black"><span></span>
-                  <p class="text">Ödendi</p>
+                  <p class="text" data-i18n="bill.paid">Paid</p>
                 </div>
               </div>
               <div class="divider"></div>
               <div class="bill-content">
                 <div class="bill-order">
                   <div class="button-group mb-10 d-flex">
-                    <div class="button button--light mr-3">Siparişlerim</div>
-                    <div class="button button--red mt-0">Tüm Siparişler</div>
+                    <div class="button button--light mr-3" data-i18n="bill.myOrders">My Orders</div>
+                    <div class="button button--red mt-0" data-i18n="bill.allOrders">All Orders</div>
                   </div>
                   <div class="bill-order-header">
                     <div class="bill-order-header__title">
@@ -763,20 +767,20 @@
                       <div class="d-flex align-items-center">
                         <div class="date">05.11.2020</div>
                         <div class="divider divider-circle"></div>
-                        <div class="table-no status status--danger">Masa 12</div>
+                        <div class="table-no status status--danger" data-i18n="bill.table12">Table 12</div>
                       </div>
                     </div>
                   </div>
                   <div class="bill-order-content">
                     <div class="bill-order-content-header">
-                      <div class="bill-order-content__title">Sipariş No: #257<span>Sipariş: Muhammet Celepci</span></div>
-                      <div class="button button--sm button--red">Tümünü Seç</div>
+                      <div class="bill-order-content__title" data-i18n="bill.orderNo">Order No: #257<span>Sipariş: Muhammet Celepci</span></div>
+                      <div class="button button--sm button--red" data-i18n="bill.selectAll">Select All</div>
                     </div>
                     <div class="bill-order-content-items">
                       <div class="bill-order-content-item">
                         <div class="d-flex">
                           <div class="product-count">2</div>
-                          <div class="product-name">Su</div>
+                          <div class="product-name" data-i18n="food.water">Water</div>
                         </div>
                         <div class="product-price">5.00 TL</div>
                       </div>
@@ -784,7 +788,7 @@
                       <div class="bill-order-content-item odendi">
                         <div class="d-flex">
                           <div class="product-count">1</div>
-                          <div class="product-name">Fincan Çay</div>
+                          <div class="product-name" data-i18n="food.cupOfTea">Cup of Tea</div>
                         </div>
                         <div class="product-price">4.00 TL</div>
                       </div>
@@ -792,12 +796,12 @@
                       <div class="bill-order-content-item secildi">
                         <div class="d-flex">
                           <div class="product-count">8</div>
-                          <div class="product-name">Tereyağlı İskender</div>
+                          <div class="product-name" data-i18n="food.butterIskender">Butter Iskender</div>
                         </div>
                         <div class="product-price">80.00 TL</div>
-                        <div class="secildi-text">2 Adet Seçildi
+                        <div class="secildi-text" data-i18n="bill.itemsSelected">2 Items Selected
                           <div class="d-flex">
-                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)">Değiştir</div>
+                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)" data-i18n="common.change">Change</div>
                             <div class="sil__button ml-1" onclick="$(this).parent().parent().parent().removeClass(&quot;secildi&quot;);$(this).parent().parent(&quot;.secildi-text&quot;).remove();"><i class="icon icon-close"></i></div>
                           </div>
                         </div>
@@ -805,14 +809,14 @@
                       <div class="bill-order-content-item">
                         <div class="d-flex" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)">
                           <div class="product-count">1</div>
-                          <div class="product-name">Tereyağlı İskender<i class="icon-info ml-1"></i></div>
+                          <div class="product-name" data-i18n="food.butterIskender">Butter Iskender<i class="icon-info ml-1"></i></div>
                         </div>
                         <div class="product-price">10.00 TL</div>
                       </div>
                       <div class="bill-order-content-item odendi">
                         <div class="d-flex">
                           <div class="product-count">2</div>
-                          <div class="product-name">Tereyağlı İskender</div>
+                          <div class="product-name" data-i18n="food.butterIskender">Butter Iskender</div>
                         </div>
                         <div class="product-price">20.00 TL</div>
                       </div>
@@ -820,32 +824,32 @@
                       <div class="bill-order-content-item secildi">
                         <div class="d-flex">
                           <div class="product-count">2</div>
-                          <div class="product-name">Su</div>
+                          <div class="product-name" data-i18n="food.water">Water</div>
                         </div>
                         <div class="product-price">5.00 TL</div>
-                        <div class="secildi-text">Tamamı Seçildi
+                        <div class="secildi-text" data-i18n="bill.allSelected">All Selected
                           <div class="d-flex">
-                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)">Değiştir</div>
+                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)" data-i18n="common.change">Change</div>
                             <div class="sil__button ml-1" onclick="$(this).parent().parent().parent().removeClass(&quot;secildi&quot;);$(this).parent().parent(&quot;.secildi-text&quot;).remove();"><i class="icon icon-close"></i></div>
                           </div>
                         </div>
                       </div>
                       <div class="bill-order-content-footer">
-                        <div class="title">Toplam</div>
+                        <div class="title" data-i18n="common.total">Total</div>
                         <div class="amount">122.22 TL</div>
                       </div>
                     </div>
                   </div>
                   <div class="bill-order-content">
                     <div class="bill-order-content-header">
-                      <div class="bill-order-content__title">Sipariş No: #258</div>
-                      <div class="button button--sm button--gray">Ödendi</div>
+                      <div class="bill-order-content__title" data-i18n="bill.orderNo">Order No: #258</div>
+                      <div class="button button--sm button--gray" data-i18n="bill.paid">Paid</div>
                     </div>
                     <div class="bill-order-content-items">
                       <div class="bill-order-content-item odendi">
                         <div class="d-flex">
                           <div class="product-count">2</div>
-                          <div class="product-name">Su</div>
+                          <div class="product-name" data-i18n="food.water">Water</div>
                         </div>
                         <div class="product-price">5.00 TL</div>
                       </div>
@@ -853,7 +857,7 @@
                       <div class="bill-order-content-item odendi">
                         <div class="d-flex">
                           <div class="product-count">1</div>
-                          <div class="product-name">Fincan Çay</div>
+                          <div class="product-name" data-i18n="food.cupOfTea">Cup of Tea</div>
                         </div>
                         <div class="product-price">4.00 TL</div>
                       </div>
@@ -861,19 +865,19 @@
                   </div>
                   <div class="bill-order-content">
                     <div class="bill-order-content-header">
-                      <div class="bill-order-content__title">Sipariş No: #258</div>
-                      <div class="button button--sm button--orange">Tümünü Kaldır</div>
+                      <div class="bill-order-content__title" data-i18n="bill.orderNo">Order No: #258</div>
+                      <div class="button button--sm button--orange" data-i18n="bill.removeAll">Remove All</div>
                     </div>
                     <div class="bill-order-content-items">
                       <div class="bill-order-content-item secildi">
                         <div class="d-flex">
                           <div class="product-count">2</div>
-                          <div class="product-name">Su</div>
+                          <div class="product-name" data-i18n="food.water">Water</div>
                         </div>
                         <div class="product-price">5.00 TL</div>
-                        <div class="secildi-text">Tamamı Seçildi
+                        <div class="secildi-text" data-i18n="bill.allSelected">All Selected
                           <div class="d-flex">
-                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)">Değiştir</div>
+                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)" data-i18n="common.change">Change</div>
                             <div class="sil__button ml-1" onclick="$(this).parent().parent().parent().removeClass(&quot;secildi&quot;);$(this).parent().parent(&quot;.secildi-text&quot;).remove();"><i class="icon icon-close"></i></div>
                           </div>
                         </div>
@@ -882,18 +886,18 @@
                       <div class="bill-order-content-item secildi">
                         <div class="d-flex">
                           <div class="product-count">1</div>
-                          <div class="product-name">Fincan Çay</div>
+                          <div class="product-name" data-i18n="food.cupOfTea">Cup of Tea</div>
                         </div>
                         <div class="product-price">4.00 TL</div>
-                        <div class="secildi-text">Tamamı Seçildi
+                        <div class="secildi-text" data-i18n="bill.allSelected">All Selected
                           <div class="d-flex">
-                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)">Değiştir</div>
+                            <div class="secildi-text__button" onclick="$(&quot;#odenecek_urun_sayisi&quot;).addClass(&quot;active&quot;)" data-i18n="common.change">Change</div>
                             <div class="sil__button ml-1" onclick="$(this).parent().parent().parent().removeClass(&quot;secildi&quot;);$(this).parent().parent(&quot;.secildi-text&quot;).remove();"><i class="icon icon-close"></i></div>
                           </div>
                         </div>
                       </div>
                       <div class="bill-order-content-footer">
-                        <div class="title">Toplam</div>
+                        <div class="title" data-i18n="common.total">Total</div>
                         <div class="amount">9.00 TL</div>
                       </div>
                     </div>
@@ -902,68 +906,68 @@
               </div>
               <div class="apply-button d-flex mt-20">
                 <div class="button button--light"><span>542.00 TL</span></div>
-                <div class="button button--red button--icon button--icon--right" onclick="$(&quot;#odemeTuruSec&quot;).addClass(&quot;active&quot;)"><span>Hesabı Öde</span><i class="icon-arrow-right"></i></div>
+                <div class="button button--red button--icon button--icon--right" onclick="$(&quot;#odemeTuruSec&quot;).addClass(&quot;active&quot;)"><span data-i18n="bill.payBill">Pay Bill</span><i class="icon-arrow-right"></i></div>
               </div>
             </div>
           </div>
           <div class="bottom-modal" id="odemeTuruSec">
             <div class="bottom-modal__divider" onclick="$(&quot;#odemeTuruSec&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Ödeme Türü Seç</div>
-              <p class="bottom-modal-content__text">Ödenecek tutar<b class="ml-1">122.15 TL</b></p>
+              <div class="bottom-modal-content__title" data-i18n="paymentType.selectTitle">Select Payment Type</div>
+              <p class="bottom-modal-content__text" data-i18n="paymentType.amountToPay">Amount to be paid<b class="ml-1">122.15 TL</b></p>
               <div class="divider"></div>
               <div class="siparis-ozeti">
-                <div class="siparis-ozeti__title">Sipariş Özeti</div>
+                <div class="siparis-ozeti__title" data-i18n="paymentType.orderSummary">Order Summary</div>
                 <div class="siparis-ozeti-item">
-                  <div class="siparis-ozeti-item__title">2x Tereyağlı İskender</div>
+                  <div class="siparis-ozeti-item__title">2x Butter Iskender</div>
                   <div class="siparis-ozeti-item__amount">40.00 TL</div>
                 </div>
                 <div class="siparis-ozeti-item">
-                  <div class="siparis-ozeti-item__title">2x Tereyağlı İskender</div>
+                  <div class="siparis-ozeti-item__title">2x Butter Iskender</div>
                   <div class="siparis-ozeti-item__amount">40.00 TL</div>
                 </div>
                 <div class="siparis-ozeti-item">
-                  <div class="siparis-ozeti-item__title">2x Tereyağlı İskender</div>
+                  <div class="siparis-ozeti-item__title">2x Butter Iskender</div>
                   <div class="siparis-ozeti-item__amount">40.00 TL</div>
                 </div>
               </div>
-              <div class="tumunu-gor">Devamını Gör<i class="icon-chevron-down"></i></div>
+              <div class="tumunu-gor" data-i18n="paymentType.seeMore">See More<i class="icon-chevron-down"></i></div>
               <div class="divider"></div>
               <div class="odeme-turu">
-                <div class="odeme-turu__title">Ödeme Türünü Seçiniz</div>
+                <div class="odeme-turu__title" data-i18n="paymentType.selectType">Select Payment Type</div>
                 <select class="d-block w-100">
-                  <option>Kredi Kartı</option>
-                  <option>Kredi Kartı Online</option>
-                  <option>Nakit Ödeme</option>
-                  <option selected>Sodexo Kart</option>
+                  <option data-i18n="paymentType.creditCard">Credit Card</option>
+                  <option data-i18n="paymentType.creditCardOnline">Online Credit Card</option>
+                  <option data-i18n="payment.cashPayment">Cash Payment</option>
+                  <option selected data-i18n="paymentType.sodexoCard">Sodexo Card</option>
                 </select>
-                <div class="odeme-turu-aciklama">Sodexo için pos cihazı masanıza gelecektir. Lütfen tamamla diyerek ilerleyiniz.</div>
+                <div class="odeme-turu-aciklama" data-i18n="paymentType.sodexoDesc">The POS device will come to your table for Sodexo. Please proceed by clicking complete.</div>
               </div>
-              <div class="apply-button button button--red button--icon button--icon--right mt-20" onclick="$(&quot;#krediKartiOdeme&quot;).addClass(&quot;active&quot;)"><span>Devam Et</span><i class="icon-arrow-right"></i></div>
+              <div class="apply-button button button--red button--icon button--icon--right mt-20" onclick="$(&quot;#krediKartiOdeme&quot;).addClass(&quot;active&quot;)"><span data-i18n="common.continue">Continue</span><i class="icon-arrow-right"></i></div>
             </div>
           </div>
           <div class="bottom-modal" id="krediKartiOdeme">
             <div class="bottom-modal__divider" onclick="$(&quot;#krediKartiOdeme&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Kredi Kartı İle Ödeme</div>
-              <p class="bottom-modal-content__text">Ödenecek tutar<b class="ml-1">122.15 TL</b></p>
+              <div class="bottom-modal-content__title" data-i18n="creditCard.title">Credit Card Payment</div>
+              <p class="bottom-modal-content__text" data-i18n="paymentType.amountToPay">Amount to be paid<b class="ml-1">122.15 TL</b></p>
               <div class="divider"></div>
               <form>
                 <div class="input-group">
-                  <div class="input-group-title">Ad Soyad</div>
+                  <div class="input-group-title" data-i18n="creditCard.fullName">Full Name</div>
                   <div class="input-wrapper">
-                    <input class="input no-icon" type="text" placeholder="Kart Sahibi Ad Soyad">
+                    <input class="input no-icon" type="text" placeholder="Cardholder Full Name" data-i18n-placeholder="creditCard.cardholderName">
                   </div>
                 </div>
                 <div class="input-group">
-                  <div class="input-group-title">Kart Numarası</div>
+                  <div class="input-group-title" data-i18n="creditCard.cardNumber">Card Number</div>
                   <div class="input-wrapper">
-                    <input class="input no-icon" type="number" placeholder="Kart Numarası">
+                    <input class="input no-icon" type="number" placeholder="Card Number" data-i18n-placeholder="creditCard.cardNumber">
                   </div>
                 </div>
                 <div class="input-group">
                   <div class="input-group-item">
-                    <div class="input-group-title">Ay</div>
+                    <div class="input-group-title" data-i18n="creditCard.month">Month</div>
                     <div class="input-wrapper">
                       <select class="w-100">
                         <option>01</option>
@@ -982,7 +986,7 @@
                     </div>
                   </div>
                   <div class="input-group-item">
-                    <div class="input-group-title">Yıl</div>
+                    <div class="input-group-title" data-i18n="creditCard.year">Year</div>
                     <div class="input-wrapper">
                       <select class="w-100">
                         <option>2020</option>
@@ -994,15 +998,15 @@
                   </div>
                 </div>
                 <div class="input-group">
-                  <div class="input-group-title">CVV Kodu</div>
+                  <div class="input-group-title" data-i18n="creditCard.cvv">CVV Code</div>
                   <div class="input-wrapper">
-                    <input class="input no-icon" type="number" placeholder="CVV Kodu">
+                    <input class="input no-icon" type="number" placeholder="CVV Code" data-i18n-placeholder="creditCard.cvv">
                   </div>
                 </div>
               </form>
-              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span>Devam Et</span><i class="icon-arrow-right"></i></div>
+              <div class="apply-button button button--red button--icon button--icon--right mt-20"><span data-i18n="common.continue">Continue</span><i class="icon-arrow-right"></i></div>
               <div class="secure"><img src="img/secure2.svg" alt="">
-                <p>Kredi Kartı bilgileriniz güvenle korunmaktadır. Ve kesinlikle saklanmamaktadır.</p>
+                <p data-i18n="creditCard.securityNote">Your credit card information is securely protected and is never stored.</p>
               </div>
               <div class="accept-cards">
                 <div class="accept-cards__item"><img src="img/banka/mastercard.png" alt=""></div>
@@ -1015,60 +1019,60 @@
           </div>
           <div class="popup odenecek_urun_sayisi" id="odenecek_urun_sayisi">
             <div class="popup-content">
-              <div class="popup__baslik">Ödenecek Ürün Sayısı Seçimi</div>
+              <div class="popup__baslik" data-i18n="productQty.title">Product Quantity Selection</div>
               <div class="divider divider--small"></div>
-              <div class="popup__text"><b class="mr-1">Tereyağlı iskender</b><span>ürününden kaç adet ödemek istediğinizi seçiniz.</span></div>
+              <div class="popup__text"><b class="mr-1" data-i18n="food.butterIskender">Butter Iskender</b><span data-i18n="productQty.selectQty">select how many of this product you want to pay for.</span></div>
               <div class="select-count">
                 <div class="select-count-button left"><i class="icon-minus"></i></div>
                 <div class="select-count-num">2</div>
                 <div class="select-count-button"><i class="icon-plus-square"></i></div>
               </div>
-              <div class="button button--outline-red" onclick="$(&quot;#odenecek_urun_sayisi&quot;).removeClass(&quot;active&quot;)">Tamam</div>
+              <div class="button button--outline-red" onclick="$(&quot;#odenecek_urun_sayisi&quot;).removeClass(&quot;active&quot;)" data-i18n="common.ok">OK</div>
             </div>
           </div>
           <div class="popup" id="odeme_secenekleri">
             <div class="popup-content">
-              <div class="popup__baslik"><i class="icon icon-credit-card mr-2"></i>Ödeme Seçenekleri</div>
+              <div class="popup__baslik"><i class="icon icon-credit-card mr-2"></i><span data-i18n="payment.options">Payment Options</span></div>
               <div class="divider divider--small"></div>
               <ul class="odeme_secenekleri">
-                <li>Kredi Kartı (POS)</li>
-                <li>Nakit Ödeme</li>
-                <li>Online Ödeme</li>
+                <li data-i18n="payment.creditCardPOS">Credit Card (POS)</li>
+                <li data-i18n="payment.cashPayment">Cash Payment</li>
+                <li data-i18n="payment.onlinePayment">Online Payment</li>
                 <li>Setcard</li>
                 <li>Multinet</li>
                 <li>Ticket Card</li>
                 <li>Sodexo</li>
                 <li>Sodexo</li>
               </ul>
-              <div class="button button--outline-red" onclick="$(&quot;#odeme_secenekleri&quot;).removeClass(&quot;active&quot;)">Tamam</div>
+              <div class="button button--outline-red" onclick="$(&quot;#odeme_secenekleri&quot;).removeClass(&quot;active&quot;)" data-i18n="common.ok">OK</div>
             </div>
           </div>
           <div class="bottom-modal" id="customizeFood">
             <div class="bottom-modal__divider" onclick="$(&quot;#customizeFood&quot;).removeClass(&quot;active&quot;)"><span></span></div>
             <div class="bottom-modal-content">
-              <div class="bottom-modal-content__title">Seçimi Onayla</div>
-              <p class="bottom-modal-content__text">Seçiminizi özelleştirebilirsiniz.</p>
+              <div class="bottom-modal-content__title" data-i18n="customize.confirmSelection">Confirm Selection</div>
+              <p class="bottom-modal-content__text" data-i18n="customize.customizeDesc">You can customize your selection.</p>
               <div class="divider"></div>
               <div class="customize-food">
                 <div class="customize-food-item">
                   <div class="customize-food-item__image"><img src="img/food/hamburger.jpg"></div>
                   <div class="customize-food-item-content">
-                    <div class="customize-food-item-content__title">Şefin Özel Sucuklusu</div>
-                    <div class="customize-food-item-content__ingredients">200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos</div>
-                    <div class="customize-food__title">Gramaj Seçimi</div>
+                    <div class="customize-food-item-content__title" data-i18n="food.chefsSpecialSausage">Chef's Special Sausage</div>
+                    <div class="customize-food-item-content__ingredients" data-i18n="food.burgerIngredients">200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce</div>
+                    <div class="customize-food__title" data-i18n="customize.sizeSelection">Size Selection</div>
                     <select class="d-block">
                       <option>100 gram</option>
                       <option>200 gram (+12 TL)</option>
                       <option>300 gram (+24 TL)</option>
                       <option>400 gram (+36 TL)</option>
                     </select>
-                    <div class="customize-food__title">Özelleştir</div>
+                    <div class="customize-food__title" data-i18n="customize.customize">Customize</div>
                     <div class="customize-food-item-content-selects">
                       <div class="select-item">
                         <label class="tick-checkbox strike-through">
                           <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                           <div class="tick-checkbox__content">
-                            <div class="tick-checkbox__title">Soğan</div>
+                            <div class="tick-checkbox__title" data-i18n="customize.onion">Onion</div>
                           </div>
                         </label>
                       </div>
@@ -1076,7 +1080,7 @@
                         <label class="tick-checkbox strike-through">
                           <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                           <div class="tick-checkbox__content">
-                            <div class="tick-checkbox__title">Ketçap</div>
+                            <div class="tick-checkbox__title" data-i18n="customize.ketchup">Ketchup</div>
                           </div>
                         </label>
                       </div>
@@ -1084,18 +1088,18 @@
                         <label class="tick-checkbox strike-through">
                           <input class="tick-checkbox__input" type="checkbox" checked=""><span class="tick-checkbox__toggle"></span>
                           <div class="tick-checkbox__content">
-                            <div class="tick-checkbox__title">Mayonez</div>
+                            <div class="tick-checkbox__title" data-i18n="customize.mayonnaise">Mayonnaise</div>
                           </div>
                         </label>
                       </div>
                     </div>
-                    <div class="customize-food__title">Ekstra Ekle</div>
+                    <div class="customize-food__title" data-i18n="customize.addExtra">Add Extra</div>
                     <div class="customize-food-item-content-selects">
                       <div class="select-item">
                         <label class="tick-checkbox">
                           <input class="tick-checkbox__input" type="checkbox"><span class="tick-checkbox__toggle"></span>
                           <div class="tick-checkbox__content">
-                            <div class="tick-checkbox__title">Çift Peynir<span>(+2 TL)</span></div>
+                            <div class="tick-checkbox__title" data-i18n="customize.doubleCheese">Double Cheese<span>(+2 TL)</span></div>
                           </div>
                         </label>
                       </div>
@@ -1103,14 +1107,14 @@
                         <label class="tick-checkbox">
                           <input class="tick-checkbox__input" type="checkbox"><span class="tick-checkbox__toggle"></span>
                           <div class="tick-checkbox__content">
-                            <div class="tick-checkbox__title">Büyük Seçim<span>(+5 TL)</span></div>
+                            <div class="tick-checkbox__title" data-i18n="customize.largeOption">Large Option<span>(+5 TL)</span></div>
                           </div>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="customize-food__title">Sipariş Notu</div>
-                  <textarea class="comment-write-text" placeholder="Sipariş Notunuzu Ekleyebilirsiniz"></textarea>
+                  <div class="customize-food__title" data-i18n="customize.orderNote">Order Note</div>
+                  <textarea class="comment-write-text" placeholder="You can add an order note" data-i18n-placeholder="customize.orderNotePlaceholder"></textarea>
                 </div>
               </div>
               <div class="add-cart-buttons apply-button d-flex mt-20">
@@ -1119,7 +1123,7 @@
                   <div class="select-count-num">2</div>
                   <div class="select-count-button"><i class="icon-plus"></i></div>
                 </div>
-                <div class="button button--red button--icon button--icon--right add-cart-button"><span>Sepete Ekle</span>
+                <div class="button button--red button--icon button--icon--right add-cart-button"><span data-i18n="customize.addToCart">Add to Cart</span>
                   <div class="add-cart-button__amount">241.98 TL</div>
                 </div>
               </div>
@@ -1128,10 +1132,12 @@
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

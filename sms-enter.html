@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--base(href="http://wunderdesigns.at/demo/ceptemenu/")-->
-    <title>Kayıt Ol</title>
+    <title>SMS Verification</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,16 +29,16 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
           <div class="sms">
-            <div class="sms__title">SMS ONAY</div>
-            <div class="sms__text">Telefonunuza gönderilen 6 haneli kodu girin.</div>
+            <div class="sms__title" data-i18n="sms.title">SMS VERIFICATION</div>
+            <div class="sms__text" data-i18n="sms.text">Enter the 6-digit code sent to your phone.</div>
             <div class="sms-input-wrapper d-flex">
               <input class="sms-input input">
               <input class="sms-input input">
@@ -42,15 +46,17 @@
               <input class="sms-input input">
               <input class="sms-input input">
             </div>
-            <div class="button button--red mt-4">Onayla</div>
+            <div class="button button--red mt-4"><span data-i18n="common.confirm">Confirm</span></div>
           </div>
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

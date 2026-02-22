@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="lang-switcher">
+      <button class="lang-switcher-btn active" data-lang="en">EN</button>
+      <button class="lang-switcher-btn" data-lang="tr">TR</button>
+    </div>
     <label class="mobil_menu_linkler" for="linkler"><i class="icon icon-align-justify"></i></label>
     <input id="linkler" type="checkbox">
     <div class="linkler">
@@ -25,25 +29,25 @@
         <li><a href="search-page.html">Search Page</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="sms-enter.html">Sms Enter</a></li>
-        <li><a href="icerik-yok.html">İçerik Yok</a></li>
+        <li><a href="404.html">No Content</a></li>
       </ul>
     </div>
-    <!-- İçerik Başlangıç-->
+    <!-- Content Start-->
     <div class="maincontainer">
       <div class="device-container">
         <div class="safearea">
           <div class="back back-w-title"><a class="back-item" href="profile.html"><i class="icon-chevron-left"></i></a>
-            <div class="title">Önceki Siparişlerim</div>
+            <div class="title" data-i18n="previousOrders.title">Previous Orders</div>
           </div>
           <div class="within_back_area">
             <div class="profile">
               <div class="profile-content">
-                <div class="profile-content__title"><i class="icon-shopping-cart mr-2"></i>ÖNCEKİ SİPARİŞLERİM</div>
+                <div class="profile-content__title"><i class="icon-shopping-cart mr-2"></i><span data-i18n="previousOrders.titleUpper">PREVIOUS ORDERS</span></div>
                 <div class="profile-content-info mt-0"><i class="icon-info"></i>Lorem ipsum dolor sit amet.</div>
                 <div class="divider divider--small"></div>
                 <div class="search_area mb-10 mt-10">
                   <div class="input-wrapper search">
-                    <input class="no-icon input" type="text" placeholder="Şiparişlerimde ara">
+                    <input class="no-icon input" type="text" data-i18n-placeholder="previousOrders.searchPlaceholder" placeholder="Search my orders">
                     <div class="filter js-open-search-filter-modal"><i class="icon-search input-icon"></i></div>
                   </div>
                 </div>
@@ -51,10 +55,10 @@
                   <div class="order-item-image"><img src="img/restaruant/gunaydin2.jpg"></div>
                   <div class="order-item-content">
                     <div class="order-item-content__title">Günaydın Steak House</div>
-                    <div class="order-item-content__date">22 Kasım 2020</div>
-                    <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>1x Su</span><span>1x Su</span></div>
+                    <div class="order-item-content__date">November 22, 2020</div>
+                    <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>1x Water</span><span>1x Water</span></div>
                     <div class="order-item-content__amount">
-                      <div>Toplam Tutar</div><span>123.53 TL</span>
+                      <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                     </div>
                   </div>
                 </div>
@@ -62,10 +66,10 @@
                   <div class="order-item-image"><img src="img/restaruant/gunaydin2.jpg"></div>
                   <div class="order-item-content">
                     <div class="order-item-content__title">Günaydın Steak House</div>
-                    <div class="order-item-content__date">22 Kasım 2020</div>
-                    <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>1x Su</span><span>1x Su</span></div>
+                    <div class="order-item-content__date">November 22, 2020</div>
+                    <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>1x Water</span><span>1x Water</span></div>
                     <div class="order-item-content__amount">
-                      <div>Toplam Tutar</div><span>123.53 TL</span>
+                      <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                     </div>
                   </div>
                 </div>
@@ -73,10 +77,10 @@
                   <div class="order-item-image"><img src="img/restaruant/starbucks.jpg"></div>
                   <div class="order-item-content">
                     <div class="order-item-content__title">Starbucks</div>
-                    <div class="order-item-content__date">24 Kasım 2020</div>
-                    <div class="order-item-content__text"><span>3x Çay</span><span>1x Magnolia</span><span>2x Şefin Özel Pastırmalı Kuru Fasulyesi</span><span>3x Çay</span></div>
+                    <div class="order-item-content__date">November 24, 2020</div>
+                    <div class="order-item-content__text"><span>3x Tea</span><span>1x Magnolia</span><span>2x Chef's Special Pastrami Baked Beans</span><span>3x Tea</span></div>
                     <div class="order-item-content__amount">
-                      <div>Toplam Tutar</div><span>123.53 TL</span>
+                      <div data-i18n="common.totalAmount">Total Amount</div><span>123.53 TL</span>
                     </div>
                   </div>
                 </div>
@@ -86,10 +90,12 @@
         </div>
       </div>
     </div>
-    <!-- İçerik Bitiş-->
+    <!-- Content End-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="locales/en.json.js"></script>
+    <script src="locales/tr.json.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

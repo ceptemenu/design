@@ -2,16 +2,16 @@
     .popup-content
         .popup__baslik
             i.icon.icon-credit-card.mr-2
-            | Ödeme Seçenekleri
+            span(data-i18n="payment.options") Payment Options
         .divider.divider--small
         ul.odeme_secenekleri
-            li Kredi Kartı (POS)
-            li Nakit Ödeme
-            li Online Ödeme
+            li(data-i18n="payment.creditCardPOS") Credit Card (POS)
+            li(data-i18n="payment.cashPayment") Cash Payment
+            li(data-i18n="payment.onlinePayment") Online Payment
             li Setcard
             li Multinet
             li Ticket Card
             li Sodexo
             li Sodexo
 
-        .button.button--outline-red(onclick='$("#odeme_secenekleri").removeClass("active")') Tamam
+        .button.button--outline-red(onclick='$("#odeme_secenekleri").removeClass("active")', data-i18n="common.ok") OK

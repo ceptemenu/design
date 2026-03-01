@@ -2,35 +2,35 @@
     .bottom-modal__divider(onclick='$("#odemeTuruSec").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Ödeme Türü Seç
-        p.bottom-modal-content__text Ödenecek tutar
+        .bottom-modal-content__title(data-i18n="paymentType.selectTitle") Select Payment Type
+        p.bottom-modal-content__text(data-i18n="paymentType.amountToPay") Amount to be paid
             b.ml-1 122.15 TL
         .divider
         .siparis-ozeti
-            .siparis-ozeti__title Sipariş Özeti
+            .siparis-ozeti__title(data-i18n="paymentType.orderSummary") Order Summary
             .siparis-ozeti-item
-                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__title 2x Butter Iskender
                 .siparis-ozeti-item__amount 40.00 TL
             .siparis-ozeti-item
-                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__title 2x Butter Iskender
                 .siparis-ozeti-item__amount 40.00 TL
             .siparis-ozeti-item
-                .siparis-ozeti-item__title 2x Tereyağlı İskender
+                .siparis-ozeti-item__title 2x Butter Iskender
                 .siparis-ozeti-item__amount 40.00 TL
-        .tumunu-gor Devamını Gör
+        .tumunu-gor(data-i18n="paymentType.seeMore") See More
             i.icon-chevron-down
         .divider
         .odeme-turu
-            .odeme-turu__title Ödeme Türünü Seçiniz
+            .odeme-turu__title(data-i18n="paymentType.selectType") Select Payment Type
             select.d-block.w-100
-                option Kredi Kartı
-                option Kredi Kartı Online
-                option Nakit Ödeme
-                option(selected) Sodexo Kart
-            .odeme-turu-aciklama Sodexo için pos cihazı masanıza gelecektir. Lütfen tamamla diyerek ilerleyiniz.
+                option(data-i18n="paymentType.creditCard") Credit Card
+                option(data-i18n="paymentType.creditCardOnline") Online Credit Card
+                option(data-i18n="payment.cashPayment") Cash Payment
+                option(selected, data-i18n="paymentType.sodexoCard") Sodexo Card
+            .odeme-turu-aciklama(data-i18n="paymentType.sodexoDesc") The POS device will come to your table for Sodexo. Please proceed by clicking complete.
 
 
 
         .apply-button.button.button--red.button--icon.button--icon--right.mt-20(onclick='$("#krediKartiOdeme").addClass("active")')
-            span Devam Et
+            span(data-i18n="common.continue") Continue
             i.icon-arrow-right

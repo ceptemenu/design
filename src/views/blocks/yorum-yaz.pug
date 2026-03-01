@@ -2,8 +2,8 @@
     .bottom-modal__divider(onclick='$("#writeComment").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Yorum Yap
-        p.bottom-modal-content__text Seçtiğiniz sipariş için yorum yapabilirsiniz.
+        .bottom-modal-content__title(data-i18n="writeReview.title") Write Review
+        p.bottom-modal-content__text(data-i18n="writeReview.desc") You can review the order you selected.
         .divider
         .comment-write
             .order-item
@@ -11,23 +11,23 @@
                     img(src="img/restaruant/gunaydin.jpg")
 
                 .order-item-content
-                    .order-item-content__title 13 Ekim 2020 Tarihli Sipariş
+                    .order-item-content__title(data-i18n="orderSelect.orderDated") Order Dated October 13, 2020
                     .order-item-content__text
-                        span 3x Çay
+                        span 3x Tea
                         span 1x Magnolia
-                        span 2x Şefin Özel Pastırmalı Kuru Fasulyesi
-                        span 1x Su
+                        span 2x Chef's Special Pastrami Baked Beans
+                        span 1x Water
                     .order-item-content__amount
-                        div Toplam Tutar
+                        div(data-i18n="common.totalAmount") Total Amount
                         span 123.53 TL
-            .comment-write__title Değerlendir
+            .comment-write__title(data-i18n="writeReview.rate") Rate
             .comment-write-star-content
                 i.star.icon-star-fill
                 i.star.icon-star-fill
                 i.star.icon-star-fill
                 i.star.icon-star
                 i.star.icon-star
-            .comment-write__title Fotoğraf Yükle
+            .comment-write__title(data-i18n="writeReview.uploadPhoto") Upload Photo
             .comment-write-upload
                 .comment-write-upload__image.upload-image
                     i.icon.icon-image
@@ -47,10 +47,10 @@
                     img(src="img/restaruant/gunaydin.jpg")
                     span.comment-write-upload__close
                         i.icon.icon-close
-            .comment-write__title Yorum Yaz
-            textarea.comment-write-text(placeholder="Siparişinizle ilgili görüşlerinizi yazın.")
+            .comment-write__title(data-i18n="writeReview.writeReview") Write Review
+            textarea.comment-write-text(placeholder="Write your opinions about your order.",data-i18n-placeholder="writeReview.placeholder")
 
 
         .apply-button.button.button--red.button--icon.button--icon--right.mt-20
-            span Gönder Gitsin
+            span(data-i18n="writeReview.submit") Submit
             i.icon.icon-arrow-right

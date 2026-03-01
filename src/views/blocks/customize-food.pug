@@ -2,66 +2,66 @@
     .bottom-modal__divider(onclick='$("#customizeFood").removeClass("active")')
         span
     .bottom-modal-content
-        .bottom-modal-content__title Seçimi Onayla
-        p.bottom-modal-content__text Seçiminizi özelleştirebilirsiniz.
+        .bottom-modal-content__title(data-i18n="customize.confirmSelection") Confirm Selection
+        p.bottom-modal-content__text(data-i18n="customize.customizeDesc") You can customize your selection.
         .divider
         .customize-food
             .customize-food-item
                 .customize-food-item__image
                     img(src="img/food/hamburger.jpg")
                 .customize-food-item-content
-                    .customize-food-item-content__title Şefin Özel Sucuklusu
-                    .customize-food-item-content__ingredients
-                        | 200gr Özel Hamburger Köftesi, Karamelize Soğan, Patates Kızartması, Domates, Özel Sos
-                    .customize-food__title Gramaj Seçimi
+                    .customize-food-item-content__title(data-i18n="food.chefsSpecialSausage") Chef's Special Sausage
+                    .customize-food-item-content__ingredients(data-i18n="food.burgerIngredients")
+                        | 200g Special Hamburger Patty, Caramelized Onion, French Fries, Tomato, Special Sauce
+                    .customize-food__title(data-i18n="customize.sizeSelection") Size Selection
                     select.d-block
                         option 100 gram
                         option 200 gram (+12 TL)
                         option 300 gram (+24 TL)
                         option 400 gram (+36 TL)
-                    .customize-food__title Özelleştir
+                    .customize-food__title(data-i18n="customize.customize") Customize
                     .customize-food-item-content-selects
                         .select-item
                             label.tick-checkbox.strike-through
                                 input.tick-checkbox__input(type='checkbox' checked='')
                                 span.tick-checkbox__toggle
                                 .tick-checkbox__content
-                                    .tick-checkbox__title
-                                        | Soğan
+                                    .tick-checkbox__title(data-i18n="customize.onion")
+                                        | Onion
                         .select-item
                             label.tick-checkbox.strike-through
                                 input.tick-checkbox__input(type='checkbox' checked='')
                                 span.tick-checkbox__toggle
                                 .tick-checkbox__content
-                                    .tick-checkbox__title
-                                        | Ketçap
+                                    .tick-checkbox__title(data-i18n="customize.ketchup")
+                                        | Ketchup
                         .select-item
                             label.tick-checkbox.strike-through
                                 input.tick-checkbox__input(type='checkbox' checked='')
                                 span.tick-checkbox__toggle
                                 .tick-checkbox__content
-                                    .tick-checkbox__title
-                                        | Mayonez
-                    .customize-food__title Ekstra Ekle
+                                    .tick-checkbox__title(data-i18n="customize.mayonnaise")
+                                        | Mayonnaise
+                    .customize-food__title(data-i18n="customize.addExtra") Add Extra
                     .customize-food-item-content-selects
                         .select-item
                             label.tick-checkbox
                                 input.tick-checkbox__input(type='checkbox')
                                 span.tick-checkbox__toggle
                                 .tick-checkbox__content
-                                    .tick-checkbox__title
-                                        | Çift Peynir
+                                    .tick-checkbox__title(data-i18n="customize.doubleCheese")
+                                        | Double Cheese
                                         span (+2 TL)
                         .select-item
                             label.tick-checkbox
                                 input.tick-checkbox__input(type='checkbox')
                                 span.tick-checkbox__toggle
                                 .tick-checkbox__content
-                                    .tick-checkbox__title
-                                        | Büyük Seçim
+                                    .tick-checkbox__title(data-i18n="customize.largeOption")
+                                        | Large Option
                                         span (+5 TL)
-                .customize-food__title Sipariş Notu
-                textarea.comment-write-text(placeholder="Sipariş Notunuzu Ekleyebilirsiniz")
+                .customize-food__title(data-i18n="customize.orderNote") Order Note
+                textarea.comment-write-text(placeholder="You can add an order note",data-i18n-placeholder="customize.orderNotePlaceholder")
         .add-cart-buttons.apply-button.d-flex.mt-20
             .select-count
                 .select-count-button.left
@@ -71,5 +71,5 @@
                     i.icon-plus
 
             .button.button--red.button--icon.button--icon--right.add-cart-button
-                span Sepete Ekle
+                span(data-i18n="customize.addToCart") Add to Cart
                 .add-cart-button__amount 241.98 TL

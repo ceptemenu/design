@@ -13,14 +13,14 @@ block content
                 .back.back-w-title
                     a(href="profile.html").back-item
                         i.icon-chevron-left
-                    .title Favori Restoranlarım
+                    .title(data-i18n="favorites.title") Favorite Restaurants
                 .within_back_area
                     .profile
                         .profile-content
                             .form-content
                                 .profile-content__title
                                     i.icon-bookmark.mr-2
-                                    | FAVORİ RESTORANLARIM
+                                    span(data-i18n="favorites.titleUpper") FAVORITE RESTAURANTS
                                 .profile-content-info.mt-0
                                     i.icon-info
                                     | Lorem ipsum dolor sit amet.
@@ -28,7 +28,7 @@ block content
                                 .henuz-yok
                                     .henuz-yok__icon
                                         img(src="img/404.svg")
-                                    .henuz-yok__title Favori Restoran Yok
-                                    .henuz-yok__text Ama üzülme hemen en güzel restoranları keşfet.
+                                    .henuz-yok__title(data-i18n="favorites.noFavorite") No Favorite Restaurant
+                                    .henuz-yok__text(data-i18n="favorites.noFavoriteText") Don't worry, discover the best restaurants right away.
 
-                                    .henuz-yok__button.button.button--red Restoranları Gör
+                                    .henuz-yok__button.button.button--red(data-i18n="favorites.seeRestaurants") See Restaurants

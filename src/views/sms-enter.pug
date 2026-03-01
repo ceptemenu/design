@@ -2,7 +2,7 @@ extends blocks/layout
 block vars
 
 block append head
-    title Kayıt Ol
+    title SMS Verification
 block append svg
 
 block content
@@ -10,8 +10,8 @@ block content
         .device-container
             .safearea
                 .sms
-                    .sms__title SMS ONAY
-                    .sms__text Telefonunuza gönderilen 6 haneli kodu girin.
+                    .sms__title(data-i18n="sms.title") SMS VERIFICATION
+                    .sms__text(data-i18n="sms.text") Enter the 6-digit code sent to your phone.
                     .sms-input-wrapper.d-flex
                         input.sms-input.input
                         input.sms-input.input
@@ -19,7 +19,7 @@ block content
                         input.sms-input.input
                         input.sms-input.input
                     .button.button--red.mt-4
-                        | Onayla
+                        span(data-i18n="common.confirm") Confirm
 
 
 

@@ -18,3 +18,10 @@ $('.tab-item').on('click', function () {
 $('.js-open-search-filter-modal').on('click', function () {
     $('#search_filter_modal').addClass('active');
 });
+
+$(document).on('change', '.js-filter-all', function () {
+    var checked = $(this).is(':checked');
+    $(this).closest('.search-filter-section')
+        .find('.switch__input').not(this)
+        .prop('checked', checked);
+});

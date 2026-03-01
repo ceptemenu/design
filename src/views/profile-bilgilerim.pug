@@ -13,7 +13,7 @@ block content
                 .back.back-w-title
                     a(href="profile.html").back-item
                         i.icon-chevron-left
-                    .title Profil Bilgilerim
+                    .title(data-i18n="profile.profileInfo") My Profile Info
                 .within_back_area
                     .profile
                         .profile-header
@@ -23,7 +23,7 @@ block content
                                 .profile-header__name Mehmet Baz
                                 .profile-header__title
                                     i.icon-trending-up
-                                    | Acemi Kaşif
+                                    span(data-i18n="profile.amateurExplorer") Amateur Explorer
                                 .profile-header__loc
                                     i.icon-map-pin
                                     | Kdz. Ereğli / Zonguldak
@@ -32,24 +32,24 @@ block content
                             .form-content
                                 .profile-content-info
                                     i.icon-info
-                                    | Profil bilgilerini düzenleyebilirsin.
+                                    span(data-i18n="profileInfo.editInfo") You can edit your profile information.
                                 .divider.divider--small
                                 .input-group
-                                    .input-group-title Ad Soyad
+                                    .input-group-title(data-i18n="profileInfo.fullName") Full Name
                                     .input-wrapper
                                         i.icon-user.input-icon
-                                        input.input(type="text",placeholder="İsim Soyisim", value="Mehmet Baz")
+                                        input.input(type="text",data-i18n-placeholder="profileInfo.fullNamePlaceholder",placeholder="First and Last Name", value="Mehmet Baz")
                                 .input-group
-                                    .input-group-title Telefon Numarası
+                                    .input-group-title(data-i18n="profileInfo.phone") Phone Number
                                     .input-wrapper
                                         i.icon-mobile.input-icon
-                                        input.input(type="phone",placeholder="Telefon Numarası",value="+90 536 666 22 31")
+                                        input.input(type="phone",data-i18n-placeholder="profileInfo.phone",placeholder="Phone Number",value="+90 536 666 22 31")
                                 .input-group
                                     .input-group-title E-mail
                                     .input-wrapper
                                         i.icon-mail.input-icon
                                         input.input(type="text",placeholder="E-mail",value="mehmetbaz@gmail.com")
-                                .button.button--red.mt-20 Kaydet
+                                .button.button--red.mt-20(data-i18n="common.save") Save
 
 
 

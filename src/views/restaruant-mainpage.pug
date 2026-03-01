@@ -18,7 +18,7 @@ block content
                     .back-right.d-flex
                         .cart-button(onclick='$("#bill").addClass("active")')
                             i.icon-credit-card
-                            | Adisyon
+                            span(data-i18n="restaurant.bill") Bill
                         //.save-restaruant(onclick="$(this).toggleClass('active')")
                             i.icon-bookmark
                             i.icon-bookmark-fill
@@ -36,7 +36,7 @@ block content
                                 .rating.tab-item(data-href="yorum")
                                     i.icon.icon-star
                                     span 4.2
-                                    small.ml-1 (33 Yorum)
+                                    small.ml-1(data-i18n="restaurant.reviews33") (33 Reviews)
                                 .divider-circle
                                 .distance
                                     i.icon.icon-map-pin
@@ -46,70 +46,70 @@ block content
                             .d-flex.align-items-center
                                 .status.status--success
                                     .status__circle
-                                    .status__text Açık
-                                // Tıklandığında popup şeklinde tüm detay görülebilir
+                                    .status__text(data-i18n="restaurant.open") Open
+                                // Click to see all details in popup
                                 .divider-circle
                                 .work-hours 10:00 - 02:00
                                 //.status.status--danger
                                     .status__circle
-                                    .status__text Kapalı
+                                    .status__text(data-i18n="restaurant.closed") Closed
                             .address
                                 i.icon.icon-map-direction
                                 | Serinsu, Üsküdar, İstanbul
                             .paytype.address(onclick='$("#odeme_secenekleri").addClass("active")')
                                 i.icon.icon-credit-card
-                                | Ödeme Seçenekleri
+                                span(data-i18n="restaurant.paymentOptions") Payment Options
                         .divider
                         .restaruant-mainpage-buttons
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
                                     i.icon.icon-phone-call
-                                .restaruant-mainpage-buttons__title Ara
+                                .restaruant-mainpage-buttons__title(data-i18n="restaurant.call") Call
                             .divider-circle
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
                                     i.icon.icon-navigation
-                                .restaruant-mainpage-buttons__title Beni Götür
+                                .restaruant-mainpage-buttons__title(data-i18n="restaurant.takeMe") Take Me
                             .divider-circle
                             .restaruant-mainpage-buttons__item
                                 .restaruant-mainpage-buttons__icon
                                     i.icon.icon-calendar
-                                .restaruant-mainpage-buttons__title(onclick='$("#createReservation").addClass("active")') Rezervasyon
+                                .restaruant-mainpage-buttons__title(data-i18n="restaurant.reservation",onclick='$("#createReservation").addClass("active")') Reservation
                         .divider
                         .food.p-20.mb-0
                             .see_all-wrapper.mt-0
-                                .see_all-title En Çok Tercih Edilenler
-                                .see_all-button.tab-item(data-href="menu") Hepsini Gör
+                                .see_all-title(data-i18n="restaurant.mostPreferred") Most Preferred
+                                .see_all-button.tab-item(data-href="menu",data-i18n="common.seeAll") See All
                                     i.icon-arrow-right
                             .food-slider
                                 .food-item
                                     .food-item__image
                                         img(src="img/food/hamburger.jpg")
-                                    .food-item__title Şefin Özel Burgeri
+                                    .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                 .food-item
                                     .food-item__image
                                         img(src="img/food/hamburger.jpg")
-                                    .food-item__title Şefin Özel Burgeri
+                                    .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                 .food-item
                                     .food-item__image
                                         img(src="img/food/hamburger.jpg")
-                                    .food-item__title Şefin Özel Burgeri
+                                    .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                         .divider
                         .p-20.restaruant-mainpage-info
-                            .title Daha Fazla Bilgi
+                            .title(data-i18n="restaurant.moreInfo") More Information
                             .pins
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-guitar
-                                    .pins-item-title Canlı Müzik
+                                    .pins-item-title(data-i18n="filter.liveMusic") Live Music
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-no-smoking
-                                    .pins-item-title Sigarasız Alan
+                                    .pins-item-title(data-i18n="restaurant.nonSmokingArea") Non-Smoking Area
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-cigarette
-                                    .pins-item-title Sigara İçilebilir Alan
+                                    .pins-item-title(data-i18n="restaurant.smokingArea") Smoking Area
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-wifi
@@ -117,19 +117,19 @@ block content
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-check
-                                    .pins-item-title İç Mekan
+                                    .pins-item-title(data-i18n="restaurant.indoor") Indoor
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-fence
-                                    .pins-item-title Dış Mekan
+                                    .pins-item-title(data-i18n="restaurant.outdoor") Outdoor
                                 .pins-item
                                     .pins-item-icon
                                         i.icon.icon-alcohol
-                                    .pins-item-title Alkol İçilebilir
+                                    .pins-item-title(data-i18n="restaurant.alcoholAllowed") Alcohol Allowed
                         .divider
                         .restaruants.p-20
                             .see_all-wrapper.mt-0
-                                .see_all-title Benzer Restoranlar
+                                .see_all-title(data-i18n="restaurant.similarRestaurants") Similar Restaurants
                             .restaruants-slider
                                 .restaruant-item
                                     .restaruant-item-image
@@ -138,7 +138,7 @@ block content
                                             i.icon-heart-o
                                     .restaruant-item-content
                                         .title Günaydın Steak House
-                                        .category Türk Mutfağı - Izgara
+                                        .category(data-i18n="restaurantType.turkishGrill") Turkish Cuisine - Grill
                                         .restaruant-item-content-footer
                                             .rating
                                                 i.icon.icon-star
@@ -158,7 +158,7 @@ block content
                                             i.icon-heart
                                     .restaruant-item-content
                                         .title Starbucks Coffee
-                                        .category Cafe - Pastane
+                                        .category(data-i18n="restaurantType.cafePastry") Cafe - Pastry
                                         .restaruant-item-content-footer
                                             .rating
                                                 i.icon.icon-star
@@ -179,7 +179,7 @@ block content
                                         .rating.tab-item(data-href="yorum")
                                             i.icon.icon-star
                                             span 4.2
-                                            small.ml-1 (33 Yorum)
+                                            small.ml-1(data-i18n="restaurant.reviews33") (33 Reviews)
                                         .divider-circle
                                         .distance
                                             i.icon.icon-map-pin
@@ -188,74 +188,74 @@ block content
                             .p-20
                                 .input-wrapper.search
                                     i.icon-search.input-icon
-                                    input.input(type="text",placeholder="Ne yemek istersin")
+                                    input.input(type="text",placeholder="What do you want to eat",data-i18n-placeholder="restaurant.whatToEat")
                                     .filter
                                         i.icon-search.input-icon
                             .p-20
                                 .food_category
                                     .see_all-wrapper
-                                        .see_all-title Kategoriler
-                                        .see_all-button Hepsini Gör
+                                        .see_all-title(data-i18n="index.categories") Categories
+                                        .see_all-button(data-i18n="common.seeAll") See All
                                             i.icon-arrow-right
                                     .food_category-slider
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/burger.png")
-                                            .food_category-item-title Burgerler
+                                            .food_category-item-title(data-i18n="category.burgers") Burgers
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/makarna.png")
-                                            .food_category-item-title Makarnalar
+                                            .food_category-item-title(data-i18n="category.pastas") Pastas
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/kahve.png")
-                                            .food_category-item-title Sıcak İçecekler
+                                            .food_category-item-title(data-i18n="category.hotDrinks") Hot Drinks
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/kebap.png")
-                                            .food_category-item-title Kebap
+                                            .food_category-item-title(data-i18n="category.kebab") Kebab
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/steak.png")
-                                            .food_category-item-title Steak
+                                            .food_category-item-title(data-i18n="category.steak") Steak
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/burger.png")
-                                            .food_category-item-title Kahve
+                                            .food_category-item-title(data-i18n="category.coffee") Coffee
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/burger.png")
-                                            .food_category-item-title Burger
+                                            .food_category-item-title(data-i18n="category.burger") Burger
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/makarna.png")
-                                            .food_category-item-title Makarna
+                                            .food_category-item-title(data-i18n="category.pasta") Pasta
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/kahve.png")
-                                            .food_category-item-title Kahve
+                                            .food_category-item-title(data-i18n="category.coffee") Coffee
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/kebap.png")
-                                            .food_category-item-title Kebap
+                                            .food_category-item-title(data-i18n="category.kebab") Kebab
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/steak.png")
-                                            .food_category-item-title Steak
+                                            .food_category-item-title(data-i18n="category.steak") Steak
                                         .food_category-item
                                             .food_category-item-image
                                                 img(src="img/categories/burger.png")
-                                            .food_category-item-title Kahve
+                                            .food_category-item-title(data-i18n="category.coffee") Coffee
                             .p-20
                                 .foods-menu
-                                    .foods-menu__title En Çok Tercih Edilenler
+                                    .foods-menu__title(data-i18n="restaurant.mostPreferred") Most Preferred
                                     .foods-menu-items
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
                                 .foods-menu
-                                    .foods-menu__title Burgerler
+                                    .foods-menu__title(data-i18n="category.burgers") Burgers
                                     .foods-menu-items
                                         include blocks/food-item--extended
                                         include blocks/food-item--extended
@@ -266,29 +266,29 @@ block content
                             .comments-head.p-20.mt-10
                                 .comments-add(onclick='$("#selectOrderToWriteComment").addClass("active"); ')
                                     i.icon-edit.mr-2
-                                    span Yorum Yaz
+                                    span(data-i18n="restaurant.writeReview") Write Review
                                 .input-wrapper.search
                                     i.icon-search.input-icon
-                                    input.input(type="text",placeholder="Yorumlarda Ara")
+                                    input.input(type="text",placeholder="Search Reviews",data-i18n-placeholder="restaurant.searchReviews")
                                 .comments-filter-wrapper
-                                    .comments-filter-item.active Yorumlarım
-                                    .comments-filter-item En Güncel
-                                    .comments-filter-item Fotoğraflı
+                                    .comments-filter-item.active(data-i18n="restaurant.myReviews") My Reviews
+                                    .comments-filter-item(data-i18n="restaurant.mostRecent") Most Recent
+                                    .comments-filter-item(data-i18n="restaurant.withPhotos") With Photos
                                     .comments-filter-item
                                         i.icon-star-fill
-                                        span 5 Yıldız
+                                        span(data-i18n="restaurant.stars5") 5 Stars
                                     .comments-filter-item
                                         i.icon-star-fill
-                                        span 4 Yıldız
+                                        span(data-i18n="restaurant.stars4") 4 Stars
                                     .comments-filter-item
                                         i.icon-star-fill
-                                        span 3 Yıldız
+                                        span(data-i18n="restaurant.stars3") 3 Stars
                                     .comments-filter-item
                                         i.icon-star-fill
-                                        span 2 Yıldız
+                                        span(data-i18n="restaurant.stars2") 2 Stars
                                     .comments-filter-item
                                         i.icon-star
-                                        span 1 Yıldız
+                                        span(data-i18n="restaurant.stars1") 1 Star
 
                             .divider
                             .comments
@@ -347,26 +347,26 @@ block content
                     #sepet.tabcontent
                         .restaruant-mainpage.within_back_area.p-0
                             .bill-content.p-20.mt-10
-                                .bill-title Sepetim
+                                .bill-title(data-i18n="restaurant.myCart") My Cart
                                 .divider
                                 .bill-order
                                     .bill-order-header
                                         .bill-order-header__title
                                             .name.d-flex Muhammet Celepci
-                                                .status.status--danger.ml-1 +3 Kişi
+                                                .status.status--danger.ml-1 +3 People
                                             .d-flex.align-items-center
                                                 .date Günaydın Steak House
                                                 .divider.divider-circle
-                                                .table-no.status.status--danger Masa 12
+                                                .table-no.status.status--danger Table 12
                                             .d-flex.align-items-center
-                                                span Toplam:
+                                                span(data-i18n="common.total") Total:
                                                 .status.status--danger.ml-1 123.99 TL
                                     .food-item.food-item--extended.food-item
                                         .food-item__image
                                             img(src="img/food/hamburger.jpg")
                                         .food-item-content
                                             .food-item-content-top
-                                                .food-item__title Şefin Özel Burgeri
+                                                .food-item__title(data-i18n="food.chefsSpecialBurger") Chef's Special Burger
                                                 .d-flex
                                                     .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
                                                         i.icon.icon-plus-square
@@ -386,7 +386,7 @@ block content
                                             img(src="img/food/iskender.jpg")
                                         .food-item-content
                                             .food-item-content-top
-                                                .food-item__title Tereyağlı İskender
+                                                .food-item__title(data-i18n="food.butterIskender") Butter Iskender
                                                 .d-flex
                                                     .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
                                                         i.icon.icon-plus-square
@@ -406,7 +406,7 @@ block content
                                             img(src="img/food/cay.jpg")
                                         .food-item-content
                                             .food-item-content-top
-                                                .food-item__title Çay
+                                                .food-item__title(data-i18n="food.tea") Tea
                                                 .d-flex
                                                     .food-item__add-cart.mr-1(onclick='$("#customizeFood").addClass("active")')
                                                         i.icon.icon-plus-square
@@ -421,23 +421,23 @@ block content
                                                     .button.button--light.button--icon
                                                         i.icon.icon-chevron-right
                                 .button.button--red.button--icon.button--icon--right.mt-3
-                                    span Sipariş Ver
+                                    span(data-i18n="restaurant.placeOrder") Place Order
                                     i.icon-arrow-right
 
                 .restaruant-tabs
                     .restaruant-tabs-item.tab-item.active(data-href="genel")
                         i.icon-home
-                        | Genel
+                        span(data-i18n="restaurant.general") General
                     .restaruant-tabs-item.tab-item(data-href="yorum")
                         i.icon-message-square
-                        | Yorumlar
+                        span(data-i18n="restaurant.reviews") Reviews
                     .restaruant-tabs-item.tab-item(data-href="menu")
                         i.icon-book
-                        | Menü
+                        span(data-i18n="restaurant.menu") Menu
                     .restaruant-tabs-item.tab-item.restaruant-tabs-item--more(data-href="sepet")
                         div
                             i.icon-shopping-cart
-                            | Sepet
+                            span(data-i18n="restaurant.cart") Cart
                         span 123.99 TL
                 include blocks/yorum-icin-siparis-sec
                 include blocks/yorum-yaz
@@ -448,10 +448,5 @@ block content
                 include blocks/odenecek-urun-sayisi
                 include blocks/odeme-secenekleri
                 include blocks/customize-food
-
-
-
-
-
 
 
